@@ -1,7 +1,286 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5388cb18-1ec7-40b2-8f58-1bcd94d4db1b" name="Default" comment="" />
+    <list default="true" id="5388cb18-1ec7-40b2-8f58-1bcd94d4db1b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q100_Same_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q101_Symmetric_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q102_Binary_Tree_Level_Order_Traversal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q103_Binary_Tree_Zigzag_Level_Order_Traversal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q104_Maximum_Depth_of_Binary_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q107_Binary_Tree_Level_Order_Traversal_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q108_Convert_Sorted_Array_to_Binary_Search_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q109_Convert_Sorted_List_to_Binary_Search_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q110_Balanced_Binary_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q111_Minimum_Depth_of_Binary_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q112_Path_Sum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q113_Path_Sum_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q114_Flatten_Binary_Tree_to_Linked_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q115_Distinct_Subsequences.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q116_Populating_Next_Right_Pointers_in_Each_Node.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q117_Populating_Next_Right_Pointers_in_Each_Node_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q118_Pascals_Triangle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q119_Pascals_Triangle_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q120_Triangle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q121_Best_Time_to_Buy_and_Sell_Stock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q122_Best_Time_to_Buy_and_Sell_Stock_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q123_Best_Time_to_Buy_and_Sell_Stock_III.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q124_Binary_Tree_Maximum_Path_Sum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q125_Valid_Palindrome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q126_Word_Ladder_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q127_Word_Ladder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q128_Longest_Consecutive_Sequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q129_Sum_Root_to_Leaf_Numbers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q130_Surrounded_Regions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q131_Palindrome_Partitioning.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q132_Palindrome_Partitioning_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q133_Clone_Graph.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q134_Gas_Station.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q135_Candy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q136_Single_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q137_Single_Number_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q138_Copy_List_with_Random_Pointer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q139_Word_Break.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q140_Word_Break_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q141_Linked_List_Cycle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q142_Linked_List_Cycle_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q143_Reorder_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q144_Binary_Tree_Preorder_Traversal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q145_Binary_Tree_Postorder_Traversal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q146_LRU_Cache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q147_Insertion_Sort_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q148_Sort_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q149_Max_Points_on_a_Line.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q150_Evaluate_Reverse_Polish_Notation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q151_Reverse_Words_in_a_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q152_Maximum_Product_Subarray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q153_Find_Minimum_in_Rotated_Sorted_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q154_Find_Minimum_in_Rotated_Sorted_Array_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q155_Min_Stack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q160_Intersection_of_Two_Linked_Lists.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q162_Find_Peak_Element.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q164_Maximum_Gap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q165_Compare_Version_Numbers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q166_Fraction_to_Recurring_Decimal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q167_Two_Sum_II_Input_array_is_sorted.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q168_Excel_Sheet_Column_Title.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q169_Majority_Element.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q171_Excel_Sheet_Column_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q172_Factorial_Trailing_Zeroes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q173_Binary_Search_Tree_Iterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q174_Dungeon_Game.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q179_Largest_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q187_Repeated_DNA_Sequences.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q188_Best_Time_to_Buy_and_Sell_Stock_IV.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q189_Rotate_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q190_Reverse_Bits.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q191_Number_of_1_Bits.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q198_House_Robber.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q199_Binary_Tree_Right_Side_View.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q200_Number_of_Islands.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q201_Bitwise_AND_of_Numbers_Range.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q202_Happy_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q203_Remove_Linked_List_Elements.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q204_Count_Primes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q205_Isomorphic_Strings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q206_Reverse_Linked_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q207_Course_Schedule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q208_Implement_Trie_Prefix_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q209_Minimum_Size_Subarray_Sum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q210_Course_Schedule_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q211_Add_and_Search_Word_Data_structure_design.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q212_Word_Search_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q213_House_Robber_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q214_Shortest_Palindrome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q215_Kth_Largest_Element_in_an_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q216_Combination_Sum_III.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q217_Contains_Duplicate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q218_The_Skyline_Problem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q219_Contains_Duplicate_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q220_Contains_Duplicate_III.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q221_Maximal_Square.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q222_Count_Complete_Tree_Nodes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q223_Rectangle_Area.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q224_Basic_Calculator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q225_Implement_Stack_using_Queues.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q226_Invert_Binary_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q227_Basic_Calculator_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q228_Summary_Ranges.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q229_Majority_Element_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q230_Kth_Smallest_Element_in_a_BST.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q231_Power_of_Two.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q232_Implement_Queue_using_Stacks.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q233_Number_of_Digit_One.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q234_Palindrome_Linked_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q236_Lowest_Common_Ancestor_of_a_Binary_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q237_Delete_Node_in_a_Linked_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q238_Product_of_Array_Except_Self.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q239_Sliding_Window_Maximum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q240_Search_a_2D_Matrix_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q241_Different_Ways_to_Add_Parentheses.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q242_Valid_Anagram.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q257_Binary_Tree_Paths.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q258_Add_Digits.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q260_Single_Number_III.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q263_Ugly_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q264_Ugly_Number_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q268_Missing_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q273_Integer_to_English_Words.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q274_H_Index.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q275_H_Index_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q278_First_Bad_Version.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q279_Perfect_Squares.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q282_Expression_Add_Operators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q283_Move_Zeroes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q284_Peeking_Iterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q287_Find_the_Duplicate_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q289_Game_of_Life.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q290_Word_Pattern.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q292_Nim_Game.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q295_Find_Median_from_Data_Stream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q297_Serialize_and_Deserialize_Binary_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q299_Bulls_and_Cows.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q300_Longest_Increasing_Subsequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q301_Remove_Invalid_Parentheses.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q303_Range_Sum_Query_Immutable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q304_Range_Sum_Query_2D_Immutable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q306_Additive_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q307_Range_Sum_Query_Mutable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q309_Best_Time_to_Buy_and_Sell_Stock_with_Cooldown.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q310_Minimum_Height_Trees.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q312_Burst_Balloons.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q313_Super_Ugly_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q315_Count_of_Smaller_Numbers_After_Self.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q316_Remove_Duplicate_Letters.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q318_Maximum_Product_of_Word_Lengths.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q319_Bulb_Switcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q321_Create_Maximum_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q322_Coin_Change.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q324_Wiggle_Sort_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q326_Power_of_Three.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q327_Count_of_Range_Sum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q328_Odd_Even_Linked_List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q329_Longest_Increasing_Path_in_a_Matrix.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q330_Patching_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q331_Verify_Preorder_Serialization_of_a_Binary_Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q332_Reconstruct_Itinerary.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q334_Increasing_Triplet_Subsequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q335_Self_Crossing.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q336_Palindrome_Pairs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q337_House_Robber_III.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q338_Counting_Bits.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q341_Flatten_Nested_List_Iterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q342_Power_of_Four.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q343_Integer_Break.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q344_Reverse_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q345_Reverse_Vowels_of_a_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q347_Top_K_Frequent_Elements.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q349_Intersection_of_Two_Arrays.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q350_Intersection_of_Two_Arrays_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q352_Data_Stream_as_Disjoint_Intervals.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q354_Russian_Doll_Envelopes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q355_Design_Twitter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q357_Count_Numbers_with_Unique_Digits.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q363_Max_Sum_of_Rectangle_No_Larger_Than_K.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q365_Water_and_Jug_Problem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q367_Valid_Perfect_Square.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q368_Largest_Divisible_Subset.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q371_Sum_of_Two_Integers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q372_Super_Pow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q373_Find_K_Pairs_with_Smallest_Sums.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q374_Guess_Number_Higher_or_Lower.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q375_Guess_Number_Higher_or_Lower_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q376_Wiggle_Subsequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q377_Combination_Sum_IV.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q378_Kth_Smallest_Element_in_a_Sorted_Matrix.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q380_Insert_Delete_GetRandom_O_1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q381_Insert_Delete_GetRandom_O_1_Duplicates_allowed.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q382_Linked_List_Random_Node.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q383_Ransom_Note.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q384_Shuffle_an_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q385_Mini_Parser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q386_Lexicographical_Numbers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q387_First_Unique_Character_in_a_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q388_Longest_Absolute_File_Path.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q389_Find_the_Difference.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q390_Elimination_Game.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q391_Perfect_Rectangle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q392_Is_Subsequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q393_UTF_8_Validation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q394_Decode_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q395_Longest_Substring_with_At_Least_K_Repeating_Characters.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q396_Rotate_Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q397_Integer_Replacement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q398_Random_Pick_Index.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q399_Evaluate_Division.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q400_Nth_Digit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q401_Binary_Watch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q402_Remove_K_Digits.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q403_Frog_Jump.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q404_Sum_of_Left_Leaves.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q405_Convert_a_Number_to_Hexadecimal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q406_Queue_Reconstruction_by_Height.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q407_Trapping_Rain_Water_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q409_Longest_Palindrome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q410_Split_Array_Largest_Sum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q412_Fizz_Buzz.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q413_Arithmetic_Slices.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q414_Third_Maximum_Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q415_Add_Strings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q416_Partition_Equal_Subset_Sum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q417_Pacific_Atlantic_Water_Flow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q419_Battleships_in_a_Board.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q420_Strong_Password_Checker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q421_Maximum_XOR_of_Two_Numbers_in_an_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q423_Reconstruct_Original_Digits_from_English.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q424_Longest_Repeating_Character_Replacement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q432_All_O_one_Data_Structure.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q434_Number_of_Segments_in_a_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q435_Non_overlapping_Intervals.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q436_Find_Right_Interval.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q437_Path_Sum_III.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q438_Find_All_Anagrams_in_a_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q440_K_th_Smallest_in_Lexicographical_Order.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q441_Arranging_Coins.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q442_Find_All_Duplicates_in_an_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q445_Add_Two_Numbers_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q446_Arithmetic_Slices_II_Subsequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q447_Number_of_Boomerangs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q448_Find_All_Numbers_Disappeared_in_an_Array.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q449_Serialize_and_Deserialize_BST.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q450_Delete_Node_in_a_BST.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q451_Sort_Characters_By_Frequency.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q452_Minimum_Number_of_Arrows_to_Burst_Balloons.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q453_Minimum_Moves_to_Equal_Array_Elements.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q454_4Sum_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q455_Assign_Cookies.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q456_132_Pattern.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q459_Repeated_Substring_Pattern.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q460_LFU_Cache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q461_Hamming_Distance.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q462_Minimum_Moves_to_Equal_Array_Elements_II.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q463_Island_Perimeter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q464_Can_I_Win.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q466_Count_The_Repetitions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q467_Unique_Substrings_in_Wraparound_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q468_Validate_IP_Address.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q472_Concatenated_Words.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q473_Matchsticks_to_Square.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q474_Ones_and_Zeroes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q475_Heaters.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q476_Number_Complement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q477_Total_Hamming_Distance.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q480_Sliding_Window_Median.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q481_Magical_String.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q482_License_Key_Formatting.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q485_Max_Consecutive_One.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Leetcode/Q488_Zuma_Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Leetcode/Q001_Two_Sum.java" afterPath="$PROJECT_DIR$/src/Leetcode/Q001_Two_Sum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Leetcode/Q002_Add_Two_Numbers.java" afterPath="$PROJECT_DIR$/src/Leetcode/Q002_Add_Two_Numbers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="whitespace.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +309,21 @@
     <favorites_list name="whitespace" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ListNode.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Leetcode/Util/ListNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.15671642">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+              <folding>
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#204#205#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,6 +333,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/Leetcode" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -48,9 +344,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/whitespace/raghav/Stack/MyStackUsingQueue.java" />
-        <option value="$PROJECT_DIR$/src/com/whitespace/raghav/Stack/MyStackUsingQueueV2.java" />
-        <option value="$PROJECT_DIR$/src/com/whitespace/raghav/Stack/MyStackUsingQueueV1.java" />
         <option value="$PROJECT_DIR$/src/com/whitespace/raghav/Misc/TwoSum.java" />
         <option value="$PROJECT_DIR$/src/com/whitespace/raghav/Misc/ParseInt.java" />
         <option value="$PROJECT_DIR$/src/com/whitespace/raghav/Misc/WordBreak.java" />
@@ -99,6 +392,9 @@
         <option value="$PROJECT_DIR$/src/Leetcode/Q235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.java" />
         <option value="$PROJECT_DIR$/src/Leetcode/Q322_Coin_Change.java" />
         <option value="$PROJECT_DIR$/src/Leetcode/Q416_Partition_Equal_Subset_Sum.java" />
+        <option value="$PROJECT_DIR$/src/Leetcode/Q001_Two_Sum.java" />
+        <option value="$PROJECT_DIR$/src/Leetcode/Util/ListNode.java" />
+        <option value="$PROJECT_DIR$/src/Leetcode/Q002_Add_Two_Numbers.java" />
       </list>
     </option>
   </component>
@@ -118,10 +414,10 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="817" />
+    <option name="width" value="1252" />
+    <option name="height" value="813" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -145,6 +441,8 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,10 +493,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whitespace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whitespace" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Leetcode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -656,16 +974,18 @@
       <workItem from="1484126003908" duration="1235000" />
       <workItem from="1484288316681" duration="5924000" />
       <workItem from="1484502897082" duration="5517000" />
-      <workItem from="1484532832332" duration="2226000" />
+      <workItem from="1484532832332" duration="3092000" />
+      <workItem from="1484597012436" duration="1139000" />
+      <workItem from="1484628633363" duration="2794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182087000" />
+    <option name="totallyTimeSpent" value="186886000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="817" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1252" height="813" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -681,7 +1001,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25250357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2520661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24034335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -927,35 +1247,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Leetcode/Q414_Third_Maximum_Number.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11127596">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Leetcode/Q415_Add_Strings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11127596">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Leetcode/Q416_Partition_Equal_Subset_Sum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11127596">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Leetcode/Q417_Pacific_Atlantic_Water_Flow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,7 +1258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,7 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,7 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,7 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -995,7 +1286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,7 +1300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,7 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,7 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,7 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,7 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,7 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11127596">
           <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,7 +1342,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,7 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,7 +1363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,7 +1370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,7 +1377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,7 +1384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,7 +1391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1123,7 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,7 +1405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,7 +1412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,7 +1419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,7 +1426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,7 +1433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,7 +1440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,7 +1447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,7 +1454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,7 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,7 +1468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,7 +1475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,7 +1482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,7 +1489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1235,7 +1496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,7 +1503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,7 +1510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,7 +1517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,7 +1524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1275,7 +1531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,7 +1538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,7 +1545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,7 +1552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,7 +1559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1315,7 +1566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,7 +1573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,7 +1580,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Leetcode/Q001_Two_Sum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#471#489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Leetcode/Q002_Add_Two_Numbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12686567">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding>
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Leetcode/Util/ListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15671642">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
