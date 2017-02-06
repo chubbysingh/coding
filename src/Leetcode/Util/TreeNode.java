@@ -9,7 +9,7 @@ public class TreeNode {
     public int val;
     public TreeNode left, right;
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 }
