@@ -20,7 +20,7 @@ public class Q024_Swap_Nodes_in_Pairs {
 
             first.next = second.next;
             curr.next = second;
-            curr.next.next = first;
+            second.next = first;
 
             curr = curr.next.next;
         }
