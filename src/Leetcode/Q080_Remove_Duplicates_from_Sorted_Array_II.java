@@ -4,21 +4,15 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
+ *
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
  */
 public class Q080_Remove_Duplicates_from_Sorted_Array_II {
-    public ListNode deleteDuplicates(ListNode head) {
-        if (head == null)
-            return head;
-
-        ListNode curr = head;
-
-        while(curr.next != null) {
-            if (curr.data == curr.next.data) {
-                curr.next = curr.next.next;
-            } else {
-                curr = curr.next;
-            }
-        }
-        return head;
+    public int removeDuplicates(int[] nums) {
+        int i = 0;
+        for (int n : nums)
+            if (i < 2 || n > nums[i - 2])
+                nums[i++] = n;
+        return i;
     }
 }
