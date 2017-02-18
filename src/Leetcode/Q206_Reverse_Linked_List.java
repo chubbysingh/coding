@@ -33,4 +33,15 @@ public class Q206_Reverse_Linked_List {
             return head;
         }
     }
+
+    public ListNode reverseListIterative(ListNode head) {
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        return prev;
+    }
 }
