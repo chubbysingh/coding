@@ -21,6 +21,7 @@ public class Q003_Longest_Substring_Without_Repeating_Characters {
         for (int i=0; i<str.length(); i++) {
             Character c = str.charAt(i);
             if (map.containsKey(c)) {
+                // we need to take Math.max coz of cases like "abba" where left Pointer is already ahead
                 leftPointer = Math.max(leftPointer, map.get(c) + 1);
             }
             map.put(c, i);
