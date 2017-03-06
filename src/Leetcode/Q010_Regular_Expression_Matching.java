@@ -19,24 +19,32 @@ public class Q010_Regular_Expression_Matching {
                 dp[0][i+1] = true;
             }
         }
-        for (int i = 0 ; i < s.length(); i++) {
-            for (int j = 0; j < p.length(); j++) {
-                if (p.charAt(j) == '.') {
-                    dp[i+1][j+1] = dp[i][j];
+        for (int i = 1 ; i < dp.length; i++) {
+            for (int j = 1; j < dp[0].length; j++) {
+                if (p.charAt(j-1) == '.') {
+                    dp[i][j] = dp[i-1][j-1];
                 }
-                if (p.charAt(j) == s.charAt(i)) {
-                    dp[i+1][j+1] = dp[i][j];
+                if (p.charAt(j-1) == s.charAt(i-1)) {
+                    dp[i][j] = dp[i-1][j-1];
                 }
-                if (p.charAt(j) == '*') {
-                    if (p.charAt(j-1) != s.charAt(i) && p.charAt(j-1) != '.') {
-                        dp[i+1][j+1] = dp[i+1][j-1];
-                    } else {
-                        dp[i+1][j+1] = (dp[i+1][j] || dp[i][j+1] || dp[i+1][j-1]);
+                // zero occurrence
+                if (p.charAt(j-1) == '*') {
+                    dp[i][j] = dp[i][j-2];
+                    //one occurrence. check previous chars
+                    if (p.charAt(j-2) == '.' || p.charAt(j-2) == s.charAt(i-1) ) {
+                        dp[i][j] = dp[i][j] | dp[i-1][j];
                     }
                 }
             }
         }
         return dp[s.length()][p.length()];
 
+    }
+
+    public static void main(String[] args) {
+        Q010_Regular_Expression_Matching sol = new Q010_Regular_Expression_Matching();
+        String pattern = "ab*a*c*a";
+        String str = "aaa";
+        boolean isMatch = sol.isMatch(str,pattern);
     }
 }
