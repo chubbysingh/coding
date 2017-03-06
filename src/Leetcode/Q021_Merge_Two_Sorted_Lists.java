@@ -29,4 +29,29 @@ public class Q021_Merge_Two_Sorted_Lists {
         }
         return resHead.next;
     }
+
+    public ListNode mergeTwoListsMethodTwo(ListNode l1, ListNode l2) {
+        ListNode res = new ListNode(0);
+        ListNode resHead = res;
+
+        while (l1 != null && l2 != null) {
+            if (l1.data < l2.data) {
+                res.next = l1;
+                l1 = l1.next;
+            } else {
+                res.next = l2;
+                l2 = l2.next;
+            }
+            res = res.next;
+        }
+
+        if (l1 == null) {
+            res.next = l2;
+        } else if (l2 == null) {
+            res.next = l1;
+        }
+        return resHead.next;
+    }
+
+
 }
