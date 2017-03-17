@@ -7,6 +7,12 @@ import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
+ * Design a data structure that supports all following operations in average O(1) time.
+ *
+ * insert(val): Inserts an item val to the set if not already present.
+ * remove(val): Removes an item val from the set if present.
+ * getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.
+ *
  */
 public class Q380_Insert_Delete_GetRandom_O_1 {
     private Map<Integer, Integer> map ;
@@ -14,12 +20,15 @@ public class Q380_Insert_Delete_GetRandom_O_1 {
     java.util.Random rand = new java.util.Random();
 
     /** Initialize your data structure here. */
+
     public Q380_Insert_Delete_GetRandom_O_1() {
         map = new HashMap<Integer, Integer>();
         list = new ArrayList<Integer>();
     }
 
-    /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
+    /** Inserts a value to the set.
+     * Returns true if the set did not already contain the specified element.
+     */
     public boolean insert(int val) {
         if (map.containsKey(val))
             return false;
@@ -29,7 +38,9 @@ public class Q380_Insert_Delete_GetRandom_O_1 {
         return true;
     }
 
-    /** Removes a value from the set. Returns true if the set contained the specified element. */
+    /** Removes a value from the set.
+     * Returns true if the set contained the specified element.
+     **/
     public boolean remove(int val) {
         if (!map.containsKey(val))
             return false;

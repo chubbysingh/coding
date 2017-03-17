@@ -5,6 +5,8 @@ import java.util.PriorityQueue;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
+ * Given a n x n matrix where each of the rows and columns are sorted in ascending order,
+ * find the kth smallest element in the matrix.
  */
 public class Q378_Kth_Smallest_Element_in_a_Sorted_Matrix {
     public int kthSmallest(int[][] matrix, int k) {

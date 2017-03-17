@@ -5,6 +5,9 @@ import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
+ *
+ * Given a string, find the first non-repeating character in it
+ * and return it's index. If it doesn't exist, return -1.
  */
 public class Q387_First_Unique_Character_in_a_String {
     public int firstUniqChar(String s) {
@@ -20,7 +23,6 @@ public class Q387_First_Unique_Character_in_a_String {
         }
 
         //compute answer
-
         for (int i=0; i<s.length(); i++) {
             if(map.get(s.charAt(i)) == 1)
                 return i;
