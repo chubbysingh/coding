@@ -2,6 +2,9 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
+ *
+ * Gives StackOverflow error on leetcode OJ
+ *
  */
 public class Q130_Surrounded_Regions {
     public void solve(char[][] board) {
