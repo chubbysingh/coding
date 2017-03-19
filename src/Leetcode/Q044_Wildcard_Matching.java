@@ -2,6 +2,11 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
+ *
+ * Implement wildcard pattern matching with support for '?' and '*'.
+ *
+ * '?' Matches any single character.
+ * '*' Matches any sequence of characters (including the empty sequence).
  */
 public class Q044_Wildcard_Matching {
     public boolean isMatch(String s, String p) {
