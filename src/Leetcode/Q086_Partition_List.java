@@ -13,26 +13,22 @@ public class Q086_Partition_List {
         ListNode smaller = new ListNode(1);
         ListNode bigger = new ListNode(1);
 
-        smaller.next = head;
-        ListNode smPointer = smaller.next;
-        ListNode prev = smaller;
-
+        ListNode sPointer = smaller;
         ListNode bPointer = bigger;
 
-        while(smPointer != null) {
-            if (smPointer.data < x) {
-                smPointer = smPointer.next;
-                prev = prev.next;
+        while(head != null) {
+            if (head.data < x) {
+                smaller.next = head;
+                smaller = smaller.next;
             } else {
-                bPointer.next = smPointer;
-                prev.next = smPointer.next;
-                smPointer = prev.next;
-
-                bPointer = bPointer.next;
+                bigger.next = head;
+                bigger = bigger.next;
             }
+            head = head.next;
         }
-        bPointer.next = null;
-        prev.next = bigger.next;
-        return smaller.next;
+        bigger.next = null;
+
+        smaller.next = bPointer.next;
+        return sPointer.next;
     }
 }

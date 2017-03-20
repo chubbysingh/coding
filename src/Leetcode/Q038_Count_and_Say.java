@@ -2,6 +2,9 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/12/17.
+ *
+ * Given an integer n, generate the nth sequence.
+ *
  */
 public class Q038_Count_and_Say {
     public String countAndSay(int n) {
@@ -24,8 +27,10 @@ public class Q038_Count_and_Say {
                 }
             }
 
+            //Append the last one which fell off the for loop
             sb.append(count);
             sb.append(result.charAt(result.length() - 1));
+
             result = sb.toString();
             i++;
         }
