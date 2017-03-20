@@ -11,35 +11,31 @@ public class Q061_Rotate_List {
         if(head == null) return head;
 
         //Calculate the length
-        int length = 0;
+        int length = 1;
         ListNode node = head;
-        while(node != null){
+        while(node.next != null){
             node = node.next;
             length++;
         }
+
+        //Convert it into cyclic linkedList
+        node.next = head;
 
         // Adjust k if its more than k
         if (k >= length)
             k = k % length;
 
-        // Split list to fpart and lpart
-        ListNode lpart, fpart;
-        lpart = head;
-        for(int i = 1; i < length - k; i++){
+        // Move head to length-k-1 steps (supposedly last element of the list)
+        for (int i=0; i < length-k-1; i++)
             head = head.next;
-        }
 
-        fpart = head.next;
+        //Next item should be the head of new list
+        node = head.next;
+
+        //Disconnect the cycle
         head.next = null;
 
-        // move to last element of fpart and assign next as lpart
-        if(fpart == null) return lpart;
-        node = fpart;
-        while(node.next != null){
-            node = node.next;
-        }
-        node.next = lpart;
-
-        return fpart;
+        //Return the new head
+        return node;
     }
 }

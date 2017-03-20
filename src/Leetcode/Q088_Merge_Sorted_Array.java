@@ -23,12 +23,11 @@ public class Q088_Merge_Sorted_Array {
             if (first > second) {
                 nums1[currentIndex] = first;
                 index1--;
-                currentIndex--;
             } else {
                 nums1[currentIndex] = second;
                 index2--;
-                currentIndex--;
             }
+            currentIndex--;
         }
     }
 }
