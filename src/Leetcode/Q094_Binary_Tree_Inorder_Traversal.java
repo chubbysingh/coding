@@ -27,6 +27,8 @@ public class Q094_Binary_Tree_Inorder_Traversal {
         return resultList;
     }
 
+
+    /* Iterative */
     public List<Integer> inorderTraversalIterative(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
