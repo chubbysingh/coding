@@ -28,8 +28,10 @@ public class Q017_Letter_Combinations_of_a_Phone_Number {
 
         // char to int
         int num = digits.charAt(start) - '0';
-        for (int i = 0; i < dict[num].length(); i++) {
-            temp.append(dict[num].charAt(i));
+        String tuple = dict[num];
+        for (int i = 0; i < tuple.length(); i++) {
+            char c = tuple.charAt(i);
+            temp.append(c);
             letterCombinationsHelper(digits, start + 1, temp, dict, result);
             temp.deleteCharAt(temp.length() - 1);
         }
