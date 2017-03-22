@@ -45,12 +45,18 @@ public class Q380_Insert_Delete_GetRandom_O_1 {
         if (!map.containsKey(val))
             return false;
 
-        if(map.get(val) < list.size()-1) {
+        int currentIndex = map.get(val);
+
+        // If not the last Element, swap it with last Element
+        if(currentIndex < list.size()-1) {
             int lastElement = list.get(list.size()-1);
-            list.set(map.get(val), lastElement);
-            map.put(lastElement, map.get(val));
+            list.set(currentIndex, lastElement);
+            map.put(lastElement, currentIndex);
         }
+
+        // Remove last element from list
         list.remove(list.size()-1);
+        // Remove element from map
         map.remove(val);
         return true;
     }

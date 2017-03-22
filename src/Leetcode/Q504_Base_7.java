@@ -26,4 +26,10 @@ public class Q504_Base_7 {
 
         return sb.reverse().toString();
     }
+
+    public static void main(String[] args) {
+        Q504_Base_7 sol = new Q504_Base_7();
+        String result = sol.convertToBase7(50);
+        System.out.println(result);
+    }
 }

@@ -14,11 +14,11 @@ public class Q415_Add_Strings {
             int sum = carry;
             carry = 0;
             if (l1 >= 0) {
-                sum += Integer.parseInt(String.valueOf(num1.charAt(l1)));
+                sum += num1.charAt(l1) - '0';
                 l1--;
             }
             if (l2 >= 0) {
-                sum += Integer.parseInt(String.valueOf(num2.charAt(l2)));
+                sum += num2.charAt(l2) - '0';
                 l2--;
             }
 
