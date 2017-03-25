@@ -12,13 +12,22 @@ public class Q152_Maximum_Product_Subarray {
 
         for (int i = 1; i < nums.length; i++) {
             int temp = max;
-            max = Math.max(Math.max(max * nums[i], min * nums[i]), nums[i]);
-            min = Math.min(Math.min(temp * nums[i], min * nums[i]), nums[i]);
+
+            max = getMaximum(max * nums[i], min * nums[i], nums[i]);
+            min = getMinimum(temp * nums[i], min * nums[i], nums[i]);
+
             if (max > result) {
                 result = max;
             }
         }
         return result;
+    }
 
+    private int getMaximum(int a, int b, int c) {
+        return Math.max(Math.max(a, b), c);
+    }
+
+    private int getMinimum(int a, int b, int c) {
+        return Math.min(Math.min(a, b), c);
     }
 }
