@@ -4,24 +4,38 @@ package Leetcode;
  * Created by rbhatnagar2 on 1/12/17.
  */
 public class Q032_Longest_Valid_Parentheses {
+
+    /**
+     * DP Solution
+     * dp[i] means longest valid substring starting from i to the end
+     * So, if s.charAt(i) == ')', dp[i] = 0 since longest valid substring cannot start from ')'
+     * if s.chatAt(i) == '(', we check dp[i+1] to get the longest valid parenthesis
+     * and jump to its index to check if i + dp[i+1] 's char is ')'
+     *
+     * Also, after checking dp[j], check dp[j+1] since that can be a valid string as well
+     */
     public int longestValidParentheses(String s) {
-        int length=s.length();
-        if (length==0) {
+        if (s == null || s.length() < 2) {
             return 0;
         }
-        int ans=0;
-        char[] c=s.toCharArray();
-        int[] vals=new int[length];
-        for (int i = length-2; i >= 0; i--) {
-            if (c[i]=='(') {
-                int t=i+1+vals[i+1];
-                if (t<length&&c[t]==')') {
-                    vals[i]=vals[i+1]+2;
-                    vals[i]+=((t+1<length)?vals[t+1]:0);
-                    ans=ans<vals[i]?vals[i]:ans;
+
+        int[] dp = new int[s.length()];
+        int maxLen = 0;
+
+        for (int i = s.length() - 2; i >= 0; i--) {
+            if (s.charAt(i) == '(') {
+                int j = i + dp[i + 1] + 1;
+                if (j < s.length() && s.charAt(j) == ')') {
+                    dp[i] = dp[i + 1] + 2;
+                    if (j + 1 < s.length()) {
+                        dp[i] += dp[j + 1];
+                    }
                 }
             }
+
+            maxLen = Math.max(maxLen, dp[i]);
         }
-        return ans;
+
+        return maxLen;
     }
 }

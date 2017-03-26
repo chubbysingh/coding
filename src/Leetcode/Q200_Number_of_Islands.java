@@ -31,11 +31,9 @@ public class Q200_Number_of_Islands {
             return 0;
 
         int count = 0;
-        int rows = grid.length,
-                cols = grid[0].length;
 
-        for (int i=0; i<rows; i++) {
-            for (int j=0; j<cols; j++) {
+        for (int i=0; i<grid.length; i++) {
+            for (int j=0; j<grid[0].length; j++) {
                 if(grid[i][j] == '1') {
                     count++;
                     helper(grid, i, j);
@@ -47,7 +45,10 @@ public class Q200_Number_of_Islands {
     }
 
     private void helper(char[][] grid, int row, int col) {
-        if (row < 0 || row >= grid.length || col < 0 || col >= grid[0].length || grid[row][col] != '1')
+        if (row < 0 || row >= grid.length || col < 0 || col >= grid[0].length)
+            return;
+
+        else if (grid[row][col] != '1')
             return;
 
         grid[row][col] = '0';
