@@ -13,4 +13,11 @@ public class Q122_Best_Time_to_Buy_and_Sell_Stock_II {
         }
         return max;
     }
+
+    public static void main(String[] args) {
+        Q122_Best_Time_to_Buy_and_Sell_Stock_II sol = new Q122_Best_Time_to_Buy_and_Sell_Stock_II();
+        int[] prices = {7 , 1, 5, 3, 6};
+        int max = sol.maxProfit(prices);
+        System.out.println(max);
+    }
 }

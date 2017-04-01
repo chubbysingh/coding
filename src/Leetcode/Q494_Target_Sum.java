@@ -19,4 +19,12 @@ public class Q494_Target_Sum {
                 dp[i] += dp[i - n];
         return dp[s];
     }
+
+    public static void main(String[] args) {
+        int num[] = {1, 2, 3, 4, 5};
+        int target=3;
+        Q494_Target_Sum sol = new Q494_Target_Sum();
+        int result = sol.findTargetSumWays(num, target);
+        System.out.println(result);
+    }
 }
