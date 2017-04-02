@@ -23,8 +23,9 @@ public class Q093_Restore_IP_Addresses {
             return;
 
         if (segment == 4) {
-            if (isValid(s.substring(start))) {
-                result.add(curr + "." + s.substring(start));
+            String temp = s.substring(start);
+            if (isValid(temp)) {
+                result.add(curr + "." + temp);
             }
             return;
         }
