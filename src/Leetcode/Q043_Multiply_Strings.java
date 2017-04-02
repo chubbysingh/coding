@@ -20,16 +20,21 @@ public class Q043_Multiply_Strings {
             }
         }
 
-        StringBuilder sb = new StringBuilder();
-
         //calculate each digit
         for(int i=0; i<d.length; i++){
             int mod = d[i]%10;
             int carry = d[i]/10;
-            if(i+1<d.length){
+            d[i] = mod;
+
+            if(carry > 0){
                 d[i+1] += carry;
             }
-            sb.insert(0, mod);
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i=d.length-1; i>=0; i--) {
+            sb.append(d[i]);
         }
 
         //remove front 0's

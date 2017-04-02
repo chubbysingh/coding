@@ -10,9 +10,8 @@ public class Q093_Restore_IP_Addresses {
     public List<String> restoreIpAddresses(String s) {
         List<String> result = new ArrayList<String>();
 
-        if (s == null || s.length() < 4) {
+        if (s == null || s.length() < 4)
             return result;
-        }
 
         restoreHelper(s, 0, 1, "", result);
 
@@ -20,9 +19,8 @@ public class Q093_Restore_IP_Addresses {
     }
 
     private void restoreHelper(String s, int start, int segment, String curr, List<String> result) {
-        if (start >= s.length()) {
+        if (start >= s.length())
             return;
-        }
 
         if (segment == 4) {
             if (isValid(s.substring(start))) {
