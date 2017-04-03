@@ -22,16 +22,14 @@ public class Q143_Reorder_List {
         slow.next = null; //truncate the first half
 
         // STEP 2: Reverse the second list
-        ListNode prev = secondHead;
-        ListNode curr = secondHead.next;
-        while (curr != null) {
-            ListNode temp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = temp;
+        ListNode prev = null;
+        while (secondHead != null) {
+            ListNode next = secondHead.next;
+            secondHead.next = prev;
+            prev = secondHead;
+            secondHead = next;
         }
         // setup the new head
-        secondHead.next = null;
         secondHead = prev;
 
 
