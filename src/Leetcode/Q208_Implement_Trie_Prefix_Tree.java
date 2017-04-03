@@ -29,7 +29,6 @@ public class Q208_Implement_Trie_Prefix_Tree {
         TrieNode current = root;
 
         for(char c : word.toCharArray()){
-
             TrieNode node = current.children.get(c);
             if (node == null) {
                 node = new TrieNode();
@@ -59,19 +58,16 @@ public class Q208_Implement_Trie_Prefix_Tree {
     }
 
     public TrieNode searchNode(String str){
-        Map<Character, TrieNode> children = root.children;
-        TrieNode t = null;
-        
+        TrieNode curr = root;
+
         for(char c : str.toCharArray()){
-            if(children.containsKey(c)){
-                t = children.get(c);
-                children = t.children;
-            }else{
+            TrieNode node = curr.children.get(c);
+            if (node == null)
                 return null;
-            }
+            curr = node;
         }
 
-        return t;
+        return curr;
     }
 
 
