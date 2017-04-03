@@ -38,13 +38,15 @@ public class Q211_Add_and_Search_Word_Data_structure_design {
 
         char c = word.charAt(start);
 
-        if(children.containsKey(c)){
+        if(children.containsKey(c)) {
             if(start == word.length()-1 && children.get(c).isLeaf){
                 return true;
             }
 
             return dfsSearch(children.get(c).children, word, start+1);
-        }else if(c == '.'){
+        }
+
+        else if(c == '.') {
             boolean result = false;
             for(Map.Entry<Character, TrieNode> child: children.entrySet()){
                 if(start == word.length()-1 && child.getValue().isLeaf){
@@ -58,7 +60,9 @@ public class Q211_Add_and_Search_Word_Data_structure_design {
             }
 
             return result;
-        }else{
+        }
+
+        else {
             return false;
         }
     }
