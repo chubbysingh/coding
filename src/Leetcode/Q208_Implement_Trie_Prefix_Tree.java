@@ -7,7 +7,17 @@ import java.util.Map;
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q208_Implement_Trie_Prefix_Tree {
-    private TrieNode root;
+
+    private class TrieNode {
+        Map<Character, TrieNode> children;
+        boolean endOfWord;
+        public TrieNode() {
+            children = new HashMap<>();
+            endOfWord = false;
+        }
+    }
+
+    private final TrieNode root;
 
     /** Initialize your data structure here. */
     public Q208_Implement_Trie_Prefix_Tree() {
@@ -16,32 +26,25 @@ public class Q208_Implement_Trie_Prefix_Tree {
 
     /** Inserts a word into the trie. */
     public void insert(String word) {
-        Map<Character, TrieNode> children = root.children;
+        TrieNode current = root;
 
-        for(int i=0; i<word.length(); i++){
-            char c = word.charAt(i);
+        for(char c : word.toCharArray()){
 
-            TrieNode t;
-            if(children.containsKey(c)){
-                t = children.get(c);
-            }else{
-                t = new TrieNode(c);
-                children.put(c, t);
+            TrieNode node = current.children.get(c);
+            if (node == null) {
+                node = new TrieNode();
+                current.children.put(c, node);
             }
-
-            children = t.children;
-
-            //set leaf node
-            if(i==word.length()-1)
-                t.isLeaf = true;
+            current = node;
         }
+        current.endOfWord = true;
     }
 
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
         TrieNode t = searchNode(word);
 
-        if(t != null && t.isLeaf)
+        if(t != null && t.endOfWord)
             return true;
         else
             return false;
@@ -58,8 +61,8 @@ public class Q208_Implement_Trie_Prefix_Tree {
     public TrieNode searchNode(String str){
         Map<Character, TrieNode> children = root.children;
         TrieNode t = null;
-        for(int i=0; i<str.length(); i++){
-            char c = str.charAt(i);
+        
+        for(char c : str.toCharArray()){
             if(children.containsKey(c)){
                 t = children.get(c);
                 children = t.children;
@@ -70,16 +73,8 @@ public class Q208_Implement_Trie_Prefix_Tree {
 
         return t;
     }
+
+
 }
 
-class TrieNode {
-    char c;
-    Map<Character, TrieNode> children = new HashMap<Character, TrieNode>();
-    boolean isLeaf;
 
-    public TrieNode() {}
-
-    public TrieNode(char c){
-        this.c = c;
-    }
-}
