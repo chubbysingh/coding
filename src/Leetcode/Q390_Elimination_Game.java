@@ -5,14 +5,18 @@ package Leetcode;
  */
 public class Q390_Elimination_Game {
     public int lastRemaining(int n) {
-        return f(n,true);
-    }
+        boolean isLeft = true;
+        int remaining = n;
+        int step = 1;
+        int head = 1;
 
-    public int f(int n,boolean flag){
-        if (n<=2) {
-            return flag?n:1;
-        }else{
-            return 2*f(n/2,!flag)-(((n&1)==0&&!flag)?1:0);
+        while (remaining > 1) {
+            if (isLeft || remaining%2==1)
+                head = head + step;
+            step = step*2;
+            remaining /= 2;
+            isLeft = !isLeft;
         }
+        return head;
     }
 }

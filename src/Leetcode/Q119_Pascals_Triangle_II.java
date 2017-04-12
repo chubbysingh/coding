@@ -11,16 +11,21 @@ import java.util.List;
  */
 public class Q119_Pascals_Triangle_II {
     public List<Integer> getRow(int rowIndex) {
-        List<Integer> result = new ArrayList<Integer>();
-        result.add(1);
+        List<Integer> list = new ArrayList<Integer>();
 
-        for (int i = 1; i <= rowIndex; i++) {
-            result.add(1);
-            for (int j = i - 1; j > 0; j--) {
-                result.set(j, result.get(j) + result.get(j - 1));
+        for (int i = 0; i <= rowIndex; i++) {
+            list.add(0, 1);
+            for (int j = 1; j < list.size() - 1; j++) {
+                list.set(j, list.get(j) + list.get(j + 1));
             }
         }
+        return list;
+    }
 
-        return result;
+    public static void main(String[] args) {
+        Q119_Pascals_Triangle_II sol = new Q119_Pascals_Triangle_II();
+        int k=3;
+        List<Integer> result = sol.getRow(k);
+        System.out.println(result);
     }
 }
