@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 1/21/17.
@@ -53,9 +55,33 @@ public class Solution {
         return sb.toString();
     }
 
+    public List<List<Integer>> pascalTriangle(int[] nums) {
+        List<List<Integer>> res = new LinkedList<List<Integer>>();
+
+        int count = 1, index=0;
+        while(index < nums.length) {
+            List<Integer> list = new LinkedList<>();
+
+            for (int j = 0; j < count; j++) {
+                list.add(nums[index]);
+                index++;
+            }
+
+            res.add(list);
+            count++;
+        }
+
+        return res;
+
+    }
+
 
     public static void main(String[] args) {
         Solution sol = new Solution();
+
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        List<List<Integer>> res = sol.pascalTriangle(nums);
+        System.out.println(res);
 
         System.out.println(sol.compressedVersion("AAABBZZDDD"));
         System.out.println(sol.decompressString("3A2B2Z3D"));

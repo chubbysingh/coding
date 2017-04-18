@@ -15,7 +15,9 @@ public class Q309_Best_Time_to_Buy_and_Sell_Stock_with_Cooldown {
         int s1 = 0;
 
         for (int i = 1; i <= prices.length; i++) {
+            // buy[i] = Math.max(buy[i-1], sell[i-2] - price[i-1]);
             int b0 = Math.max(b1, s2 - prices[i - 1]);
+            // sell[i] = Math.max(sell[i-1], buy[i-1] + price[i-1]);
             int s0 = Math.max(s1, b1 + prices[i - 1]);
 
             b1 = b0;
