@@ -13,6 +13,7 @@ public class Q355_Design_Twitter {
     List<Integer> tweetList;
     List<Integer> userList;
     Map<Integer, Map<Integer,Integer>> followMap;
+
     /** Initialize your data structure here. */
     public Q355_Design_Twitter() {
         tweetList=new ArrayList<Integer>();
