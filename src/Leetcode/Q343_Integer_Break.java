@@ -4,16 +4,13 @@ package Leetcode;
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q343_Integer_Break {
-    public int integerBreakOne(int n) {
+    public int integerBreak(int n) {
         int[] dp = new int[n+1];
-        for (int i=0; i<dp.length; i++) {
-            dp[i] = i;
-        }
 
         for(int i=1; i<n; i++){
             for(int j=1; j<i+1; j++){
                 if(i+j<=n){
-                    dp[i+j]=Math.max(dp[i] * dp[j], dp[i+j]);
+                    dp[i+j]=Math.max(dp[i+j], Math.max(i, dp[i]) * Math.max(j,dp[j]));
                 }
             }
         }
