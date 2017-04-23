@@ -46,16 +46,20 @@ public class Q215_Kth_Largest_Element_in_an_Array {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k);
 
         for (int num : nums) {
+
+            // Put 1st k elements in the heap
             if (maxHeap.size() < k) {
                 maxHeap.offer(num);
-            } else {
+            }
+            // if incoming number > min, add that number in the heap
+            else {
                 if (num > maxHeap.peek()) {
                     maxHeap.poll();
                     maxHeap.offer(num);
                 }
             }
         }
-
+        // result will be k largest numbers with min as kth largest number
         return maxHeap.peek();
     }
 }

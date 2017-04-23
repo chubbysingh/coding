@@ -6,6 +6,10 @@ import Leetcode.Util.TreeNode;
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q337_House_Robber_III {
+
+    // result[0] : Money with robbing the node
+    // result[1] : Money without robbing the node
+
     public int rob(TreeNode root) {
         if (root == null) {
             return 0;
