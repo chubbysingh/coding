@@ -50,7 +50,7 @@ public class Q227_Basic_Calculator_II {
 
     public static void main(String[] args) {
         Q227_Basic_Calculator_II sol = new Q227_Basic_Calculator_II();
-        String s = "3+2*2";
+        String s = "1*2-3/4+5*6-7*8+9/10";
         int result = sol.calculate(s);
         System.out.println(result);
     }
