@@ -7,10 +7,11 @@ public class Q343_Integer_Break {
     public int integerBreak(int n) {
         int[] dp = new int[n+1];
 
-        for(int i=1; i<n; i++){
-            for(int j=1; j<i+1; j++){
-                if(i+j<=n){
-                    dp[i+j]=Math.max(dp[i+j], Math.max(i, dp[i]) * Math.max(j,dp[j]));
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(i + j <= n){
+                    dp[i+j] = Math.max( dp[i+j],
+                                        Math.max(i, dp[i]) * Math.max(j,dp[j]));
                 }
             }
         }
@@ -41,5 +42,13 @@ public class Q343_Integer_Break {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        Q343_Integer_Break sol = new Q343_Integer_Break();
+        int n = 10;
+        int res = sol.integerBreak(n);
+        System.out.println(res);
+
     }
 }

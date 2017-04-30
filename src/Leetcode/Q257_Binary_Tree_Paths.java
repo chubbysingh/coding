@@ -10,18 +10,18 @@ import java.util.List;
  */
 public class Q257_Binary_Tree_Paths {
     public List<String> binaryTreePaths(TreeNode root) {
-        List<String> answer = new ArrayList<String>();
+        List<String> result = new ArrayList<String>();
         if (root != null)
-            searchBT(root, "", answer);
-        return answer;
+            searchBT(root, "", result);
+        return result;
     }
-    private void searchBT(TreeNode root, String path, List<String> answer) {
+    private void searchBT(TreeNode root, String path, List<String> result) {
         if (root.left == null && root.right == null)
-            answer.add(path + root.val);
+            result.add(path + root.val);
 
         if (root.left != null)
-            searchBT(root.left, path + root.val + "->", answer);
+            searchBT(root.left, path + root.val + "->", result);
         if (root.right != null)
-            searchBT(root.right, path + root.val + "->", answer);
+            searchBT(root.right, path + root.val + "->", result);
     }
 }
