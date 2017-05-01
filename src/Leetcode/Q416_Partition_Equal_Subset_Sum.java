@@ -29,9 +29,9 @@ public class Q416_Partition_Equal_Subset_Sum {
         // dp init
         dp[0] = true;
         // dp transition
-        for (int i = 1; i <= nums.length; i++) {
-            for (int j = sum; j >= nums[i-1]; j--) {
-                dp[j] = dp[j] || dp[j - nums[i-1]];
+        for (int n : nums) {
+            for (int j = sum; j >= n; j--) {
+                dp[j] = dp[j] || dp[j - n];
             }
         }
         return dp[sum];

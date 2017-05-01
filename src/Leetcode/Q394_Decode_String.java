@@ -1,43 +1,43 @@
 package Leetcode;
 
+import java.util.Stack;
+
 /**
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q394_Decode_String {
     public String decodeString(String s) {
-        if (s.length() == 0) {
-            return "";
-        }
-        StringBuffer sb = new StringBuffer();
-        char[] cs = s.toCharArray();
-        int startNum = -1;
-        int startString = -1;
-        int bracketNums = 0;
-        for (int i = 0; i < cs.length; i++) {
-            if (cs[i] >= '0' && cs[i] <= '9') {
-                if (startNum == -1) {
-                    startNum = i;
+        String res = "";
+        Stack<Integer> countStack = new Stack<>();
+        Stack<String> resStack = new Stack<>();
+        int idx = 0;
+        while (idx < s.length()) {
+            if (Character.isDigit(s.charAt(idx))) {
+                int count = 0;
+                while (Character.isDigit(s.charAt(idx))) {
+                    count = 10 * count + (s.charAt(idx) - '0');
+                    idx++;
                 }
-            } else if (cs[i] == '[') {
-                if (startString == -1) {
-                    startString = i;
+                countStack.push(count);
+            }
+            else if (s.charAt(idx) == '[') {
+                resStack.push(res);
+                res = "";
+                idx++;
+            }
+            else if (s.charAt(idx) == ']') {
+                StringBuilder temp = new StringBuilder (resStack.pop());
+                int repeatTimes = countStack.pop();
+                for (int i = 0; i < repeatTimes; i++) {
+                    temp.append(res);
                 }
-                bracketNums++;
-            } else if (cs[i] == ']') {
-                bracketNums--;
-                if (bracketNums == 0) {
-                    int times = Integer.valueOf(s.substring(startNum, startString));
-                    String son = decodeString(s.substring(startString + 1, i));
-                    for (int j = 0; j < times; j++) {
-                        sb.append(son);
-                    }
-                    startString = -1;
-                    startNum = -1;
-                }
-            } else if (bracketNums == 0) {
-                sb.append(String.valueOf(cs[i]));
+                res = temp.toString();
+                idx++;
+            }
+            else {
+                res += s.charAt(idx++);
             }
         }
-        return sb.toString();
+        return res;
     }
 }

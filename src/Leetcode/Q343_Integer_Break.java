@@ -19,28 +19,22 @@ public class Q343_Integer_Break {
     }
 
     public int integerBreakTwo(int n) {
-        if (n==1) return 1;
-        if (n==2) return 2;
-        if (n==3) return 3;
-        if (n==4) return 4;
-
-        int result=1;
-        // If multiple of 3, maxSUm would be 3*3*3*3....m times
-        if(n%3==0){
-            int m = n/3;
-            result = (int) Math.pow(3, m);
-        }
-        // If not, get multiple of 3 * 2
-        else if(n%3==2){
-            int m=n/3;
-            result = (int) Math.pow(3, m) * 2;
-        }
-        // We dont want to be left with 1, so multiples of 3 * 4
-        else if(n%3==1){
-            int m=(n-4)/3;
-            result = (int) Math.pow(3, m) *4;
+        if (n == 2 || n == 3) {
+            return n - 1;
         }
 
+        if (n == 4) {
+            return 4;
+        }
+
+        int result = 1;
+
+        while (n > 4) {
+            result *= 3;
+            n -= 3;
+        }
+
+        result *= n;
         return result;
     }
 
