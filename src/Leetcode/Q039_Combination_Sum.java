@@ -11,19 +11,23 @@ public class Q039_Combination_Sum {
     public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> list = new ArrayList<>();
         //Arrays.sort(nums);
-        backtrack(list, new ArrayList<>(), nums, target, 0);
+        backtrack(list, 0, target, new ArrayList<>(), nums);
         return list;
     }
 
-    private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums, int target, int start){
-        if(target < 0) return;
-        else if(target == 0) list.add(new ArrayList<>(tempList));
-        else{
-            for(int i = start; i < nums.length; i++){
-                tempList.add(nums[i]);
-                backtrack(list, tempList, nums, target - nums[i], i); // not i + 1 because we can reuse same elements
-                tempList.remove(tempList.size() - 1);
-            }
+    private void backtrack(List<List<Integer>> list, int start, int target, List<Integer> tempList, int [] nums ){
+        if(target < 0)
+            return;
+        if(target == 0) {
+            list.add(new ArrayList<>(tempList));
+            return;
         }
+
+        for(int i = start; i < nums.length; i++) {
+            tempList.add(nums[i]);
+            backtrack(list, i, target - nums[i], tempList, nums ); // not i + 1 because we can reuse same elements
+            tempList.remove(tempList.size() - 1);
+        }
+
     }
 }

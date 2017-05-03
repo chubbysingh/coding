@@ -1,40 +1,52 @@
 package Leetcode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q373_Find_K_Pairs_with_Smallest_Sums {
     public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
-        List<int[]> result = new ArrayList<int[]>();
 
-        k = Math.min(k, nums1.length*nums2.length);
+        List<int[]> res = new LinkedList<int[]>();
+        PriorityQueue<Tuple> queue = new PriorityQueue<Tuple>();
 
-        if(k==0)
-            return result;
+        if(nums1.length==0 || nums2.length==0 || k==0)
+            return res;
 
-        int[] idx = new int[nums1.length];
+        for(int i=0; i<nums1.length && i<k; i++)
+            queue.offer(new Tuple(nums1[i], nums2[0], 0));
 
-        while(k>0){
-            int min = Integer.MAX_VALUE;
-            int t=0;
-            for(int i=0; i<nums1.length; i++){
-                if(idx[i]<nums2.length && nums1[i]+nums2[idx[i]]<min){
-                    t=i;
-                    min = nums1[i]+nums2[idx[i]];
-                }
-            }
-
-            int[] arr = {nums1[t], nums2[idx[t]]};
-            result.add(arr);
-
-            idx[t]++;
-
+        while(k > 0 && !queue.isEmpty()){
             k--;
+            Tuple tuple = queue.poll();
+            res.add(new int[]{tuple.num1, tuple.num2});
+
+            if(tuple.num2Index == nums2.length-1)
+                continue;
+
+            queue.offer(new Tuple(tuple.num1, nums2[tuple.num2Index+1], tuple.num2Index+1));
+
+
+        }
+        return res;
+    }
+
+    class Tuple implements Comparable<Tuple>{
+        int num1, num2, num2Index;
+
+        public Tuple(int num1, int num2, int num2Index) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num2Index = num2Index;
         }
 
-        return result;
+        @Override
+        public int compareTo(Tuple that) {
+            return this.num1 + this.num2 - that.num1 - that.num2;
+        }
     }
 }
