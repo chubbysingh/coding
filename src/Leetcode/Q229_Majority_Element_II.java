@@ -13,12 +13,12 @@ public class Q229_Majority_Element_II {
         if (nums == null || nums.length == 0)
             return result;
 
-        int number1=nums[0], number2=nums[0],
-                count1=0, count2=0;
+        int number1 = nums[0], number2 = nums[0],
+                count1 = 0, count2 = 0;
 
         int length = nums.length;
 
-        for (int i=0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             if (nums[i] == number1)
                 count1++;
             else if (nums[i] == number2)
@@ -37,7 +37,8 @@ public class Q229_Majority_Element_II {
 
         }
 
-        count1=0; count2=0;
+        count1 = 0;
+        count2 = 0;
 
         for (int n : nums) {
             if (n == number1)
@@ -46,9 +47,9 @@ public class Q229_Majority_Element_II {
                 count2++;
         }
 
-        if (count1 > length/3)
+        if (count1 > length / 3)
             result.add(number1);
-        if (count2 > length/3)
+        if (count2 > length / 3)
             result.add(number2);
 
         return result;

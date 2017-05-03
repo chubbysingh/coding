@@ -6,9 +6,8 @@ import java.util.Queue;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
- *
+ * <p>
  * Gives StackOverflow error on leetcode OJ
- *
  */
 public class Q130_Surrounded_Regions {
 
@@ -64,7 +63,7 @@ public class Q130_Surrounded_Regions {
     public static void main(String[] args) {
         Q130_Surrounded_Regions sol = new Q130_Surrounded_Regions();
 
-        char[][] board = new char[][] {
+        char[][] board = new char[][]{
                 {'X', 'X', 'X', 'X'},
                 {'X', 'O', 'O', 'X'},
                 {'X', 'X', 'O', 'X'},

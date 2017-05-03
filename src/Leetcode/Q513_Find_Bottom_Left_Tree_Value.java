@@ -20,7 +20,7 @@ public class Q513_Find_Bottom_Left_Tree_Value {
         while (!queue.isEmpty()) {
             int size = queue.size();
 
-            for (int i=0; i<size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 if (i == 0) result = node.val;
 

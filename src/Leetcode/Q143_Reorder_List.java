@@ -7,7 +7,7 @@ import Leetcode.Util.ListNode;
  */
 public class Q143_Reorder_List {
     public void reorderList(ListNode head) {
-        if (head  == null || head.next == null || head.next.next == null) return;
+        if (head == null || head.next == null || head.next.next == null) return;
 
         // STEP 1: Find the middle point of the linked list, use fast-slow pointers
         ListNode slow = head;

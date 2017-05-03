@@ -9,6 +9,6 @@ public class Q441_Arranging_Coins {
 
         // x = (-1 + (1 + 4n)^1/2 ) / 2;
 
-        return (int)(-1 + Math.sqrt(1 + 8.0 * n) )/2;
+        return (int) (-1 + Math.sqrt(1 + 8.0 * n)) / 2;
     }
 }

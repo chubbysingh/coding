@@ -28,9 +28,7 @@ public class Q071_Simplify_Path {
                 if (!stack.isEmpty()) {
                     stack.pop();
                 }
-            }
-
-            else {
+            } else {
                 stack.push(str);
             }
         }

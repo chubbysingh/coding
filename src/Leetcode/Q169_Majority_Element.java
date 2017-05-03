@@ -9,11 +9,11 @@ public class Q169_Majority_Element {
         int majorityElement = nums[0];
         int count = 1;
 
-        for (int i=1; i<nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
 
             if (count == 0) {
                 majorityElement = nums[i];
-                count=1;
+                count = 1;
             } else {
                 if (majorityElement == nums[i]) {
                     count++;

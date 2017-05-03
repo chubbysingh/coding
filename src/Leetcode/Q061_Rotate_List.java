@@ -8,12 +8,12 @@ import Leetcode.Util.ListNode;
 public class Q061_Rotate_List {
     public ListNode rotateRight(ListNode head, int k) {
         //Boundry condition
-        if(head == null) return head;
+        if (head == null) return head;
 
         //Calculate the length
         int length = 1;
         ListNode node = head;
-        while(node.next != null){
+        while (node.next != null) {
             node = node.next;
             length++;
         }
@@ -26,7 +26,7 @@ public class Q061_Rotate_List {
             k = k % length;
 
         // Move head to length-k-1 steps (supposedly last element of the list)
-        for (int i=0; i < length-k-1; i++)
+        for (int i = 0; i < length - k - 1; i++)
             head = head.next;
 
         //Next item should be the head of new list

@@ -10,6 +10,7 @@ import java.util.Map;
  */
 public class Q210_Course_Schedule_II {
     private int label;
+
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         if (numCourses <= 0) {
             return new int[0];

@@ -24,14 +24,14 @@ public class Q104_Maximum_Depth_of_Binary_Tree {
             return 0;
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(root);
-        int count=0;
+        int count = 0;
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             count++;
             int size = queue.size();
-            for (int i=0; i<size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                if(node.left != null)
+                if (node.left != null)
                     queue.add(node.left);
                 if (node.right != null)
                     queue.add(node.right);

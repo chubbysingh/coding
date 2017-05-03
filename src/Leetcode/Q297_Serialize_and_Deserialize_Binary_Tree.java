@@ -18,7 +18,7 @@ public class Q297_Serialize_and_Deserialize_Binary_Tree {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
 
             if (node != null) {
@@ -29,7 +29,7 @@ public class Q297_Serialize_and_Deserialize_Binary_Tree {
                 sb.append("#" + ",");
             }
         }
-        sb.deleteCharAt(sb.length()-1);
+        sb.deleteCharAt(sb.length() - 1);
         return sb.toString();
     }
 
@@ -44,8 +44,8 @@ public class Q297_Serialize_and_Deserialize_Binary_Tree {
         TreeNode root = new TreeNode(Integer.parseInt(sArr[0]));
         queue.add(root);
 
-        int i=1;
-        while(!queue.isEmpty()) {
+        int i = 1;
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
 
             if (node == null)

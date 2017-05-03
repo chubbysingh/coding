@@ -9,8 +9,8 @@ public class Q258_Add_Digits {
             return num;
 
         int result = 0;
-        while(num > 0) {
-            result += num%10;
+        while (num > 0) {
+            result += num % 10;
             num /= 10;
         }
         return addDigits(result);

@@ -11,20 +11,20 @@ public class Q238_Product_of_Array_Except_Self {
 
         //left product
         left[0] = 1;
-        for(int i=1; i<nums.length; i++) {
-            left[i] = left[i-1]*nums[i-1];
+        for (int i = 1; i < nums.length; i++) {
+            left[i] = left[i - 1] * nums[i - 1];
         }
 
 
         //right product
-        right[nums.length-1] = 1;
-        for(int i=nums.length-2; i>=0; i--) {
-            right[i] = right[i+1] * nums[i+1];
+        right[nums.length - 1] = 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            right[i] = right[i + 1] * nums[i + 1];
         }
 
         //product of left and right
-        for(int i=0; i < res.length; i++) {
-            res[i] = left[i]*right[i];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = left[i] * right[i];
         }
         return res;
     }

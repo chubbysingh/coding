@@ -5,13 +5,13 @@ package Leetcode;
  */
 public class Q343_Integer_Break {
     public int integerBreak(int n) {
-        int[] dp = new int[n+1];
+        int[] dp = new int[n + 1];
 
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < n; j++){
-                if(i + j <= n){
-                    dp[i+j] = Math.max( dp[i+j],
-                                        Math.max(i, dp[i]) * Math.max(j,dp[j]));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i + j <= n) {
+                    dp[i + j] = Math.max(dp[i + j],
+                            Math.max(i, dp[i]) * Math.max(j, dp[j]));
                 }
             }
         }

@@ -8,23 +8,23 @@ import Leetcode.Util.ListNode;
 public class Q019_Remove_Nth_Node_From_End_of_List {
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
-        if(head == null)
+        if (head == null)
             return null;
 
         ListNode fast = head;
         ListNode slow = head;
 
-        for(int i=0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             fast = fast.next;
         }
 
         //if remove the first node
-        if(fast == null){
+        if (fast == null) {
             head = head.next;
             return head;
         }
 
-        while(fast.next != null){
+        while (fast.next != null) {
             fast = fast.next;
             slow = slow.next;
         }

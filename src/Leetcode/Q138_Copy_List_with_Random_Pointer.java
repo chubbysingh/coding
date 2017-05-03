@@ -52,8 +52,13 @@ public class Q138_Copy_List_with_Random_Pointer {
     }
 
     class RandomListNode {
-            int label;
-            RandomListNode next, random;
-            RandomListNode(int x) { this.label = x; }
-        };
+        int label;
+        RandomListNode next, random;
+
+        RandomListNode(int x) {
+            this.label = x;
+        }
+    }
+
+    ;
 }

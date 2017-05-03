@@ -11,6 +11,7 @@ public class Q208_Implement_Trie_Prefix_Tree {
     private class TrieNode {
         Map<Character, TrieNode> children;
         boolean endOfWord;
+
         public TrieNode() {
             children = new HashMap<>();
             endOfWord = false;
@@ -19,16 +20,20 @@ public class Q208_Implement_Trie_Prefix_Tree {
 
     private final TrieNode root;
 
-    /** Initialize your data structure here. */
+    /**
+     * Initialize your data structure here.
+     */
     public Q208_Implement_Trie_Prefix_Tree() {
         root = new TrieNode();
     }
 
-    /** Inserts a word into the trie. */
+    /**
+     * Inserts a word into the trie.
+     */
     public void insert(String word) {
         TrieNode current = root;
 
-        for(char c : word.toCharArray()){
+        for (char c : word.toCharArray()) {
             TrieNode node = current.children.get(c);
             if (node == null) {
                 node = new TrieNode();
@@ -39,28 +44,32 @@ public class Q208_Implement_Trie_Prefix_Tree {
         current.endOfWord = true;
     }
 
-    /** Returns if the word is in the trie. */
+    /**
+     * Returns if the word is in the trie.
+     */
     public boolean search(String word) {
         TrieNode t = searchNode(word);
 
-        if(t != null && t.endOfWord)
+        if (t != null && t.endOfWord)
             return true;
         else
             return false;
     }
 
-    /** Returns if there is any word in the trie that starts with the given prefix. */
+    /**
+     * Returns if there is any word in the trie that starts with the given prefix.
+     */
     public boolean startsWith(String prefix) {
-        if(searchNode(prefix) == null)
+        if (searchNode(prefix) == null)
             return false;
         else
             return true;
     }
 
-    public TrieNode searchNode(String str){
+    public TrieNode searchNode(String str) {
         TrieNode curr = root;
 
-        for(char c : str.toCharArray()){
+        for (char c : str.toCharArray()) {
             TrieNode node = curr.children.get(c);
             if (node == null)
                 return null;

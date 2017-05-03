@@ -28,9 +28,9 @@ public class Q014_Longest_Common_Prefix {
      */
     public String longestCommonPrefixVerticalScan(String[] strs) {
         if (strs == null || strs.length == 0) return "";
-        for (int i = 0; i < strs[0].length() ; i++){
+        for (int i = 0; i < strs[0].length(); i++) {
             char c = strs[0].charAt(i);
-            for (int j = 1; j < strs.length; j ++) {
+            for (int j = 1; j < strs.length; j++) {
                 if (i == strs[j].length() || strs[j].charAt(i) != c)
                     return strs[0].substring(0, i);
             }
@@ -50,19 +50,18 @@ public class Q014_Longest_Common_Prefix {
     private String longestCommonPrefix(String[] strs, int l, int r) {
         if (l == r) {
             return strs[l];
-        }
-        else {
-            int mid = (l + r)/2;
-            String lcpLeft =   longestCommonPrefix(strs, l , mid);
-            String lcpRight =  longestCommonPrefix(strs, mid + 1,r);
+        } else {
+            int mid = (l + r) / 2;
+            String lcpLeft = longestCommonPrefix(strs, l, mid);
+            String lcpRight = longestCommonPrefix(strs, mid + 1, r);
             return commonPrefix(lcpLeft, lcpRight);
         }
     }
 
-    String commonPrefix(String left,String right) {
+    String commonPrefix(String left, String right) {
         int min = Math.min(left.length(), right.length());
         for (int i = 0; i < min; i++) {
-            if ( left.charAt(i) != right.charAt(i) )
+            if (left.charAt(i) != right.charAt(i))
                 return left.substring(0, i);
         }
         return left.substring(0, min);
@@ -79,10 +78,10 @@ public class Q014_Longest_Common_Prefix {
         String first = strs[0];
         String last = strs[strs.length - 1];
 
-        int i=0;
+        int i = 0;
 
         while (i < first.length() && i < last.length()) {
-            if (first.charAt(i) == last.charAt(i) ) {
+            if (first.charAt(i) == last.charAt(i)) {
                 sb.append(first.charAt(i));
             } else {
                 break;

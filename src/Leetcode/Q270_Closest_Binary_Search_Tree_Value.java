@@ -4,10 +4,9 @@ import Leetcode.Util.TreeNode;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given a non-empty binary search tree and a target value,
  * find the value in the BST that is closest to the target.
- *
  */
 public class Q270_Closest_Binary_Search_Tree_Value {
     int goal;
@@ -18,44 +17,44 @@ public class Q270_Closest_Binary_Search_Tree_Value {
         return goal;
     }
 
-    public void helper(TreeNode root, double target){
-        if(root==null)
+    public void helper(TreeNode root, double target) {
+        if (root == null)
             return;
 
-        if(Math.abs(root.val - target) < min){
-            min = Math.abs(root.val-target);
+        if (Math.abs(root.val - target) < min) {
+            min = Math.abs(root.val - target);
             goal = root.val;
         }
 
-        if(target < root.val){
+        if (target < root.val) {
             helper(root.left, target);
-        }else{
+        } else {
             helper(root.right, target);
         }
     }
 
     public int closestValueIterative(TreeNode root, double target) {
-        double min=Double.MAX_VALUE;
+        double min = Double.MAX_VALUE;
         int result = root.val;
 
-        while(root!=null){
-            if(target>root.val){
+        while (root != null) {
+            if (target > root.val) {
 
-                double diff = Math.abs(root.val-target);
-                if(diff<min){
+                double diff = Math.abs(root.val - target);
+                if (diff < min) {
                     min = Math.min(min, diff);
                     result = root.val;
                 }
                 root = root.right;
-            }else if(target<root.val){
+            } else if (target < root.val) {
 
-                double diff = Math.abs(root.val-target);
-                if(diff<min){
+                double diff = Math.abs(root.val - target);
+                if (diff < min) {
                     min = Math.min(min, diff);
                     result = root.val;
                 }
                 root = root.left;
-            }else{
+            } else {
                 return root.val;
             }
         }

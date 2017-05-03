@@ -21,11 +21,11 @@ public class Q107_Binary_Tree_Level_Order_Traversal_II {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             List<Integer> list = new LinkedList<Integer>();
             int sizeOfQueue = queue.size();
 
-            for (int i=0; i<sizeOfQueue; i++) {
+            for (int i = 0; i < sizeOfQueue; i++) {
                 TreeNode node = queue.poll();
                 list.add(node.val);
 

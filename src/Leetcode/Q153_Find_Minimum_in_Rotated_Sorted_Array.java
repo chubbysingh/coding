@@ -13,7 +13,7 @@ public class Q153_Find_Minimum_in_Rotated_Sorted_Array {
         if (left == right)
             return num[left];
 
-        // exit condition 2
+            // exit condition 2
         else if ((right - left) == 1)
             return Math.min(num[left], num[right]);
 
@@ -27,34 +27,34 @@ public class Q153_Find_Minimum_in_Rotated_Sorted_Array {
         if (num[middle] > num[left])
             return findMinRecursive(num, middle, right);
 
-        // go left side
+            // go left side
         else
             return findMinRecursive(num, left, middle);
 
     }
 
     public int findMinIterative(int[] nums) {
-        if(nums==null || nums.length==0)
+        if (nums == null || nums.length == 0)
             return -1;
 
-        if(nums.length==1)
+        if (nums.length == 1)
             return nums[0];
 
-        int left=0;
-        int right=nums.length-1;
+        int left = 0;
+        int right = nums.length - 1;
 
         //not rotated
-        if(nums[left]<nums[right])
+        if (nums[left] < nums[right])
             return nums[left];
 
-        while(left <= right){
-            if(right-left==1){
+        while (left <= right) {
+            if (right - left == 1) {
                 return nums[right];
             }
 
-            int m = left + (right-left)/2;
+            int m = left + (right - left) / 2;
 
-            if(nums[m] > nums[right])
+            if (nums[m] > nums[right])
                 left = m;
             else
                 right = m;

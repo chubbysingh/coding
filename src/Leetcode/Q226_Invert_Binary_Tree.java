@@ -27,7 +27,7 @@ public class Q226_Invert_Binary_Tree {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
 
             // swap left and right children

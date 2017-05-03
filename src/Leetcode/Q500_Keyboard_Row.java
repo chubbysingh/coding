@@ -16,11 +16,11 @@ public class Q500_Keyboard_Row {
         List<String> res = new LinkedList<String>();
         Map<Character, Integer> map = buildMap();
 
-        for(String str : words) {
+        for (String str : words) {
             char firstChar = Character.toUpperCase(str.charAt(0));
             int index = map.get(firstChar);
             boolean isSameLine = true;
-            for(char ch : str.toCharArray()) {
+            for (char ch : str.toCharArray()) {
                 char upperCaseChar = Character.toUpperCase(ch);
                 if (map.get(upperCaseChar) != index) {
                     isSameLine = false;
@@ -33,19 +33,21 @@ public class Q500_Keyboard_Row {
         }
         return res.toArray(new String[res.size()]);
     }
+
     private Map<Character, Integer> buildMap() {
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         String[] str = {"QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"};
-        for (int i=0; i<str.length; i++) {
+        for (int i = 0; i < str.length; i++) {
             for (char c : str[i].toCharArray()) {
                 map.put(c, i);
             }
         }
         return map;
     }
+
     public static void main(String[] args) {
         Q500_Keyboard_Row sol = new Q500_Keyboard_Row();
-        String[] ans = sol.findWords(new String[] {"adsdf","sfd"});
+        String[] ans = sol.findWords(new String[]{"adsdf", "sfd"});
         System.out.println(ans);
 
     }

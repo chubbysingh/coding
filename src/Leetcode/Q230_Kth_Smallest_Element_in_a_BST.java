@@ -11,7 +11,7 @@ public class Q230_Kth_Smallest_Element_in_a_BST {
         if (k <= count) {
             return kthSmallest(root.left, k);
         } else if (k > count + 1) {
-            return kthSmallest(root.right, k-1-count); // 1 is counted as current node
+            return kthSmallest(root.right, k - 1 - count); // 1 is counted as current node
         }
 
         return root.val;

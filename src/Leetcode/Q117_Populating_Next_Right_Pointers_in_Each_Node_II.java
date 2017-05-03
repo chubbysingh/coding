@@ -40,7 +40,10 @@ public class Q117_Populating_Next_Right_Pointers_in_Each_Node_II {
 }
 
 class TreeLinkNode {
-     int val;
-     TreeLinkNode left, right, next;
-     TreeLinkNode(int x) { val = x; }
- }
+    int val;
+    TreeLinkNode left, right, next;
+
+    TreeLinkNode(int x) {
+        val = x;
+    }
+}

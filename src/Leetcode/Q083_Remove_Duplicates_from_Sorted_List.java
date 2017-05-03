@@ -12,7 +12,7 @@ public class Q083_Remove_Duplicates_from_Sorted_List {
 
         ListNode curr = head;
 
-        while(curr.next != null) {
+        while (curr.next != null) {
             if (curr.data == curr.next.data) {
                 curr.next = curr.next.next;
             } else {

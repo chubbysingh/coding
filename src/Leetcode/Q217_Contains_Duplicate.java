@@ -12,8 +12,8 @@ public class Q217_Contains_Duplicate {
             return false;
         Set<Integer> _set = new HashSet<Integer>();
 
-        for (int n: nums) {
-            if(_set.contains(n))
+        for (int n : nums) {
+            if (_set.contains(n))
                 return true;
             else {
                 _set.add(n);

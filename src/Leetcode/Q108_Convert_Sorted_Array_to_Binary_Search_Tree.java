@@ -19,10 +19,10 @@ public class Q108_Convert_Sorted_Array_to_Binary_Search_Tree {
             return null;
         }
 
-        int mid = low + (high - low)/2;
+        int mid = low + (high - low) / 2;
         TreeNode tmp = new TreeNode(nums[mid]);
-        tmp.left = helper(nums, low, mid-1);
-        tmp.right = helper(nums, mid+1, high);
+        tmp.left = helper(nums, low, mid - 1);
+        tmp.right = helper(nums, mid + 1, high);
         return tmp;
     }
 }

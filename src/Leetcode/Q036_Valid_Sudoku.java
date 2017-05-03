@@ -15,17 +15,17 @@ public class Q036_Valid_Sudoku {
     }
 
     private boolean validateRowAndCols(char[][] board) {
-        for (int i=0; i<9; i++) {
+        for (int i = 0; i < 9; i++) {
             Set<Character> rowSet = new HashSet<Character>();
             Set<Character> colSet = new HashSet<Character>();
-            for (int j = 0; j <9; j++) {
-                if(board[i][j] != '.') {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != '.') {
                     if (rowSet.contains(board[i][j]))
                         return false;
                     else
                         rowSet.add(board[i][j]);
                 }
-                if(board[j][i] != '.') {
+                if (board[j][i] != '.') {
                     if (colSet.contains(board[j][i]))
                         return false;
                     else
@@ -38,10 +38,10 @@ public class Q036_Valid_Sudoku {
 
     private boolean validateCube(char[][] board) {
 
-        for (int bucket=0; bucket<9; bucket++) {
+        for (int bucket = 0; bucket < 9; bucket++) {
             Set<Character> set = new HashSet<Character>();
-            for (int i=bucket/3 * 3; i<bucket/3 * 3 + 3; i++) {
-                for (int j=bucket%3 * 3; j<bucket%3 * 3 + 3; j++) {
+            for (int i = bucket / 3 * 3; i < bucket / 3 * 3 + 3; i++) {
+                for (int j = bucket % 3 * 3; j < bucket % 3 * 3 + 3; j++) {
                     if (board[i][j] != '.') {
                         if (set.contains(board[i][j]))
                             return false;
@@ -56,16 +56,16 @@ public class Q036_Valid_Sudoku {
 
     public static void main(String[] args) {
         Q036_Valid_Sudoku sol = new Q036_Valid_Sudoku();
-        char[][] input = {  {'.','.','.','.','5','.','.','1','.'},
-                            {'.','4','.','3','.','.','.','.','.'},
-                            {'.','.','.','.','.','3','.','.','1'},
-                            {'8','.','.','.','.','.','.','2','.'},
-                            {'.','.','2','.','7','.','.','.','.'},
-                            {'.','1','5','.','.','.','.','.','.'},
-                            {'.','.','.','.','.','2','.','.','.'},
-                            {'.','2','.','9','.','.','.','.','.'},
-                            {'.','.','4','.','.','.','.','.','.'}
-            };
+        char[][] input = {{'.', '.', '.', '.', '5', '.', '.', '1', '.'},
+                {'.', '4', '.', '3', '.', '.', '.', '.', '.'},
+                {'.', '.', '.', '.', '.', '3', '.', '.', '1'},
+                {'8', '.', '.', '.', '.', '.', '.', '2', '.'},
+                {'.', '.', '2', '.', '7', '.', '.', '.', '.'},
+                {'.', '1', '5', '.', '.', '.', '.', '.', '.'},
+                {'.', '.', '.', '.', '.', '2', '.', '.', '.'},
+                {'.', '2', '.', '9', '.', '.', '.', '.', '.'},
+                {'.', '.', '4', '.', '.', '.', '.', '.', '.'}
+        };
 
         boolean isValid = sol.isValidSudoku(input);
         System.out.println(isValid);

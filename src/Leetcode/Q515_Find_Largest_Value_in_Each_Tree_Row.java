@@ -19,12 +19,12 @@ public class Q515_Find_Largest_Value_in_Each_Tree_Row {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             int size = queue.size();
-            int max=Integer.MIN_VALUE;
+            int max = Integer.MIN_VALUE;
 
-            for (int i=0; i<size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 max = Math.max(max, node.val);
                 if (node.left != null)

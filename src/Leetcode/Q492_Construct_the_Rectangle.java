@@ -9,11 +9,11 @@ public class Q492_Construct_the_Rectangle {
         if (area == 0)
             return res;
 
-        int width = (int)Math.sqrt(area);
-        while(area%width != 0) {
+        int width = (int) Math.sqrt(area);
+        while (area % width != 0) {
             width--;
         }
-        res[0] = area/width;
+        res[0] = area / width;
         res[1] = width;
         return res;
     }

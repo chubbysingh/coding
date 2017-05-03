@@ -9,7 +9,9 @@ public class Q481_Magical_String {
         if (n <= 3) return 1;
 
         int[] a = new int[n + 1];
-        a[0] = 1; a[1] = 2; a[2] = 2;
+        a[0] = 1;
+        a[1] = 2;
+        a[2] = 2;
         int head = 2, tail = 3, num = 1, result = 1;
 
         while (tail < n) {

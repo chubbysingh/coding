@@ -43,7 +43,7 @@ public class Q076_Minimum_Window_Substring {
                 while (!dict.containsKey(S.charAt(start)) ||
                         map.get(S.charAt(start)) > dict.get(S.charAt(start))) {
                     if (map.containsKey(S.charAt(start))) {
-                        map.put(S.charAt(start), map.get(S.charAt(start)) -1);
+                        map.put(S.charAt(start), map.get(S.charAt(start)) - 1);
                     }
                     start++;
                 }

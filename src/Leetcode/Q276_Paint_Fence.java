@@ -2,11 +2,10 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * There is a fence with n posts, each post can be painted with one of the k colors.
  * You have to paint all the posts such that no more than two adjacent fence posts have the same color.
  * Return the total number of ways you can paint the fence.
- *
  */
 public class Q276_Paint_Fence {
 
@@ -23,12 +22,12 @@ public class Q276_Paint_Fence {
      */
 
     public int numWays(int n, int k) {
-        int dp[] = {0, k , k*k, 0};
+        int dp[] = {0, k, k * k, 0};
 
-        if(n <= 2)
+        if (n <= 2)
             return dp[n];
 
-        for(int i = 2; i < n; i++){
+        for (int i = 2; i < n; i++) {
             dp[3] = (k - 1) * (dp[1] + dp[2]);
             dp[1] = dp[2];
             dp[2] = dp[3];

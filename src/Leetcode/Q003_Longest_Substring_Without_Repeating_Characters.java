@@ -5,9 +5,8 @@ import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 1/12/17.
- *
+ * <p>
  * Given a string, find the length of the longest substring without repeating characters.
- *
  */
 public class Q003_Longest_Substring_Without_Repeating_Characters {
     public int lengthOfLongestSubstring(String str) {
@@ -15,10 +14,10 @@ public class Q003_Longest_Substring_Without_Repeating_Characters {
             return 0;
         }
         Map<Character, Integer> map = new HashMap<Character, Integer>();
-        int leftPointer=0,
+        int leftPointer = 0,
                 result = 0;
 
-        for (int i=0; i<str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             Character c = str.charAt(i);
             if (map.containsKey(c)) {
                 // we need to take Math.max coz of cases like "abba" where left Pointer is already ahead

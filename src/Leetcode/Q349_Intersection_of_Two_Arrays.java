@@ -21,9 +21,9 @@ public class Q349_Intersection_of_Two_Arrays {
         }
 
         int[] res = new int[intersect.size()];
-        int i=0;
-        for(Integer in: intersect) {
-            res[i]=in;
+        int i = 0;
+        for (Integer in : intersect) {
+            res[i] = in;
             i++;
         }
         return res;

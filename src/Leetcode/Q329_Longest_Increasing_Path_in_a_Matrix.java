@@ -6,6 +6,7 @@ package Leetcode;
 public class Q329_Longest_Increasing_Path_in_a_Matrix {
     private int[] dx = new int[]{0, 0, -1, 1};
     private int[] dy = new int[]{1, -1, 0, 0};
+
     public int longestIncreasingPath(int[][] matrix) {
         if (matrix == null || matrix.length == 0) {
             return 0;

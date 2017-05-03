@@ -5,9 +5,9 @@ package Leetcode;
  */
 public class Q334_Increasing_Triplet_Subsequence {
     public boolean increasingTriplet(int[] nums) {
-        int small=Integer.MAX_VALUE, mid=Integer.MAX_VALUE;
+        int small = Integer.MAX_VALUE, mid = Integer.MAX_VALUE;
 
-        for (int n: nums) {
+        for (int n : nums) {
             if (n == small || n == mid) {
                 continue;
             } else if (n < small) {

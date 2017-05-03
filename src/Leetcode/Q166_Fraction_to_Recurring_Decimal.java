@@ -18,9 +18,9 @@ public class Q166_Fraction_to_Recurring_Decimal {
         denominator = Math.abs(denominator);
 
         //integral part
-        res.append(numerator/denominator);
+        res.append(numerator / denominator);
 
-        int num = numerator%denominator;
+        int num = numerator % denominator;
         if (num == 0)
             return res.toString();
 
@@ -29,11 +29,11 @@ public class Q166_Fraction_to_Recurring_Decimal {
 
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         map.put(num, res.length());
-        while(num != 0) {
-            num = num*10;
-            res.append(num/denominator);
-            num = num%denominator;
-            if(map.containsKey(num)) {
+        while (num != 0) {
+            num = num * 10;
+            res.append(num / denominator);
+            num = num % denominator;
+            if (map.containsKey(num)) {
                 res.insert(map.get(num), "(");
                 res.append(")");
                 break;
@@ -48,7 +48,7 @@ public class Q166_Fraction_to_Recurring_Decimal {
 
     public static void main(String[] args) {
         Q166_Fraction_to_Recurring_Decimal sol = new Q166_Fraction_to_Recurring_Decimal();
-        String res = sol.fractionToDecimal(-1 , -2147483648);
+        String res = sol.fractionToDecimal(-1, -2147483648);
         System.out.println(res);
     }
 }

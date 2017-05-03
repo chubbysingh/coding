@@ -10,14 +10,14 @@ public class Q278_First_Bad_Version {
 
     private int binarySearchBadVersion(int start, int end) {
         while (start < end) {
-            int mid = start + (end-start)/2;
+            int mid = start + (end - start) / 2;
             if (isBadVersion(mid)) {
                 end = mid;
             } else {
-                start = mid+1;
+                start = mid + 1;
             }
 
-            if(isBadVersion(start)) {
+            if (isBadVersion(start)) {
                 return start;
             }
         }
@@ -27,10 +27,11 @@ public class Q278_First_Bad_Version {
 
     /**
      * Given API
+     *
      * @param version
      * @return
      */
-    public boolean  isBadVersion(int version){
+    public boolean isBadVersion(int version) {
         return false;
     }
 }

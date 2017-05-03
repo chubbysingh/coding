@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Implement an iterator to flatten a 2d vector.
  * For example,
  * Given 2d vector =
@@ -15,7 +15,6 @@ import java.util.List;
  * ]
  * By calling next repeatedly until hasNext returns false,
  * the order of elements returned by next should be: [1,2,3,4,5,6].
- *
  */
 public class Q251_Flatten_2D_Vector {
     private List<List<Integer>> vec2d;

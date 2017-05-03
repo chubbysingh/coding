@@ -8,7 +8,7 @@ public class Q453_Minimum_Moves_to_Equal_Array_Elements {
         int min = getMinimum(nums);
 
         int result = 0;
-        for (int n: nums) {
+        for (int n : nums) {
             result += n - min;
         }
         return result;
@@ -17,7 +17,7 @@ public class Q453_Minimum_Moves_to_Equal_Array_Elements {
     private int getMinimum(int[] nums) {
         int min = nums[0];
 
-        for (int n: nums) {
+        for (int n : nums) {
             min = Math.min(min, n);
         }
         return min;

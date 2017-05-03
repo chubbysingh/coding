@@ -21,15 +21,15 @@ public class Q034_Search_for_a_Range {
     }
 
     private int binarySearchFirst(int[] nums, int target) {
-        int low=0, high = nums.length-1;
+        int low = 0, high = nums.length - 1;
         while (low < high) {
             int mid = low + (high - low) / 2;
             if (nums[mid] == target)
                 high = mid;
             else if (nums[mid] > target)
-                high = mid-1;
+                high = mid - 1;
             else
-                low = mid+1;
+                low = mid + 1;
         }
         if (nums[low] == target)
             return low;
@@ -37,7 +37,7 @@ public class Q034_Search_for_a_Range {
     }
 
     private int binarySearchLast(int[] nums, int target) {
-        int low=0, high=nums.length-1;
+        int low = 0, high = nums.length - 1;
         while (low < high) {
             //for finding the right index, making id more towards right
             // so that it does not stuck at infinite loop

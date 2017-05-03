@@ -25,11 +25,11 @@ public class Q111_Minimum_Depth_of_Binary_Tree {
         queue.add(root);
 
         int min = 0;
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int sizeOfQueue = queue.size();
             min++;
 
-            for (int i=0; i<sizeOfQueue; i++) {
+            for (int i = 0; i < sizeOfQueue; i++) {
                 TreeNode node = queue.poll();
                 if (node.left == null && node.right == null)
                     return min;

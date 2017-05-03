@@ -10,7 +10,9 @@ public class Q295_Find_Median_from_Data_Stream {
     PriorityQueue<Integer> minPq;
     PriorityQueue<Integer> maxPq;
 
-    /** initialize your data structure here. */
+    /**
+     * initialize your data structure here.
+     */
     public Q295_Find_Median_from_Data_Stream() {
         minPq = new PriorityQueue<>();
         maxPq = new PriorityQueue<>(Collections.reverseOrder());
@@ -47,23 +49,15 @@ public class Q295_Find_Median_from_Data_Stream {
     the median is the top of the heap which one more element.
     */
     public double findMedian() {
-        if(maxPq.isEmpty()) {
+        if (maxPq.isEmpty()) {
             return (double) minPq.peek();
-        }
-
-        else if (minPq.isEmpty()) {
+        } else if (minPq.isEmpty()) {
             return (double) maxPq.peek();
-        }
-
-        else if (maxPq.size() > minPq.size()) {
+        } else if (maxPq.size() > minPq.size()) {
             return (double) maxPq.peek();
-        }
-
-        else if (minPq.size() > maxPq.size()) {
+        } else if (minPq.size() > maxPq.size()) {
             return (double) minPq.peek();
-        }
-
-        else {
+        } else {
             return (double) (maxPq.peek() + minPq.peek()) / 2;
         }
     }

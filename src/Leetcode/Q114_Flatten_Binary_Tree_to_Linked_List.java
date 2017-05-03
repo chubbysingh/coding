@@ -8,7 +8,7 @@ import java.util.Stack;
  * Created by rbhatnagar2 on 1/13/17.
  */
 public class Q114_Flatten_Binary_Tree_to_Linked_List {
-    public void flatten(TreeNode root){
+    public void flatten(TreeNode root) {
         if (root == null) return;
 
         if (root.left != null) {
@@ -25,7 +25,7 @@ public class Q114_Flatten_Binary_Tree_to_Linked_List {
         flatten(root.right);
     }
 
-    public void flattenIterative(TreeNode root){
+    public void flattenIterative(TreeNode root) {
         if (root == null) return;
         Stack<TreeNode> stack = new Stack<TreeNode>();
 
@@ -48,7 +48,7 @@ public class Q114_Flatten_Binary_Tree_to_Linked_List {
         }
     }
 
-    public void flattenIterativeTwo(TreeNode root){
+    public void flattenIterativeTwo(TreeNode root) {
         if (root == null) return;
         TreeNode p = root;
 

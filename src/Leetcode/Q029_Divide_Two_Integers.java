@@ -15,18 +15,19 @@ public class Q029_Divide_Two_Integers {
 
         //Take care the edge cases.
         if (ldivisor == 0) return Integer.MAX_VALUE;
-        if ((ldividend == 0) || (ldividend < ldivisor))	return 0;
+        if ((ldividend == 0) || (ldividend < ldivisor)) return 0;
 
         long lans = ldivide(ldividend, ldivisor);
 
         int ans;
-        if (lans > Integer.MAX_VALUE){ //Handle overflow.
-            ans = (sign == 1)? Integer.MAX_VALUE : Integer.MIN_VALUE;
+        if (lans > Integer.MAX_VALUE) { //Handle overflow.
+            ans = (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
         } else {
             ans = (int) (sign * lans);
         }
         return ans;
     }
+
     private long ldivide(long ldividend, long ldivisor) {
         // Recursion exit condition
         if (ldividend < ldivisor) return 0;
@@ -36,7 +37,7 @@ public class Q029_Divide_Two_Integers {
         //  Think this as a binary search.
         long sum = ldivisor;
         long multiple = 1;
-        while ((sum+sum) <= ldividend) {
+        while ((sum + sum) <= ldividend) {
             sum += sum;
             multiple += multiple;
         }

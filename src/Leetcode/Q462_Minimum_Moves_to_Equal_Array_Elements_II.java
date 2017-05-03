@@ -11,8 +11,8 @@ public class Q462_Minimum_Moves_to_Equal_Array_Elements_II {
             return 0;
 
         Arrays.sort(nums);
-        int midIndex = nums.length/2;
-        int result=0;
+        int midIndex = nums.length / 2;
+        int result = 0;
 
         for (int n : nums) {
             result += Math.abs(n - nums[midIndex]);
@@ -25,11 +25,11 @@ public class Q462_Minimum_Moves_to_Equal_Array_Elements_II {
             return 0;
 
         Arrays.sort(nums);
-        int i=0, j=nums.length;
-        int result=0;
+        int i = 0, j = nums.length;
+        int result = 0;
 
         while (i < j) {
-            result +=  nums[j] - nums[i];
+            result += nums[j] - nums[i];
             i++;
             j--;
         }

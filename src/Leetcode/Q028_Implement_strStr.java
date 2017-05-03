@@ -16,16 +16,16 @@ public class Q028_Implement_strStr {
             return 0;
 
         //Loop through haystack
-        for (int i=0; i < haystack.length() - needle.length() + 1; i++) {
+        for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
             int indexH = i;
             // Loop through needle
             for (int j = 0; j < needle.length(); j++) {
                 // If chars are same
                 if (needle.charAt(j) == haystack.charAt(indexH)) {
                     // If we reach end of needle, return starting point i
-                    if (j == needle.length()-1)
+                    if (j == needle.length() - 1)
                         return i;
-                    // Run the inner loop for next char
+                        // Run the inner loop for next char
                     else
                         indexH++;
                 }

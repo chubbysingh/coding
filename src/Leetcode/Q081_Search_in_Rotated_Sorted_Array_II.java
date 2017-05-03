@@ -2,22 +2,21 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
- *
+ * <p>
  * Follow up for "Search in Rotated Sorted Array":
  * What if duplicates are allowed?
- *
+ * <p>
  * Would this affect the run-time complexity? How and why?
- *
  */
 public class Q081_Search_in_Rotated_Sorted_Array_II {
     public boolean search(int[] nums, int target) {
         if (nums == null || nums.length == 0)
             return false;
 
-        int low = 0, high = nums.length-1;
+        int low = 0, high = nums.length - 1;
 
         while (low <= high) {
-            int mid = low + (high-low)/2;
+            int mid = low + (high - low) / 2;
 
             if (nums[mid] == target)
                 return true;
@@ -33,7 +32,7 @@ public class Q081_Search_in_Rotated_Sorted_Array_II {
             // Right is sorted for sure...
             else if (nums[mid] < nums[high] || nums[mid] < nums[low]) {
                 if (nums[mid] < target && target <= nums[high])
-                    low = mid +1 ;
+                    low = mid + 1;
                 else
                     high = mid - 1;
             }

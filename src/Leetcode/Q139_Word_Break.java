@@ -17,9 +17,9 @@ public class Q139_Word_Break {
         dp[0] = true;
 
         // <= because substring does not include the last index
-        for (int i=1; i<=s.length(); i++) {
-            for (int j=0; j<i; j++) {
-                String subString = s.substring(j,i);
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                String subString = s.substring(j, i);
                 if (dp[j] && wordDict.contains(subString)) {
                     dp[i] = true;
                     break;
@@ -32,7 +32,7 @@ public class Q139_Word_Break {
     public static void main(String[] args) {
         Q139_Word_Break sol = new Q139_Word_Break();
 
-        List<String> wordDict = Arrays.asList(new String[] {"Leet", "Code"});
+        List<String> wordDict = Arrays.asList(new String[]{"Leet", "Code"});
         boolean isExist = sol.wordBreak("LeetCode", wordDict);
         System.out.println(isExist);
     }

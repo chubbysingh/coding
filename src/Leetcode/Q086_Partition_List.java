@@ -4,9 +4,8 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
- *
+ * <p>
  * https://leetcode.com/problems/partition-list/
- *
  */
 public class Q086_Partition_List {
     public ListNode partition(ListNode head, int x) {
@@ -16,7 +15,7 @@ public class Q086_Partition_List {
         ListNode sPointer = smaller;
         ListNode bPointer = bigger;
 
-        while(head != null) {
+        while (head != null) {
             if (head.data < x) {
                 smaller.next = head;
                 smaller = smaller.next;

@@ -5,12 +5,12 @@ package Leetcode;
  */
 public class Q125_Valid_Palindrome {
     public boolean isPalindrome(String s) {
-        int start = 0, end = s.length()-1;
+        int start = 0, end = s.length() - 1;
 
-        while(start < end) {
-            if(isNotLetter(s.charAt(start)))
+        while (start < end) {
+            if (isNotLetter(s.charAt(start)))
                 start++;
-            else if(isNotLetter(s.charAt(end)))
+            else if (isNotLetter(s.charAt(end)))
                 end--;
             else {
                 if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end)))

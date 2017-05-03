@@ -5,6 +5,6 @@ package Leetcode;
  */
 public class Q292_Nim_Game {
     public boolean canWinNim(int n) {
-        return (n%4 != 0);
+        return (n % 4 != 0);
     }
 }

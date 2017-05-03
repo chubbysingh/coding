@@ -8,13 +8,13 @@ public class Q374_Guess_Number_Higher_or_Lower {
 
         int low = 1, high = n;
 
-        while(low <= high) {
-            int mid = low + (high-low)/2 ;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
             int res = guess(mid);
             if (res == 0)
                 return mid;
             else if (res > 0)
-                low = mid+1;
+                low = mid + 1;
             else
                 high = mid;
         }
@@ -23,6 +23,7 @@ public class Q374_Guess_Number_Higher_or_Lower {
 
     /**
      * Given API function
+     *
      * @param mid
      * @return
      */

@@ -11,7 +11,7 @@ public class Q032_Longest_Valid_Parentheses {
      * So, if s.charAt(i) == ')', dp[i] = 0 since longest valid substring cannot start from ')'
      * if s.chatAt(i) == '(', we check dp[i+1] to get the longest valid parenthesis
      * and jump to its index to check if i + dp[i+1] 's char is ')'
-     *
+     * <p>
      * Also, after checking dp[j], check dp[j+1] since that can be a valid string as well
      */
     public int longestValidParentheses(String s) {

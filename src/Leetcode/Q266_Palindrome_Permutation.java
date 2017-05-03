@@ -6,10 +6,10 @@ import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given a string, determine if a permutation of the string could form a palindrome.
- For example,
- "code" -> False, "aab" -> True, "carerac" -> True.
+ * For example,
+ * "code" -> False, "aab" -> True, "carerac" -> True.
  */
 
 public class Q266_Palindrome_Permutation {

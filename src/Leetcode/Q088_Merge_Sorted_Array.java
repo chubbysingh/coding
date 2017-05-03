@@ -6,8 +6,8 @@ package Leetcode;
 public class Q088_Merge_Sorted_Array {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int currentIndex = m + n - 1,
-                index1 = m-1,
-                index2 = n-1;
+                index1 = m - 1,
+                index2 = n - 1;
 
         while (index1 >= 0 || index2 >= 0) {
             int first = Integer.MIN_VALUE,

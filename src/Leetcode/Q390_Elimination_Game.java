@@ -5,7 +5,6 @@ package Leetcode;
  */
 public class Q390_Elimination_Game {
     /**
-     *
      * My idea is to update and record head in each turn. when the total number becomes 1, head is the only number left.
      * When will head be updated?
      * if we move from left
@@ -21,9 +20,9 @@ public class Q390_Elimination_Game {
         int head = 1;
 
         while (remaining > 1) {
-            if (isLeft || remaining%2==1)
+            if (isLeft || remaining % 2 == 1)
                 head = head + step;
-            step = step*2;
+            step = step * 2;
             remaining /= 2;
             isLeft = !isLeft;
         }

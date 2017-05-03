@@ -14,7 +14,7 @@ public class Q205_Isomorphic_Strings {
             return false;
 
         Map<Character, Character> map = new HashMap<Character, Character>();
-        for (int i=0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             Character sc = s.charAt(i);
             Character tc = t.charAt(i);
 

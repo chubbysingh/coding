@@ -6,9 +6,8 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
- *
+ * <p>
  * Given a collection of integers that might contain duplicates, nums, return all possible subsets.
- *
  */
 public class Q090_Subsets_II {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
@@ -18,10 +17,10 @@ public class Q090_Subsets_II {
         return list;
     }
 
-    private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums, int start){
+    private void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, int start) {
         list.add(new ArrayList<>(tempList));
-        for(int i = start; i < nums.length; i++){
-            if(i > start && nums[i] == nums[i-1]) continue; // skip duplicates
+        for (int i = start; i < nums.length; i++) {
+            if (i > start && nums[i] == nums[i - 1]) continue; // skip duplicates
             tempList.add(nums[i]);
             backtrack(list, tempList, nums, i + 1);
             tempList.remove(tempList.size() - 1);

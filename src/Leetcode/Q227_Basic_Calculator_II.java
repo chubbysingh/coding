@@ -9,32 +9,29 @@ public class Q227_Basic_Calculator_II {
 
     public int calculate(String s) {
 
-        if(s==null || s.length() == 0)
+        if (s == null || s.length() == 0)
             return 0;
 
         Stack<Integer> stack = new Stack<Integer>();
         int num = 0;
         char sign = '+';
 
-        for(int i=0; i<s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
-            if(Character.isDigit(c)){
-                num = num*10 + (c-'0');
+            if (Character.isDigit(c)) {
+                num = num * 10 + (c - '0');
             }
 
-            if((!Character.isDigit(c) ) || i==s.length()-1){
-                if(sign=='-'){
+            if ((!Character.isDigit(c)) || i == s.length() - 1) {
+                if (sign == '-') {
                     stack.push(-num);
-                }
-                else if(sign=='+'){
+                } else if (sign == '+') {
                     stack.push(num);
-                }
-                else if(sign=='*'){
-                    stack.push(stack.pop()*num);
-                }
-                else if(sign=='/'){
-                    stack.push(stack.pop()/num);
+                } else if (sign == '*') {
+                    stack.push(stack.pop() * num);
+                } else if (sign == '/') {
+                    stack.push(stack.pop() / num);
                 }
                 sign = s.charAt(i);
                 num = 0;
@@ -42,7 +39,7 @@ public class Q227_Basic_Calculator_II {
         }
 
         int re = 0;
-        for(int i:stack){
+        for (int i : stack) {
             re += i;
         }
         return re;

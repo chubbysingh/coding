@@ -24,7 +24,7 @@ public class Q103_Binary_Tree_Zigzag_Level_Order_Traversal {
             List<Integer> list = new LinkedList<Integer>();
             int size = queue.size();
 
-            for (int i=0; i<size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
 
                 if (zigZag)

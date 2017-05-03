@@ -11,7 +11,7 @@ public class Q455_Assign_Cookies {
         Arrays.sort(s);
 
         int contentChild = 0;
-        for (int i=0, j=0; i < g.length && j < s.length; j++) {
+        for (int i = 0, j = 0; i < g.length && j < s.length; j++) {
             if (g[i] <= s[j]) {
                 contentChild++;
                 i++;

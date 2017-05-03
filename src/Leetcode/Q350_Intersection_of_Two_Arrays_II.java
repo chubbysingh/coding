@@ -17,17 +17,17 @@ public class Q350_Intersection_of_Two_Arrays_II {
 
         // buildList
         List<Integer> res = new LinkedList<Integer>();
-        for (int n: nums1) {
+        for (int n : nums1) {
             if (map.containsKey(n) && map.get(n) != 0) {
                 res.add(n);
-                map.put(n, map.get(n)-1);
+                map.put(n, map.get(n) - 1);
             }
         }
 
         //return an array from the list
         int[] result = new int[res.size()];
-        int index=0;
-        for(int i: res) {
+        int index = 0;
+        for (int i : res) {
             result[index] = i;
             index++;
         }
@@ -37,11 +37,11 @@ public class Q350_Intersection_of_Two_Arrays_II {
 
     private Map<Integer, Integer> buildMap(int[] num) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for (int n: num) {
+        for (int n : num) {
             if (map.containsKey(n)) {
-                map.put(n, map.get(n)+1);
+                map.put(n, map.get(n) + 1);
             } else {
-                map.put(n,1);
+                map.put(n, 1);
             }
         }
         return map;

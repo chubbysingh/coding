@@ -14,8 +14,8 @@ public class Q015_3Sum {
         HashSet<List<Integer>> set = new HashSet<List<Integer>>();
         Arrays.sort(nums);
 
-        for (int i=0; i<nums.length; i++) {
-            int j = i+1, k = nums.length-1;
+        for (int i = 0; i < nums.length; i++) {
+            int j = i + 1, k = nums.length - 1;
 
             while (j < k) {
                 int sum = nums[i] + nums[j] + nums[k];

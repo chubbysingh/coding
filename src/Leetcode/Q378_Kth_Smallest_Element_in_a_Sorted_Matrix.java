@@ -20,24 +20,25 @@ public class Q378_Kth_Smallest_Element_in_a_Sorted_Matrix {
 
         int n = matrix.length;
 
-        for (int i=0; i < matrix.length; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             pq.offer(new Tuple(0, i, matrix[0][i]));
         }
 
-        for (int i=0; i<k-1; i++) {
+        for (int i = 0; i < k - 1; i++) {
             Tuple t = pq.poll();
             if (t.x == matrix[0].length - 1)
                 continue;
             else
-                pq.offer(new Tuple(t.x+1, t.y, matrix[t.x+1][t.y]));
+                pq.offer(new Tuple(t.x + 1, t.y, matrix[t.x + 1][t.y]));
         }
         return pq.poll().val;
     }
 
-    class Tuple implements Comparable<Tuple>{
+    class Tuple implements Comparable<Tuple> {
         int x;
         int y;
         int val;
+
         Tuple(int x, int y, int val) {
             this.x = x;
             this.y = y;
@@ -59,8 +60,8 @@ public class Q378_Kth_Smallest_Element_in_a_Sorted_Matrix {
     public int kthSmallestBad(int[][] matrix, int k) {
         // max heap
         PriorityQueue<Integer> pq = new PriorityQueue(k, Collections.reverseOrder());
-        for (int i=0; i<matrix.length; i++) {
-            for (int j=0; j<matrix[0].length; j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
                 if (pq.size() < k) {
                     pq.add(matrix[i][j]);
                 } else {

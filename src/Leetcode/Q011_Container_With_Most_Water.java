@@ -8,7 +8,7 @@ public class Q011_Container_With_Most_Water {
         if (height == null || height.length < 2)
             return 0;
 
-        int leftIndex = 0, rightIndex = height.length-1;
+        int leftIndex = 0, rightIndex = height.length - 1;
         int max = 0;
 
         while (leftIndex < rightIndex) {

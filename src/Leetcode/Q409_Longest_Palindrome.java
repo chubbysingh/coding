@@ -11,10 +11,10 @@ public class Q409_Longest_Palindrome {
         Set<Character> set = new HashSet<Character>();
         int res = 0;
 
-        for (char c: s.toCharArray()) {
+        for (char c : s.toCharArray()) {
             if (set.contains(c)) {
                 set.remove(c);
-                res +=2 ;
+                res += 2;
             } else {
                 set.add(c);
             }

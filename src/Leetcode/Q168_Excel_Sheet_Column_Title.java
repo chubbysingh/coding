@@ -6,9 +6,9 @@ package Leetcode;
 public class Q168_Excel_Sheet_Column_Title {
     public String convertToTitle(int n) {
         StringBuffer sb = new StringBuffer();
-        while(n > 0) {
+        while (n > 0) {
             n--;
-            Character c = (char) ('A' + n%26);
+            Character c = (char) ('A' + n % 26);
             n /= 26;
             sb.append(c);
         }

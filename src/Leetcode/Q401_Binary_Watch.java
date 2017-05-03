@@ -11,10 +11,10 @@ import java.util.Map;
 public class Q401_Binary_Watch {
     Map<Integer, List<String>> minuteMap = new HashMap<Integer, List<String>>() {
         {
-            put(0,new ArrayList<String>(){{
+            put(0, new ArrayList<String>() {{
                 add("00");
             }});
-            put(1,new ArrayList<String>(){{
+            put(1, new ArrayList<String>() {{
                 add("01");
                 add("02");
                 add("04");
@@ -22,7 +22,7 @@ public class Q401_Binary_Watch {
                 add("16");
                 add("32");
             }});
-            put(2,new ArrayList<String>(){{
+            put(2, new ArrayList<String>() {{
                 add("03");
                 add("05");
                 add("06");
@@ -39,7 +39,7 @@ public class Q401_Binary_Watch {
                 add("40");
                 add("48");
             }});
-            put(3,new ArrayList<String>(){{
+            put(3, new ArrayList<String>() {{
                 add("07");
                 add("11");
                 add("13");
@@ -61,7 +61,7 @@ public class Q401_Binary_Watch {
                 add("52");
                 add("56");
             }});
-            put(4,new ArrayList<String>(){{
+            put(4, new ArrayList<String>() {{
                 add("15");
                 add("23");
                 add("27");
@@ -77,7 +77,7 @@ public class Q401_Binary_Watch {
                 add("57");
                 add("58");
             }});
-            put(5,new ArrayList<String>(){{
+            put(5, new ArrayList<String>() {{
                 add("31");
                 add("47");
                 add("55");
@@ -87,39 +87,40 @@ public class Q401_Binary_Watch {
     };
     Map<Integer, List<String>> hourMap = new HashMap<Integer, List<String>>() {
         {
-            put(0,new ArrayList<String>(){{
+            put(0, new ArrayList<String>() {{
                 add("0");
             }});
-            put(1,new ArrayList<String>(){{
+            put(1, new ArrayList<String>() {{
                 add("1");
                 add("2");
                 add("4");
                 add("8");
             }});
-            put(2,new ArrayList<String>(){{
+            put(2, new ArrayList<String>() {{
                 add("3");
                 add("5");
                 add("6");
                 add("9");
                 add("10");
             }});
-            put(3,new ArrayList<String>(){{
+            put(3, new ArrayList<String>() {{
                 add("7");
                 add("11");
             }});
         }
     };
+
     public List<String> readBinaryWatch(int num) {
-        List<String> ans=new ArrayList<String>();
-        for (int i = 0; i <=num; i++) {
-            int hour=i;
-            int minute=num-i;
-            if (hour<=3&&minute<=5) {
-                List<String> hours=hourMap.get(hour);
-                List<String> minutes=minuteMap.get(minute);
+        List<String> ans = new ArrayList<String>();
+        for (int i = 0; i <= num; i++) {
+            int hour = i;
+            int minute = num - i;
+            if (hour <= 3 && minute <= 5) {
+                List<String> hours = hourMap.get(hour);
+                List<String> minutes = minuteMap.get(minute);
                 for (int j = 0; j < hours.size(); j++) {
                     for (int k = 0; k < minutes.size(); k++) {
-                        ans.add(hours.get(j)+":"+minutes.get(k));
+                        ans.add(hours.get(j) + ":" + minutes.get(k));
                     }
                 }
             }

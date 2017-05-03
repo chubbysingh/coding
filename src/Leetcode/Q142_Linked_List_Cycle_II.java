@@ -4,9 +4,8 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
- *
+ * <p>
  * Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
- *
  */
 public class Q142_Linked_List_Cycle_II {
     public ListNode detectCycle(ListNode head) {

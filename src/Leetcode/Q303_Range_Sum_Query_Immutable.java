@@ -5,9 +5,10 @@ package Leetcode;
  */
 public class Q303_Range_Sum_Query_Immutable {
     int[] nums;
+
     public Q303_Range_Sum_Query_Immutable(int[] nums) {
-        for(int i=1; i < nums.length; i++) {
-            nums[i] += nums[i-1];
+        for (int i = 1; i < nums.length; i++) {
+            nums[i] += nums[i - 1];
         }
         this.nums = nums;
     }
@@ -16,7 +17,7 @@ public class Q303_Range_Sum_Query_Immutable {
         if (i == 0) {
             return nums[j];
         } else {
-            return nums[j] - nums[i-1];
+            return nums[j] - nums[i - 1];
         }
     }
 }

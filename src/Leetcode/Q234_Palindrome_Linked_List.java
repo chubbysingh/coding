@@ -18,7 +18,7 @@ public class Q234_Palindrome_Linked_List {
         slow = reverse(slow);
         fast = head;
 
-        while(slow != null && fast != null) {
+        while (slow != null && fast != null) {
             if (fast.data != slow.data)
                 return false;
             else {

@@ -10,10 +10,10 @@ public class Q344_Reverse_String {
 
         char[] strArray = s.toCharArray();
 
-        int start=0;
+        int start = 0;
         int end = strArray.length - 1;
 
-        while(start < end) {
+        while (start < end) {
             char temp = strArray[start];
             strArray[start] = strArray[end];
             strArray[end] = temp;

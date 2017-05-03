@@ -5,11 +5,11 @@ package Leetcode;
  */
 public class Q413_Arithmetic_Slices {
     public int numberOfArithmeticSlices(int[] A) {
-        int cur=0, sum=0;
+        int cur = 0, sum = 0;
 
-        for(int i=1; i<A.length-1; i++) {
-            if (A[i] - A[i-1] == A[i+1] - A[i]) {
-                cur +=1;
+        for (int i = 1; i < A.length - 1; i++) {
+            if (A[i] - A[i - 1] == A[i + 1] - A[i]) {
+                cur += 1;
                 sum += cur;
             } else {
                 cur = 0;

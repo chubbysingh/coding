@@ -4,9 +4,8 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
- *
+ * <p>
  * Reverse a linked list from position m to n. Do it in-place and in one-pass.
- *
  */
 public class Q092_Reverse_Linked_List_II {
     public ListNode reverseBetween(ListNode head, int m, int n) {
@@ -15,7 +14,7 @@ public class Q092_Reverse_Linked_List_II {
         }
 
         ListNode dummyNode = new ListNode(0);
-        dummyNode.next  = head;
+        dummyNode.next = head;
 
         int count = 1;
         /// Find the tail node of the first segment

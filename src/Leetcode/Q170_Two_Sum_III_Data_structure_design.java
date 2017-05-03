@@ -5,12 +5,11 @@ import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Design and implement a TwoSum class. It should support the following operations: add and find.
-
- add - Add the number to an internal data structure.
- find - Find if there exists any pair of numbers which sum is equal to the value.
-
+ * <p>
+ * add - Add the number to an internal data structure.
+ * find - Find if there exists any pair of numbers which sum is equal to the value.
  */
 public class Q170_Two_Sum_III_Data_structure_design {
     private Map<Integer, Integer> elements = new HashMap<Integer, Integer>();

@@ -19,22 +19,19 @@ public class Q394_Decode_String {
                     idx++;
                 }
                 countStack.push(count);
-            }
-            else if (s.charAt(idx) == '[') {
+            } else if (s.charAt(idx) == '[') {
                 resStack.push(res);
                 res = "";
                 idx++;
-            }
-            else if (s.charAt(idx) == ']') {
-                StringBuilder temp = new StringBuilder (resStack.pop());
+            } else if (s.charAt(idx) == ']') {
+                StringBuilder temp = new StringBuilder(resStack.pop());
                 int repeatTimes = countStack.pop();
                 for (int i = 0; i < repeatTimes; i++) {
                     temp.append(res);
                 }
                 res = temp.toString();
                 idx++;
-            }
-            else {
+            } else {
                 res += s.charAt(idx++);
             }
         }

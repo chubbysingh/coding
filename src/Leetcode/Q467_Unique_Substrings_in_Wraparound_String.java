@@ -15,8 +15,7 @@ public class Q467_Unique_Substrings_in_Wraparound_String {
         for (int i = 0; i < p.length(); i++) {
             if (i > 0 && (p.charAt(i) - p.charAt(i - 1) == 1 || (p.charAt(i - 1) - p.charAt(i) == 25))) {
                 maxLengthCur++;
-            }
-            else {
+            } else {
                 maxLengthCur = 1;
             }
 

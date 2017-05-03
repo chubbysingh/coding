@@ -20,17 +20,17 @@ public class Q345_Reverse_Vowels_of_a_String {
         vowels.add('O');
         vowels.add('U');
 
-        int start=0, end=s.length()-1;
+        int start = 0, end = s.length() - 1;
         char[] cArr = s.toCharArray();
 
         while (start < end) {
-            if(!vowels.contains(cArr[start])) {
+            if (!vowels.contains(cArr[start])) {
                 start++;
             }
-            if(!vowels.contains(cArr[end])) {
+            if (!vowels.contains(cArr[end])) {
                 end--;
             }
-            if(vowels.contains(cArr[start]) && vowels.contains(cArr[end])) {
+            if (vowels.contains(cArr[start]) && vowels.contains(cArr[end])) {
                 Character tmp = cArr[start];
                 cArr[start] = cArr[end];
                 cArr[end] = tmp;

@@ -4,12 +4,11 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/12/17.
- *
+ * <p>
  * Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
- *
+ * <p>
  * k is a positive integer and is less than or equal to the length of the linked list.
  * If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
- *
  */
 public class Q025_Reverse_Nodes_in_k_Group {
     public ListNode reverseKGroup(ListNode head, int k) {

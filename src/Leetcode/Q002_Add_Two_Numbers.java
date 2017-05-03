@@ -4,7 +4,7 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/12/17.
- *
+ * <p>
  * You are given two non-empty linked lists representing two non-negative integers.
  * The digits are stored in reverse order and each of their nodes contain a single digit.
  * Add the two numbers and return it as a linked list.
@@ -53,8 +53,8 @@ public class Q002_Add_Two_Numbers {
         result += l1 == null ? 0 : l1.data;
         result += l2 == null ? 0 : l2.data;
 
-        carry = result%10;
-        result = result/10;
+        carry = result % 10;
+        result = result / 10;
 
         ListNode node = new ListNode(result);
 

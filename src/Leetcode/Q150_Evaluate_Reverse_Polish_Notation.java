@@ -4,9 +4,8 @@ import java.util.Stack;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
- *
+ * <p>
  * https://leetcode.com/problems/evaluate-reverse-polish-notation/
- *
  */
 public class Q150_Evaluate_Reverse_Polish_Notation {
     public int evalRPN(String[] tokens) {
@@ -31,12 +30,12 @@ public class Q150_Evaluate_Reverse_Polish_Notation {
 
     private int evaluate(int first, int second, String c) {
         if (c.equals("+"))
-            return first + second ;
+            return first + second;
         else if (c.equals("-"))
             return second - first;
         else if (c.equals("*"))
             return first * second;
         else
-            return second/first;
+            return second / first;
     }
 }

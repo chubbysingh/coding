@@ -14,7 +14,7 @@ public class Q543_Diameter_of_Binary_Tree {
     // Return Height and Diameter together
     private int[] DFS(TreeNode node) {
         if (node == null)
-            return new int[] {0,0};
+            return new int[]{0, 0};
 
         int[] leftResult = DFS(node.left);
         int[] rightResult = DFS(node.right);
@@ -27,7 +27,7 @@ public class Q543_Diameter_of_Binary_Tree {
 
         int maxDiameter = Math.max(rootDiameter, Math.max(leftDiameter, rightDiameter));
 
-        return new int[] {maxHeight, maxDiameter};
+        return new int[]{maxHeight, maxDiameter};
 
 
     }

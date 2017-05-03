@@ -7,6 +7,7 @@ import Leetcode.Util.TreeNode;
  */
 public class Q124_Binary_Tree_Maximum_Path_Sum {
     private int maxSum = Integer.MIN_VALUE;
+
     public int maxPathSum(TreeNode root) {
         if (root == null) {
             return 0;

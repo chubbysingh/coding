@@ -2,7 +2,7 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
- *
+ * <p>
  * The trapped water for slot i is determined by
  * min(leftMostHeight[i], rgithMostHeight[i]) - A[i],
  * which means the most water trapped for
@@ -10,7 +10,6 @@ package Leetcode;
  * the highest block left to i (exclusive),
  * and the highest block right to i, whichever is less,
  * and subtract by the height of the block itself.
- *
  */
 public class Q042_Trapping_Rain_Water {
     public int trap(int[] A) {

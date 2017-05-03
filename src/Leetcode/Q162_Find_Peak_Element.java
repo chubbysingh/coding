@@ -13,8 +13,8 @@ public class Q162_Find_Peak_Element {
             return (nums[0] > nums[1]) ? 0 : 1;
         }
         // find peak
-        for (int i=1; i<nums.length-1; i++) {
-            if (nums[i] > nums[i-1] && nums[i] > nums[i+1])
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1])
                 return i;
         }
         // if no peak is found, then arr is sorted (asc or desc), return highest

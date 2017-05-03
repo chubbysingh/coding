@@ -14,12 +14,12 @@ public class Q242_Valid_Anagram {
         else {
             int[] countArr = new int[26];
 
-            for (int i=0; i< s.length(); i++) {
+            for (int i = 0; i < s.length(); i++) {
                 countArr[s.charAt(i) - 'a']++;
                 countArr[t.charAt(i) - 'a']--;
             }
 
-            for (int i=0; i< countArr.length; i++) {
+            for (int i = 0; i < countArr.length; i++) {
                 if (countArr[i] != 0)
                     return false;
             }

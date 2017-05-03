@@ -2,9 +2,8 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/12/17.
- *
+ * <p>
  * https://leetcode.com/problems/reverse-integer/
- *
  */
 public class Q007_Reverse_Integer {
     public int reverse(int num) {
@@ -18,8 +17,8 @@ public class Q007_Reverse_Integer {
         int reverse = 0;
 
         while (num != 0) {
-            if (reverse < Integer.MAX_VALUE/10) {
-                reverse = reverse*10 + num%10;
+            if (reverse < Integer.MAX_VALUE / 10) {
+                reverse = reverse * 10 + num % 10;
                 num /= 10;
             } else {
                 return 0;

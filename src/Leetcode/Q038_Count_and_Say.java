@@ -2,9 +2,8 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/12/17.
- *
+ * <p>
  * Given an integer n, generate the nth sequence.
- *
  */
 public class Q038_Count_and_Say {
     public String countAndSay(int n) {

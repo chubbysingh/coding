@@ -8,19 +8,19 @@ public class Q067_Add_Binary {
         int i = a.length() - 1, j = b.length() - 1, carry = 0;
         StringBuffer sb = new StringBuffer();
 
-        while(i >=0 || j >= 0) {
+        while (i >= 0 || j >= 0) {
             int sum = carry;
-            if (i >=0) {
-                sum += a.charAt(i) - '0' ;
+            if (i >= 0) {
+                sum += a.charAt(i) - '0';
                 i--;
             }
-            if (j >=0) {
+            if (j >= 0) {
                 sum += b.charAt(j) - '0';
                 j--;
             }
             if (sum > 1) {
                 carry = 1;
-                sum = sum%2;
+                sum = sum % 2;
             } else {
                 carry = 0;
             }

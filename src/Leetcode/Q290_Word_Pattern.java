@@ -22,7 +22,7 @@ public class Q290_Word_Pattern {
             String word = strArr[i];
 
             if (map.containsKey(c)) {
-                if(!map.get(c).equals(strArr[i]))
+                if (!map.get(c).equals(strArr[i]))
                     return false;
             } else {
                 if (map.containsValue(strArr[i]))

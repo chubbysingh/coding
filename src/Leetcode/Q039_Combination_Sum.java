@@ -15,17 +15,17 @@ public class Q039_Combination_Sum {
         return list;
     }
 
-    private void backtrack(List<List<Integer>> list, int start, int target, List<Integer> tempList, int [] nums ){
-        if(target < 0)
+    private void backtrack(List<List<Integer>> list, int start, int target, List<Integer> tempList, int[] nums) {
+        if (target < 0)
             return;
-        if(target == 0) {
+        if (target == 0) {
             list.add(new ArrayList<>(tempList));
             return;
         }
 
-        for(int i = start; i < nums.length; i++) {
+        for (int i = start; i < nums.length; i++) {
             tempList.add(nums[i]);
-            backtrack(list, i, target - nums[i], tempList, nums ); // not i + 1 because we can reuse same elements
+            backtrack(list, i, target - nums[i], tempList, nums); // not i + 1 because we can reuse same elements
             tempList.remove(tempList.size() - 1);
         }
 

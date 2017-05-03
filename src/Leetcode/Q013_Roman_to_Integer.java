@@ -18,8 +18,8 @@ public class Q013_Roman_to_Integer {
         map.put('D', 500);
         map.put('M', 1000);
 
-        int prev=0;
-        for(int i=s.length()-1; i>=0; i--) {
+        int prev = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
             int cur = map.get(c);
 

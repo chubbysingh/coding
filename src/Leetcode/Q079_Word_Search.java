@@ -2,13 +2,12 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
- *
+ * <p>
  * Given a 2D board and a word, find if the word exists in the grid.
- *
+ * <p>
  * The word can be constructed from letters of sequentially adjacent cell,
  * where "adjacent" cells are those horizontally or vertically neighboring.
  * The same letter cell may not be used more than once.
- *
  */
 public class Q079_Word_Search {
     public boolean exist(char[][] board, String word) {
@@ -22,10 +21,10 @@ public class Q079_Word_Search {
 
         boolean[][] visited = new boolean[rows][cols];
 
-        for (int i=0; i<rows; i++) {
-            for (int j=0; j<cols; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 boolean result = existHelper(board, word, 0 /*start*/, i, j, visited);
-                if(result)
+                if (result)
                     return result;
             }
         }
@@ -43,15 +42,15 @@ public class Q079_Word_Search {
         if (visited[row][col])
             return false;
         //Character is not the same
-        if (word.charAt(start) != board[row][col] )
+        if (word.charAt(start) != board[row][col])
             return false;
 
         visited[row][col] = true;
         // check adjacent
-        boolean result = existHelper(board, word, start+1, row+1, col, visited)
-                || existHelper(board, word, start+1, row-1, col, visited)
-                || existHelper(board, word, start+1, row, col+1, visited)
-                || existHelper(board, word, start+1, row, col-1, visited);
+        boolean result = existHelper(board, word, start + 1, row + 1, col, visited)
+                || existHelper(board, word, start + 1, row - 1, col, visited)
+                || existHelper(board, word, start + 1, row, col + 1, visited)
+                || existHelper(board, word, start + 1, row, col - 1, visited);
 
         // Clear the boolean for the case when we get a false.
         visited[row][col] = false;

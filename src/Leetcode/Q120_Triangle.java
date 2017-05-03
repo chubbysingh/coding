@@ -7,6 +7,7 @@ import java.util.List;
  */
 public class Q120_Triangle {
     int min = Integer.MAX_VALUE;
+
     public int minimumTotal(List<List<Integer>> triangle) {
         if (triangle == null || triangle.size() == 0) {
             return 0;
@@ -18,7 +19,7 @@ public class Q120_Triangle {
 
         /// Initialization
         for (int i = 0; i < n; i++) {
-            dp[i] = triangle.get(n-1).get(i);
+            dp[i] = triangle.get(n - 1).get(i);
         }
 
         for (int i = n - 2; i >= 0; i--) {

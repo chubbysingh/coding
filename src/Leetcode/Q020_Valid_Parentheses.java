@@ -9,11 +9,10 @@ public class Q020_Valid_Parentheses {
     public boolean isValid(String s) {
         Stack<Character> bracket = new Stack<Character>();
 
-        for (Character c: s.toCharArray()) {
+        for (Character c : s.toCharArray()) {
             if (c == '(' || c == '{' || c == '[') {
                 bracket.push(getInverted(c));
-            }
-            else if (bracket.isEmpty() || bracket.pop() != c) {
+            } else if (bracket.isEmpty() || bracket.pop() != c) {
                 return false;
             }
         }

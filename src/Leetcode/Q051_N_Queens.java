@@ -8,21 +8,21 @@ import java.util.List;
  */
 public class Q051_N_Queens {
     public List<List<String>> solveNQueens(int n) {
-        int[] nums=new int[n];
-        List<List<String>> ans=new ArrayList<List<String>>();
-        int i=0;
+        int[] nums = new int[n];
+        List<List<String>> ans = new ArrayList<List<String>>();
+        int i = 0;
         while (true) {
-            if (i<0) {
+            if (i < 0) {
                 return ans;
             }
-            if (i==n) {
-                List<String> list=new ArrayList<String>();
+            if (i == n) {
+                List<String> list = new ArrayList<String>();
                 for (int j = 0; j < nums.length; j++) {
-                    StringBuffer sb=new StringBuffer();
+                    StringBuffer sb = new StringBuffer();
                     for (int k = 0; k < n; k++) {
-                        if (k!=nums[j]) {
+                        if (k != nums[j]) {
                             sb.append(".");
-                        }else {
+                        } else {
                             sb.append("Q");
                         }
                     }
@@ -30,24 +30,24 @@ public class Q051_N_Queens {
                 }
                 ans.add(list);
                 i--;
-                while (nums[i]==n) {
-                    nums[i]=0;
+                while (nums[i] == n) {
+                    nums[i] = 0;
                     i--;
                 }
                 nums[i]++;
-            }else {
-                if (nums[i]==n) {
-                    while (i>=0&&nums[i]==n) {
-                        nums[i]=0;
+            } else {
+                if (nums[i] == n) {
+                    while (i >= 0 && nums[i] == n) {
+                        nums[i] = 0;
                         i--;
                     }
-                    if (i>=0) {
+                    if (i >= 0) {
                         nums[i]++;
                     }
-                }else {
-                    if (f(nums,i,nums[i])) {
+                } else {
+                    if (f(nums, i, nums[i])) {
                         i++;
-                    }else {
+                    } else {
                         nums[i]++;
                     }
                 }
@@ -56,10 +56,11 @@ public class Q051_N_Queens {
         }
 //        return ans;
     }
-    public boolean f(int[] nums,int x,int val){
+
+    public boolean f(int[] nums, int x, int val) {
         for (int i = 0; i < x; i++) {
-            int t=x-i;
-            if (val==nums[i]||val==nums[i]+t||val==nums[i]-t) {
+            int t = x - i;
+            if (val == nums[i] || val == nums[i] + t || val == nums[i] - t) {
                 return false;
             }
         }

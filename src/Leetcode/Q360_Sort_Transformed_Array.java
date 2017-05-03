@@ -2,19 +2,19 @@ package Leetcode;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given a sorted array of integers nums and integer values a, b and c.
  * Apply a function of the form f(x) = ax2 + bx + c to each element x in the array.
-
- The returned array must be in sorted order.
-
- Expected time complexity: O(n)
-
- Example:
- nums = [-4, -2, 2, 4], a = 1, b = 3, c = 5,
- Result: [3, 9, 15, 33]
-
- nums = [-4, -2, 2, 4], a = -1, b = 3, c = 5Result: [-23, -5, 1, 7]
+ * <p>
+ * The returned array must be in sorted order.
+ * <p>
+ * Expected time complexity: O(n)
+ * <p>
+ * Example:
+ * nums = [-4, -2, 2, 4], a = 1, b = 3, c = 5,
+ * Result: [3, 9, 15, 33]
+ * <p>
+ * nums = [-4, -2, 2, 4], a = -1, b = 3, c = 5Result: [-23, -5, 1, 7]
  */
 
 public class Q360_Sort_Transformed_Array {
@@ -26,24 +26,21 @@ public class Q360_Sort_Transformed_Array {
             nextIndex = nums.length - 1;
         if (a < 0 || (a == 0 && b < 0))
             nextIndex = 0;
-        double mid = -1 * ((b * 1.0)  / (2.0 * a));
+        double mid = -1 * ((b * 1.0) / (2.0 * a));
         while (start <= end) {
             if (a > 0 || (a == 0 && b >= 0)) {
                 if (Math.abs(mid - nums[start]) > Math.abs(nums[end] - mid)) {
                     int x = nums[start++];
                     result[nextIndex--] = a * x * x + b * x + c;
-                }
-                else {
+                } else {
                     int x = nums[end--];
                     result[nextIndex--] = a * x * x + b * x + c;
                 }
-            }
-            else if (a < 0 || (a == 0 && b < 0)){
+            } else if (a < 0 || (a == 0 && b < 0)) {
                 if (Math.abs(mid - nums[start]) > Math.abs(nums[end] - mid)) {
                     int x = nums[start++];
                     result[nextIndex++] = a * x * x + b * x + c;
-                }
-                else {
+                } else {
                     int x = nums[end--];
                     result[nextIndex++] = a * x * x + b * x + c;
                 }

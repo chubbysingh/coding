@@ -46,7 +46,11 @@ public class Q133_Clone_Graph {
 }
 
 class UndirectedGraphNode {
-     int label;
-     List<UndirectedGraphNode> neighbors;
-     UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
- };
+    int label;
+    List<UndirectedGraphNode> neighbors;
+
+    UndirectedGraphNode(int x) {
+        label = x;
+        neighbors = new ArrayList<UndirectedGraphNode>();
+    }
+};

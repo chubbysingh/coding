@@ -4,9 +4,8 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/12/17.
- *
+ * <p>
  * Given a linked list, swap every two adjacent nodes and return its head.
- *
  */
 public class Q024_Swap_Nodes_in_Pairs {
     public ListNode swapPairs(ListNode head) {

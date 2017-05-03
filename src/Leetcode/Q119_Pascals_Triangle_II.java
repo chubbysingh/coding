@@ -5,9 +5,8 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
- *
+ * <p>
  * Given an index k, return the kth row of the Pascal's triangle.
- *
  */
 public class Q119_Pascals_Triangle_II {
     public List<Integer> getRow(int rowIndex) {
@@ -24,7 +23,7 @@ public class Q119_Pascals_Triangle_II {
 
     public static void main(String[] args) {
         Q119_Pascals_Triangle_II sol = new Q119_Pascals_Triangle_II();
-        int k=3;
+        int k = 3;
         List<Integer> result = sol.getRow(k);
         System.out.println(result);
     }

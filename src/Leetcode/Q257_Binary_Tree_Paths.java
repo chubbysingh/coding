@@ -15,6 +15,7 @@ public class Q257_Binary_Tree_Paths {
             searchBT(root, "", result);
         return result;
     }
+
     private void searchBT(TreeNode root, String path, List<String> result) {
         if (root.left == null && root.right == null)
             result.add(path + root.val);

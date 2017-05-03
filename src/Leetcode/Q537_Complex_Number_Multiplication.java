@@ -9,10 +9,10 @@ public class Q537_Complex_Number_Multiplication {
         String[] A = a.split("\\+");
         String[] B = b.split("\\+");
         int a1 = Integer.parseInt(A[0]);
-        int b1 = Integer.parseInt(A[1].replace("i",""));
+        int b1 = Integer.parseInt(A[1].replace("i", ""));
 
         int a2 = Integer.parseInt(B[0]);
-        int b2 = Integer.parseInt(B[1].replace("i",""));
+        int b2 = Integer.parseInt(B[1].replace("i", ""));
 
         int a1a2 = a1 * a2;
         int b1b2 = b1 * b2;
@@ -20,7 +20,7 @@ public class Q537_Complex_Number_Multiplication {
 
         String afinal = (a1a2 + (-1 * b1b2)) + "";
         String bfinal = a1b2a2b1 + "i";
-        result = afinal+"+"+bfinal;
+        result = afinal + "+" + bfinal;
         return result;
     }
 }

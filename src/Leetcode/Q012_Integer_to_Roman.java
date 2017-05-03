@@ -10,7 +10,7 @@ public class Q012_Integer_to_Roman {
 
         StringBuilder sb = new StringBuilder();
 
-        for (int i=0; i<val.length; i++) {
+        for (int i = 0; i < val.length; i++) {
             while (num >= val[i]) {
                 String curVal = key[i];
                 sb.append(curVal);

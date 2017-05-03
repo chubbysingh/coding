@@ -8,25 +8,27 @@ import java.util.Map;
 /**
  * Created by rbhatnagar2 on 1/15/17.
  * Design a data structure that supports all following operations in average O(1) time.
- *
+ * <p>
  * insert(val): Inserts an item val to the set if not already present.
  * remove(val): Removes an item val from the set if present.
  * getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.
- *
  */
 public class Q380_Insert_Delete_GetRandom_O_1 {
-    private Map<Integer, Integer> map ;
+    private Map<Integer, Integer> map;
     private List<Integer> list;
     java.util.Random rand = new java.util.Random();
 
-    /** Initialize your data structure here. */
+    /**
+     * Initialize your data structure here.
+     */
 
     public Q380_Insert_Delete_GetRandom_O_1() {
         map = new HashMap<Integer, Integer>();
         list = new ArrayList<Integer>();
     }
 
-    /** Inserts a value to the set.
+    /**
+     * Inserts a value to the set.
      * Returns true if the set did not already contain the specified element.
      */
     public boolean insert(int val) {
@@ -38,7 +40,8 @@ public class Q380_Insert_Delete_GetRandom_O_1 {
         return true;
     }
 
-    /** Removes a value from the set.
+    /**
+     * Removes a value from the set.
      * Returns true if the set contained the specified element.
      **/
     public boolean remove(int val) {
@@ -48,20 +51,22 @@ public class Q380_Insert_Delete_GetRandom_O_1 {
         int currentIndex = map.get(val);
 
         // If not the last Element, swap it with last Element
-        if(currentIndex < list.size()-1) {
-            int lastElement = list.get(list.size()-1);
+        if (currentIndex < list.size() - 1) {
+            int lastElement = list.get(list.size() - 1);
             list.set(currentIndex, lastElement);
             map.put(lastElement, currentIndex);
         }
 
         // Remove last element from list
-        list.remove(list.size()-1);
+        list.remove(list.size() - 1);
         // Remove element from map
         map.remove(val);
         return true;
     }
 
-    /** Get a random element from the set. */
+    /**
+     * Get a random element from the set.
+     */
     public int getRandom() {
         int randomIndex = rand.nextInt(list.size());
         return list.get(randomIndex);

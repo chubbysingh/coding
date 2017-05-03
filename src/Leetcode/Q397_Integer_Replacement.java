@@ -14,9 +14,9 @@ public class Q397_Integer_Replacement {
             }
             //Odd number + Last 2 bits are 1
             else if (n == 3 || ((n >>> 1) & 1) == 0) {
-                n = n-1;
+                n = n - 1;
             } else {
-                n = n+1;
+                n = n + 1;
             }
 
         }

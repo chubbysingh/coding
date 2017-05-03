@@ -10,12 +10,11 @@ public class Q008_String_to_Integer {
             return 0;
 
         boolean isNegative = false;
-        int start=0;
-        if(str.charAt(0) == '-') {
+        int start = 0;
+        if (str.charAt(0) == '-') {
             isNegative = true;
             start++;
-        }
-        else if(str.charAt(0) == '+') {
+        } else if (str.charAt(0) == '+') {
             start++;
         }
 
@@ -23,7 +22,7 @@ public class Q008_String_to_Integer {
         double result = 0;
         for (int i = start; i < str.length(); i++) {
             if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
-                result = result*10 + (str.charAt(i) - '0');
+                result = result * 10 + (str.charAt(i) - '0');
             } else {
                 break;
             }
