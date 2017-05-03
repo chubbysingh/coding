@@ -8,20 +8,20 @@ import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given a string, we can "shift" each of its letter to its successive letter,
  * for example: "abc" -> "bcd".
  * We can keep "shifting" which forms the sequence: "abc" -> "bcd" -> ... -> "xyz".
-
- Given a list of strings which contains only lowercase alphabets,
- group all strings that belong to the same shifting sequence, return:
-
- [
- ["abc","bcd","xyz"],
- ["az","ba"],
- ["acef"],
- ["a","z"]
- ]
+ * <p>
+ * Given a list of strings which contains only lowercase alphabets,
+ * group all strings that belong to the same shifting sequence, return:
+ * <p>
+ * [
+ * ["abc","bcd","xyz"],
+ * ["az","ba"],
+ * ["acef"],
+ * ["a","z"]
+ * ]
  */
 
 public class Q249_Group_Shifted_Strings {
@@ -30,31 +30,31 @@ public class Q249_Group_Shifted_Strings {
         HashMap<String, ArrayList<String>> map
                 = new HashMap<String, ArrayList<String>>();
 
-        for(String s: strings){
+        for (String s : strings) {
             char[] arr = s.toCharArray();
-            if(arr.length>0){
-                int diff = arr[0]-'a';
-                for(int i=0; i<arr.length; i++){
-                    if(arr[i]-diff<'a'){
-                        arr[i] = (char) (arr[i]-diff+26);
-                    }else{
-                        arr[i] = (char) (arr[i]-diff);
+            if (arr.length > 0) {
+                int diff = arr[0] - 'a';
+                for (int i = 0; i < arr.length; i++) {
+                    if (arr[i] - diff < 'a') {
+                        arr[i] = (char) (arr[i] - diff + 26);
+                    } else {
+                        arr[i] = (char) (arr[i] - diff);
                     }
 
                 }
             }
 
             String ns = new String(arr);
-            if(map.containsKey(ns)){
+            if (map.containsKey(ns)) {
                 map.get(ns).add(s);
-            }else{
+            } else {
                 ArrayList<String> al = new ArrayList<String>();
                 al.add(s);
                 map.put(ns, al);
             }
         }
 
-        for(Map.Entry<String, ArrayList<String>> entry: map.entrySet()){
+        for (Map.Entry<String, ArrayList<String>> entry : map.entrySet()) {
             Collections.sort(entry.getValue());
         }
 

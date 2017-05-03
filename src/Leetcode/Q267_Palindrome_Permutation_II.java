@@ -8,14 +8,13 @@ import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given a string s, return all the palindromic permutations (without duplicates) of it.
  * Return an empty list if no palindromic permutation could be form.
-
- For example:
- Given s = "aabb", return ["abba", "baab"].
- Given s = "abc", return [].
-
+ * <p>
+ * For example:
+ * Given s = "aabb", return ["abba", "baab"].
+ * Given s = "abc", return [].
  */
 public class Q267_Palindrome_Permutation_II {
     public List<String> generatePalindromes(String s) {

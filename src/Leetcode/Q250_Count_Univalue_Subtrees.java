@@ -18,6 +18,7 @@ import Leetcode.Util.TreeNode;
  */
 public class Q250_Count_Univalue_Subtrees {
     private int count = 0;
+
     public int countUnivalSubtrees(TreeNode root) {
         if (root == null) {
             return 0;

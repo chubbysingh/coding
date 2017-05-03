@@ -6,11 +6,10 @@ import java.util.Stack;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given an array of numbers,
  * verify whether it is the correct preorder traversal sequence of a binary search tree.
- You may assume each number in the sequence is unique.
-
+ * You may assume each number in the sequence is unique.
  */
 public class Q255_Verify_Preorder_Sequence_in_Binary_Search_Tree {
 

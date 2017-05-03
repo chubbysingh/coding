@@ -6,16 +6,15 @@ import java.util.PriorityQueue;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given an array of meeting time intervals consisting of start and end times
  * [[s1,e1],[s2,e2],...]
  * find the minimum number of conference rooms required.
- *
  */
 
 public class Q253_Meeting_Rooms_II {
     public int minMeetingRooms(Interval[] intervals) {
-        if(intervals==null||intervals.length==0)
+        if (intervals == null || intervals.length == 0)
             return 0;
 
         Arrays.sort(intervals, new Comparator<Interval>() {
@@ -25,14 +24,14 @@ public class Q253_Meeting_Rooms_II {
         });
 
         PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
-        int count=1;
+        int count = 1;
         queue.offer(intervals[0].end);
 
-        for(int i=1; i<intervals.length; i++){
-            if(intervals[i].start<queue.peek()){
+        for (int i = 1; i < intervals.length; i++) {
+            if (intervals[i].start < queue.peek()) {
                 count++;
 
-            }else{
+            } else {
                 queue.poll();
             }
 

@@ -6,10 +6,9 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given a sorted integer array where the range of elements are [0, 99] inclusive, return its missing ranges.
- For example, given [0, 1, 3, 50, 75], return [“2”, “4->49”, “51->74”, “76->99”]
-
+ * For example, given [0, 1, 3, 50, 75], return [“2”, “4->49”, “51->74”, “76->99”]
  */
 public class Q163_Missing_Ranges {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {

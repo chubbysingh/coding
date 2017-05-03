@@ -4,13 +4,13 @@ import Leetcode.Util.TreeNode;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
- *
+ * <p>
  * Given a binary tree, find the largest subtree which is a Binary Search Tree (BST),
  * where largest means subtree with largest number of nodes in it.
- *
  */
 public class Q333_Largest_BST_Subtree {
     private int max = 0;
+
     public int largestBSTSubtree(TreeNode root) {
         if (root == null) {
             return 0;
