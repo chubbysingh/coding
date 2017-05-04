@@ -1,8 +1,10 @@
 package Leetcode;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
@@ -13,6 +15,22 @@ import java.util.Map;
  */
 
 public class Q266_Palindrome_Permutation {
+    public boolean canPermutePalindromeSimple(String s) {
+        if (s == null || s.length() == 0) {
+            return true;
+        }
+
+        Set<Character> set = new HashSet<Character>();
+        for (char c : s.toCharArray()) {
+            if (!set.contains(c))
+                set.add(c);
+            else
+                set.remove(c);
+        }
+
+        return s.length()%2 == 0 ? (set.size() == 0) : (set.size() == 1);
+    }
+
     public boolean canPermutePalindrome(String s) {
         if (s == null || s.length() <= 1) {
             return true;

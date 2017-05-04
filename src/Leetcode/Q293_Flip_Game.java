@@ -25,9 +25,11 @@ public class Q293_Flip_Game {
         char[] arr = s.toCharArray();
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] == arr[i + 1] && arr[i] == '+') {
+                // flip two consecutive "++" into "--"
                 arr[i] = '-';
                 arr[i + 1] = '-';
                 result.add(new String(arr));
+                // revert the change
                 arr[i] = '+';
                 arr[i + 1] = '+';
             }
