@@ -64,4 +64,23 @@ public class Q339_Nested_List_Weight_Sum {
         return sum;
     }
 
+    class NestedInteger {
+
+        public NestedInteger() {}
+
+        public NestedInteger(int value) {}
+
+        public boolean isInteger() {
+            return true;
+        }
+
+        public Integer getInteger() {
+            return 1;
+        }
+
+        public List<NestedInteger> getList() {
+            return null;
+        }
+    }
+
 }

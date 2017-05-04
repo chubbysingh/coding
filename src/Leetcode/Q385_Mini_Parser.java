@@ -58,38 +58,40 @@ public class Q385_Mini_Parser {
         }
         return new NestedInteger(Integer.valueOf(s));
     }
+
+    class NestedInteger {
+
+        public NestedInteger() {
+
+        }
+
+        public NestedInteger(int value) {
+
+        }
+
+        public boolean isInteger() {
+            return true;
+        }
+
+        public Integer getInteger() {
+            return 1;
+        }
+
+        public void setInteger(int value) {
+
+        }
+
+        public void add(NestedInteger ni) {
+
+        }
+
+        public List<NestedInteger> getList() {
+            return null;
+        }
+    }
 }
 
-class NestedInteger {
 
-    public NestedInteger() {
-
-    }
-
-    public NestedInteger(int value) {
-
-    }
-
-    public boolean isInteger() {
-        return true;
-    }
-
-    public Integer getInteger() {
-        return 1;
-    }
-
-    public void setInteger(int value) {
-
-    }
-
-    public void add(NestedInteger ni) {
-
-    }
-
-    public List<NestedInteger> getList() {
-        return null;
-    }
-}
 
 
 
