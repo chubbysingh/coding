@@ -5,16 +5,16 @@ import java.util.Map;
 
 /**
  * Rearrange characters in a string so that no character repeats twice.
- *
+ * <p>
  * Input: aaabc
- *Output: abaca
-
- *Input: aa
- *Output: No valid output
-
- *Input: aaaabc
- *Output: No valid output
-
+ * Output: abaca
+ * <p>
+ * Input: aa
+ * Output: No valid output
+ * <p>
+ * Input: aaaabc
+ * Output: No valid output
+ * <p>
  * Created by rbhatnagar2 on 10/22/15.
  */
 public class Rearrange {
@@ -39,7 +39,7 @@ public class Rearrange {
         char[] chars = new char[size];
         int indexToPlace = 0;
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() > size/2)
+            if (entry.getValue() > size / 2)
                 return null;
             for (int i = 0; i < entry.getValue(); i++) {
 

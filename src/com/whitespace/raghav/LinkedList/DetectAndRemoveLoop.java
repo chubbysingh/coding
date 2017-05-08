@@ -19,12 +19,12 @@ public class DetectAndRemoveLoop {
         return 0;
     }
 
-    private void removeLoop (Node loopNode, Node head) {
+    private void removeLoop(Node loopNode, Node head) {
         //Get the size of the loop
         Node tmp1 = loopNode, tmp2 = loopNode;
 
         int sizeOfLoop = 1;
-        while(tmp1.next != tmp2) {
+        while (tmp1.next != tmp2) {
             sizeOfLoop++;
             tmp1 = tmp1.next;
         }

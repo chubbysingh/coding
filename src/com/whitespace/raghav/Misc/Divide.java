@@ -11,12 +11,12 @@ public class Divide {
     static void findingDigits(int[] foo) {
         for (int number : foo) {
             int count = 0;
-            while (number > 0 ) {
-                int digit = number%10;
-                if (digit!= 0 && number%digit == 0) {
+            while (number > 0) {
+                int digit = number % 10;
+                if (digit != 0 && number % digit == 0) {
                     count++;
                 }
-                number = number/10;
+                number = number / 10;
 
             }
             System.out.println(count);

@@ -3,14 +3,14 @@ package com.whitespace.raghav.Misc;
 /**
  * Created by rbhatnagar2 on 8/25/15.
  */
+
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
  * The complexity of that algorithm is O(n^m), where:
- *  n - the length of a string.
- *  m - number of permutations.
+ * n - the length of a string.
+ * m - number of permutations.
  */
 public class NearbyWords {
 

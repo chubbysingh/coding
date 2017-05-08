@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 3/30/17.
- *
+ * <p>
  * // arr[] = {1, 4, 5 , 2 , 3, 7}
  */
 public class MaxPathSum {
@@ -14,11 +14,11 @@ public class MaxPathSum {
 
         //listList = buildList(arr);
 
-        for (int i=listList.size()-2; i >=0 ; i--) {
-            for (int j=0; j<listList.get(i).size(); j++) {
+        for (int i = listList.size() - 2; i >= 0; i--) {
+            for (int j = 0; j < listList.get(i).size(); j++) {
                 int value = listList.get(i).get(j);
                 //listList.get(i).get(j) = listList.get(i).get(j)
-                       // + Math.max(listList.get(i+1).get(j), listList.get(i+1).get(j+1));
+                // + Math.max(listList.get(i+1).get(j), listList.get(i+1).get(j+1));
             }
         }
         return 0;

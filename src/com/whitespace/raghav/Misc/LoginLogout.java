@@ -8,25 +8,24 @@ import java.util.List;
 /**
  * Created by rbhatnagar2 on 3/23/17.
  * Given input which is a vector of (user name, log-in time, log-out time), output time series which will have number of users logged in at each given time slot in the input,
- output should only contain time slots which are given in input for example if the input is
- "September", 1.2, 4.5),
- ("June", 3.1, 6.7),
- ("August", 8.9, 10.3)
-
- output should contain only 1.2, 3.1, 4.5, 3.1, 6.7, 8.9, 10.3
-
- Example:
- /*
- [
- ("September", 1.2, 4.5),
- ("June", 3.1, 6.7),
- ("August", 8.9, 10.3)
- ]
-
- =>
-
- [(1.2, 1), (3.1, 2), (4.5, 1), (6.7, 0), (8.9, 1), (10.3, 0)]
-*
+ * output should only contain time slots which are given in input for example if the input is
+ * "September", 1.2, 4.5),
+ * ("June", 3.1, 6.7),
+ * ("August", 8.9, 10.3)
+ * <p>
+ * output should contain only 1.2, 3.1, 4.5, 3.1, 6.7, 8.9, 10.3
+ * <p>
+ * Example:
+ * /*
+ * [
+ * ("September", 1.2, 4.5),
+ * ("June", 3.1, 6.7),
+ * ("August", 8.9, 10.3)
+ * ]
+ * <p>
+ * =>
+ * <p>
+ * [(1.2, 1), (3.1, 2), (4.5, 1), (6.7, 0), (8.9, 1), (10.3, 0)]
  */
 public class LoginLogout {
 
@@ -58,8 +57,8 @@ public class LoginLogout {
         List<TimeType> timeTypes = new LinkedList<TimeType>();
 
         for (UserDetails userDetails : list) {
-            timeTypes.add(new TimeType(userDetails.loginTime, true) );
-            timeTypes.add(new TimeType(userDetails.logOutTime, false) );
+            timeTypes.add(new TimeType(userDetails.loginTime, true));
+            timeTypes.add(new TimeType(userDetails.logOutTime, false));
         }
         return timeTypes;
     }

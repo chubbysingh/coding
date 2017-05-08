@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 10/12/15.
- *
+ * <p>
  * Given a nested list of integers,
  * return the sum of all integers in the list
  * weighted by their depth
@@ -26,7 +26,7 @@ public class SumByDepth {
             if (nestedInteger.isInteger())
                 sum += depth * nestedInteger.getInteger();
             else
-                sum += sum(nestedInteger.getList(), depth+1);
+                sum += sum(nestedInteger.getList(), depth + 1);
         }
 
         return sum;

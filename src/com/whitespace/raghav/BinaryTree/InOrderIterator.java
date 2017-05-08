@@ -6,7 +6,7 @@ import java.util.Stack;
 /**
  * Created by rbhatnagar2 on 10/16/15.
  */
-public class InOrderIterator implements Iterator<Node>{
+public class InOrderIterator implements Iterator<Node> {
     Stack<Node> stack = new Stack<Node>();
 
     InOrderIterator(Node root) {

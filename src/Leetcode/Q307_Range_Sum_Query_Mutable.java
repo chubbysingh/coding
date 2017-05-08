@@ -21,7 +21,7 @@ public class Q307_Range_Sum_Query_Mutable {
     SegmentTreeNode root = null;
 
     public Q307_Range_Sum_Query_Mutable(int[] nums) {
-        root = buildTree(nums, 0, nums.length-1);
+        root = buildTree(nums, 0, nums.length - 1);
     }
 
     private SegmentTreeNode buildTree(int[] nums, int start, int end) {
@@ -32,7 +32,7 @@ public class Q307_Range_Sum_Query_Mutable {
             if (start == end) {
                 ret.sum = nums[start];
             } else {
-                int mid = start  + (end - start) / 2;
+                int mid = start + (end - start) / 2;
                 ret.left = buildTree(nums, start, mid);
                 ret.right = buildTree(nums, mid + 1, end);
                 ret.sum = ret.left.sum + ret.right.sum;
@@ -70,10 +70,10 @@ public class Q307_Range_Sum_Query_Mutable {
             int mid = root.start + (root.end - root.start) / 2;
             if (end <= mid) {
                 return sumRange(root.left, start, end);
-            } else if (start >= mid+1) {
+            } else if (start >= mid + 1) {
                 return sumRange(root.right, start, end);
-            }  else {
-                return sumRange(root.right, mid+1, end) + sumRange(root.left, start, mid);
+            } else {
+                return sumRange(root.right, mid + 1, end) + sumRange(root.left, start, mid);
             }
         }
     }

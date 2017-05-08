@@ -5,8 +5,12 @@ package com.whitespace.raghav.Elevator;
  */
 public interface ElevatorFactory {
     public void moveUp();
+
     public void moveDown();
+
     public void addNewDestination(int destination);
+
     public ElevatorDirection direction();
+
     public ElevatorStatus status();
 }

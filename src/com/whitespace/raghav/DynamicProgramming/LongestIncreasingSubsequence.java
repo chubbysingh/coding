@@ -9,12 +9,12 @@ public class LongestIncreasingSubsequence {
             return 0;
 
         int[] count = new int[arr.length];
-        for (int i=0; i<count.length; i++) {
+        for (int i = 0; i < count.length; i++) {
             count[i] = 1;
         }
 
-        for (int i=1; i< count.length; i++) {
-            for (int j=0; j<i; j++) {
+        for (int i = 1; i < count.length; i++) {
+            for (int j = 0; j < i; j++) {
                 if (arr[i] > arr[j]) {
                     count[i] = max(count[i], count[j] + 1);
                 }
@@ -40,7 +40,7 @@ public class LongestIncreasingSubsequence {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 10, 22, 9, 33, 21, 50, 41, 60 };
+        int[] arr = {10, 22, 9, 33, 21, 50, 41, 60};
         System.out.println(lis(arr));
     }
 }

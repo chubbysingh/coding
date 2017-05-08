@@ -15,15 +15,15 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
         int count = 1;
 
-        for (int i=0; i<str.length()-1; i++) {
-            if (str.charAt(i) == str.charAt(i+1))
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == str.charAt(i + 1))
                 count++;
             else {
                 sb.append(count).append(str.charAt(i));
                 count = 1;
             }
         }
-        sb.append(count).append(str.charAt(str.length()-1));
+        sb.append(count).append(str.charAt(str.length() - 1));
         return sb.toString();
 
     }
@@ -36,19 +36,19 @@ public class Solution {
             return "";
 
         //int count = 0;
-        int index = 0, count=0;
+        int index = 0, count = 0;
         StringBuilder sb = new StringBuilder();
 
         while (index < str.length()) {
             if (Character.isDigit(str.charAt(index)))
-                count = count*10 + ( str.charAt(index) - '0');
+                count = count * 10 + (str.charAt(index) - '0');
             else {
                 char c = str.charAt(index);
-                for (int i=0; i<count; i++) {
+                for (int i = 0; i < count; i++) {
                     sb.append(c);
 
                 }
-                count=0;
+                count = 0;
             }
             index++;
         }
@@ -58,8 +58,8 @@ public class Solution {
     public List<List<Integer>> pascalTriangle(int[] nums) {
         List<List<Integer>> res = new LinkedList<List<Integer>>();
 
-        int count = 1, index=0;
-        while(index < nums.length) {
+        int count = 1, index = 0;
+        while (index < nums.length) {
             List<Integer> list = new LinkedList<>();
 
             for (int j = 0; j < count; j++) {

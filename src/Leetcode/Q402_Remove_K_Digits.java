@@ -14,7 +14,7 @@ public class Q402_Remove_K_Digits {
         // but we can only do so when k is larger than 0
         for (int i = 0; i < num.length(); ++i) {
             char c = num.charAt(i);
-            while (top > 0 && stk[top-1] > c && k > 0) {
+            while (top > 0 && stk[top - 1] > c && k > 0) {
                 top -= 1;
                 k -= 1;
             }
@@ -23,6 +23,6 @@ public class Q402_Remove_K_Digits {
         // find the index of first non-zero digit
         int idx = 0;
         while (idx < digits && stk[idx] == '0') idx++;
-        return idx == digits? "0": new String(stk, idx, digits - idx);
+        return idx == digits ? "0" : new String(stk, idx, digits - idx);
     }
 }

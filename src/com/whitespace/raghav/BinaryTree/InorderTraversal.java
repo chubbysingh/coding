@@ -32,7 +32,7 @@ public class InorderTraversal {
 
             if (!stringStack.isEmpty()) {
                 current = stringStack.pop();
-                System.out.print (current.data + " ");
+                System.out.print(current.data + " ");
                 current = current.right;
             } else {
                 done = true;
@@ -50,7 +50,7 @@ public class InorderTraversal {
             node = node.left;
         }
 
-        while(!treeStack.isEmpty()) {
+        while (!treeStack.isEmpty()) {
             Tree curr = treeStack.pop();
             System.out.print(curr.data + " ");
             if (curr.right != null) {

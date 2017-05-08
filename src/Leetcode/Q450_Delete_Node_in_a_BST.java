@@ -7,17 +7,17 @@ import Leetcode.Util.TreeNode;
  */
 public class Q450_Delete_Node_in_a_BST {
     public TreeNode deleteNode(TreeNode root, int key) {
-        if(root == null){
+        if (root == null) {
             return null;
         }
-        if(key < root.val){
+        if (key < root.val) {
             root.left = deleteNode(root.left, key);
-        }else if(key > root.val){
+        } else if (key > root.val) {
             root.right = deleteNode(root.right, key);
-        }else{
-            if(root.left == null){
+        } else {
+            if (root.left == null) {
                 return root.right;
-            }else if(root.right == null){
+            } else if (root.right == null) {
                 return root.left;
             }
 
@@ -28,8 +28,8 @@ public class Q450_Delete_Node_in_a_BST {
         return root;
     }
 
-    private TreeNode findMin(TreeNode node){
-        while(node.left != null){
+    private TreeNode findMin(TreeNode node) {
+        while (node.left != null) {
             node = node.left;
         }
         return node;

@@ -20,12 +20,12 @@ public class DeckOfCards {
                 deckOfCards[i] = new Card(suit, rank);
                 i++;
             }
-         }
+        }
     }
 
     public void shuffle() {
-        for (int i = 0 ; i < NCARDS ; i++) {
-            int random = (int) (Math.random() * 52) ;
+        for (int i = 0; i < NCARDS; i++) {
+            int random = (int) (Math.random() * 52);
 
             Card temp;
             temp = deckOfCards[i];
@@ -68,6 +68,7 @@ class Card {
     }
 }
 
-enum Suits {HEART, DIAMOND, SPADE, CLUB} ;
-enum Ranks {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING }
+enum Suits {HEART, DIAMOND, SPADE, CLUB};
+
+enum Ranks {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING}
 

@@ -5,10 +5,9 @@ import java.util.*;
 /**
  * Created by rbhatnagar2 on 6/14/15.
  * Print all pairs of anagrams in a given array of strings
- *
- *      Input: arr[] =  {"geeksquiz", "geeksforgeeks", "abcd","forgeeksgeeks", "zuiqkeegs"};
- *      Output: (geeksforgeeks, forgeeksgeeks), (geeksquiz, zuiqkeegs)
- *
+ * <p>
+ * Input: arr[] =  {"geeksquiz", "geeksforgeeks", "abcd","forgeeksgeeks", "zuiqkeegs"};
+ * Output: (geeksforgeeks, forgeeksgeeks), (geeksquiz, zuiqkeegs)
  */
 public class Anagrams {
 

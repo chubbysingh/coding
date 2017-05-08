@@ -20,14 +20,14 @@ public class Power {
         double absA = Math.abs(a);
         int absB = Math.abs(b);
 
-        double tempAnswer ;
+        double tempAnswer;
         if ((absB % 2) == 0)
-            tempAnswer = pow(absA*absA, absB/2);
+            tempAnswer = pow(absA * absA, absB / 2);
         else
-            tempAnswer = pow(absA, absB-1)*absA;
+            tempAnswer = pow(absA, absB - 1) * absA;
 
         if (bMinus)
-            tempAnswer = 1.0/tempAnswer;
+            tempAnswer = 1.0 / tempAnswer;
 
         if (aMinus && (b & 1) != 0)
             tempAnswer = tempAnswer * -1;
@@ -37,9 +37,8 @@ public class Power {
     }
 
 
-
     ///////////////////Good Solution///////////////////
-    public double power2 (double x, int n) {
+    public double power2(double x, int n) {
         if (n < 0) {
             return 1 / pow(x, -n);
         } else {
@@ -52,7 +51,7 @@ public class Power {
         if (n == 0)
             return 1;
 
-        double v = pow(x, n/2);
+        double v = pow(x, n / 2);
 
         if (n % 2 == 0) {
             return v * v;

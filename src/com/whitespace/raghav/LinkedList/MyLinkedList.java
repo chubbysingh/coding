@@ -20,6 +20,7 @@ public class MyLinkedList {
         head = newNode;
 
     }
+
     //Add a node after a given node
     public void insertAfter(int data, Node prevNode) {
         Node newNode = new Node(data);

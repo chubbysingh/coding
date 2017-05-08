@@ -10,7 +10,7 @@ public class Q566_Reshape_the_Matrix {
             return nums;
         int[][] reshaped = new int[r][c];
         for (int i = 0; i < r * c; i++)
-            reshaped[i/c][i%c] = nums[i/n][i%n];
+            reshaped[i / c][i % c] = nums[i / n][i % n];
         return reshaped;
     }
 }

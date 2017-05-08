@@ -16,8 +16,8 @@ public class AdjMatrixGraph {
 
         adj = new boolean[V][V];
 
-        for (int i = 0 ; i < V ; i++) {
-            for (int j = 0 ; j < V ; j++) {
+        for (int i = 0; i < V; i++) {
+            for (int j = 0; j < V; j++) {
                 adj[i][j] = false;
             }
         }
@@ -48,6 +48,7 @@ public class AdjMatrixGraph {
 
     private class AdjacencyIterator implements Iterator<Integer>, Iterable<Integer> {
         int v, w = 0;
+
         AdjacencyIterator(int v) {
             this.v = v;
         }

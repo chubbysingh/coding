@@ -18,7 +18,7 @@ public class Search {
         int startRow = 0;
 
         while (startRow < rowNum && colNum > 0) {
-            int numberToCompare = matrix[startRow][colNum-1];
+            int numberToCompare = matrix[startRow][colNum - 1];
             if (numberToCompare == x) {
                 return true;
             } else if (numberToCompare > x) {
@@ -45,8 +45,7 @@ public class Search {
 
         if (isPresent(matrix, 8)) {
             System.out.println("Present");
-        }
-        else {
+        } else {
             System.out.println("Not Present");
         }
     }

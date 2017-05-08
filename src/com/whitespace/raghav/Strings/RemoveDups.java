@@ -30,20 +30,20 @@ public class RemoveDups {
      * @return
      */
     private static String removeDups2(String input) {
-       if (input == null || input == "") {
-           return null;
-       }
+        if (input == null || input == "") {
+            return null;
+        }
 
-       boolean[] seen = new boolean[256];
-       StringBuilder sb = new StringBuilder(seen.length);
+        boolean[] seen = new boolean[256];
+        StringBuilder sb = new StringBuilder(seen.length);
 
-       for (char c : input.toCharArray()) {
-           if (!seen[c]) {
-               sb.append(c);
-               seen[c] = true;
-           }
-       }
-       return sb.toString();
+        for (char c : input.toCharArray()) {
+            if (!seen[c]) {
+                sb.append(c);
+                seen[c] = true;
+            }
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {

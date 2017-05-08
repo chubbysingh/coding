@@ -5,7 +5,7 @@ package Leetcode;
  */
 public class Q551_Student_Attendance_Record_I {
     public boolean checkRecord(String s) {
-        if(s.indexOf("A") != s.lastIndexOf("A") || s.contains("LLL"))
+        if (s.indexOf("A") != s.lastIndexOf("A") || s.contains("LLL"))
             return false;
         return true;
     }

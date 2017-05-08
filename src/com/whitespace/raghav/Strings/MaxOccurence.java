@@ -17,7 +17,7 @@ public class MaxOccurence {
         Character maxCharacter = null;
 
         Map<Character, Integer> map = new HashMap<Character, Integer>();
-        for (int i=0; i< input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {
             Character c = input.charAt(i);
 
             if (map.containsKey(c)) {

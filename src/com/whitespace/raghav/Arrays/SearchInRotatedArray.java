@@ -8,7 +8,7 @@ public class SearchInRotatedArray {
         if (start > end)
             return -1;
 
-        int mid = start + (end - start)/2;
+        int mid = start + (end - start) / 2;
 
         if (arr[mid] == target)
             return mid;
@@ -17,18 +17,17 @@ public class SearchInRotatedArray {
             // The later half is sorted
             if (arr[mid] < target && target <= arr[end]) {
                 // Target is in the later half sorted array
-                return search(arr, target, mid+1, end);
-            }
-            else {
+                return search(arr, target, mid + 1, end);
+            } else {
                 // Target is in the 1st half
-                return search(arr, target, start, mid-1);
+                return search(arr, target, start, mid - 1);
             }
 
-        } else if (arr[mid] > arr[end]){
+        } else if (arr[mid] > arr[end]) {
             if (arr[start] < target && target < arr[mid])
-                return search(arr, target, start, mid-1);
+                return search(arr, target, start, mid - 1);
             else
-                return search(arr, target, mid+1, end);
+                return search(arr, target, mid + 1, end);
         }
         return -1;
     }

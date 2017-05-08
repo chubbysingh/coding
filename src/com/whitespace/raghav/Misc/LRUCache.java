@@ -61,7 +61,7 @@ public class LRUCache {
 
     public void set(int key, int value) {
         if (map.containsKey(key)) {
-            Node old  = map.get(key);
+            Node old = map.get(key);
             old.value = value;
             remove(old);
             setHead(old);
@@ -82,7 +82,7 @@ class Node {
     Node pre;
     Node next;
 
-    public Node (int key, int value) {
+    public Node(int key, int value) {
         this.key = key;
         this.value = value;
     }

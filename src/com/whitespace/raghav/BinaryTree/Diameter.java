@@ -16,7 +16,7 @@ public class Diameter {
         int lHeight = getHeight(node.left, heightMap);
         int rHeight = getHeight(node.right, heightMap);
 
-        return Math.max(Math.max(diameterRecursive(node.left), diameterRecursive(node.right)), lHeight+rHeight+1);
+        return Math.max(Math.max(diameterRecursive(node.left), diameterRecursive(node.right)), lHeight + rHeight + 1);
     }
 
     //O(n)
@@ -70,7 +70,6 @@ public class Diameter {
         System.out.println("Diameter : " + d.diameter);
     }
 }
-
 
 
 class Data {

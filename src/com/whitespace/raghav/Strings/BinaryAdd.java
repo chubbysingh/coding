@@ -2,16 +2,15 @@ package com.whitespace.raghav.Strings;
 
 /**
  * Created by rbhatnagar2 on 12/10/15.
- *
+ * <p>
  * Take binary expansions as strings,
  * and return the string containing their sum:
- *
+ * <p>
  * add("10010", "101") = "10111"
- *
  */
 public class BinaryAdd {
     public static String add(String a, String b) {
-        if (a == null && b==null)
+        if (a == null && b == null)
             return "0";
         if (a == null)
             return b;
@@ -36,7 +35,7 @@ public class BinaryAdd {
 
             carry = sum >> 1;
             sum = sum & 1;
-            result.append( sum == 0 ? '0' : '1');
+            result.append(sum == 0 ? '0' : '1');
 
         }
         if (carry > 0)

@@ -67,7 +67,7 @@ public class MaxDepth {
             if (curr.right != null)
                 stack.push(curr.right);
             if (curr.left != null || curr.right != null)
-                level.push(depth+1);
+                level.push(depth + 1);
         }
         return level.pop();
 

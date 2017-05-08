@@ -24,7 +24,7 @@ public class RootToLeaf {
         i++;
 
         if (root.left == null && root.right == null) {
-            for (int count = 0 ; count < i ; count++) {
+            for (int count = 0; count < i; count++) {
                 System.out.print(path.get(count) + " ");
 
             }

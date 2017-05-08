@@ -20,7 +20,7 @@ public class MyStackUsingQueueV1 {
         else {
             if (storage.size() > 0) {
                 cache.enqueue(item);
-                while(!storage.isEmpty()) {
+                while (!storage.isEmpty()) {
                     cache.enqueue(storage.dequeue());
 
                     MyQueue temp;
@@ -41,7 +41,10 @@ public class MyStackUsingQueueV1 {
 
 abstract class MyQueue {
     public abstract void enqueue(int item);
+
     public abstract int dequeue();
+
     public abstract boolean isEmpty();
+
     public abstract int size();
 }

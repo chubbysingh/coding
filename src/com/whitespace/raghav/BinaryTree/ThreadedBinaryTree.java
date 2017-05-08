@@ -11,7 +11,7 @@ public class ThreadedBinaryTree {
     ThreadedBinaryTree right;
     boolean isRightThreaded;
 
-    public class inorderThreadedBinaryThree{
+    public class inorderThreadedBinaryThree {
         public void inorder(ThreadedBinaryTree root) {
             ThreadedBinaryTree curr = getLeftMostNode(root);
 

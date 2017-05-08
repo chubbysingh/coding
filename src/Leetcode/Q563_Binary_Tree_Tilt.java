@@ -12,8 +12,8 @@ public class Q563_Binary_Tree_Tilt {
         return ret[0];
     }
 
-    private int helper(TreeNode node, int[] ret){
-        if(node == null){
+    private int helper(TreeNode node, int[] ret) {
+        if (node == null) {
             return 0;
         }
         int l_sum = helper(node.left, ret);

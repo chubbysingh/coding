@@ -12,16 +12,16 @@ public class RunLengthEncoding {
         String encodedString = "";
         int count = 1;
 
-        for (int i=0 ; i< input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {
             if (i == 0) {
                 encodedString = input.charAt(0) + "";
             } else {
-                if (input.charAt(i) == input.charAt(i-1)) {
+                if (input.charAt(i) == input.charAt(i - 1)) {
                     count++;
                 } else {
                     encodedString += count + "";
                     encodedString += input.charAt(i);
-                    count=1;
+                    count = 1;
                 }
 
             }

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
- *
+ * <p>
  * Given an integer n, return 1 - n in lexicographical order.
  * For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
  */

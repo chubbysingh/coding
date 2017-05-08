@@ -34,7 +34,7 @@ public class WordDistance {
 
         int minimumDistance = Integer.MAX_VALUE;
 
-        for (int i = 0 ; i < words.length; i++) {
+        for (int i = 0; i < words.length; i++) {
             if (words[i].equals(word1)) {
                 index1 = i;
             } else if (words[i].equals(word2)) {
@@ -59,7 +59,7 @@ public class WordDistance {
             return null;
 
         Map<String, List<Integer>> map = new HashMap<String, List<Integer>>();
-        for (int i = 0 ; i < words.length; i++) {
+        for (int i = 0; i < words.length; i++) {
             if (map.containsKey(words[i])) {
                 List<Integer> newList = map.get(words[i]);
                 newList.add(i);

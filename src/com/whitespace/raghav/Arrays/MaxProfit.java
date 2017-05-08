@@ -12,29 +12,29 @@ public class MaxProfit {
         int[] profit = new int[n];
 
         // initialize the elements to 0
-        for (int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             profit[i] = 0;
         }
 
-        int maxPrice = price[n-1];
-        for (int i = n-2; n >= 0; i--) {
+        int maxPrice = price[n - 1];
+        for (int i = n - 2; n >= 0; i--) {
 
             if (maxPrice < price[i]) {
                 maxPrice = price[i];
             }
 
-            profit[i] = max(profit[i+1], maxPrice - price[i]);
+            profit[i] = max(profit[i + 1], maxPrice - price[i]);
         }
 
         int minPrice = price[0];
-        for (int i=2; i<n-1; i++) {
+        for (int i = 2; i < n - 1; i++) {
             if (minPrice > price[i]) {
                 minPrice = price[i];
             }
-            profit[i] = max(profit[i-1], profit[i] + price[i] - minPrice);
+            profit[i] = max(profit[i - 1], profit[i] + price[i] - minPrice);
         }
 
-        return profit[n-1];
+        return profit[n - 1];
 
     }
 

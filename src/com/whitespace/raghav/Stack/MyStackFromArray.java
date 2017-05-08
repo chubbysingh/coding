@@ -18,7 +18,7 @@ public class MyStackFromArray {
     }
 
     public boolean isFull() {
-        return (top == capacity-1) ;
+        return (top == capacity - 1);
     }
 
     public void push(int x) throws Exception {
@@ -29,14 +29,14 @@ public class MyStackFromArray {
         arr[++top] = x;
     }
 
-    public int pop() throws Exception{
+    public int pop() throws Exception {
         if (isEmpty()) {
             throw new Exception("dadada");
         }
         return arr[top--];
     }
 
-    public int peek() throws Exception{
+    public int peek() throws Exception {
         if (isEmpty()) {
             throw new Exception("dadada");
         }

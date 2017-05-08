@@ -33,7 +33,7 @@ public class LevelOrderTraversal {
 
         int height = heightOfTree(node);
 
-        for (int i = 0 ; i < height; i++) {
+        for (int i = 0; i < height; i++) {
             printLevelOrderRecursive(node, i);
         }
     }
@@ -54,8 +54,8 @@ public class LevelOrderTraversal {
         if (level == 0)
             System.out.print(node.data + " ");
         else {
-            printLevelOrderRecursive(node.left, level-1);
-            printLevelOrderRecursive(node.right, level-1);
+            printLevelOrderRecursive(node.left, level - 1);
+            printLevelOrderRecursive(node.right, level - 1);
         }
     }
 

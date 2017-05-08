@@ -7,14 +7,14 @@ public class Q557_Reverse_Words_in_a_String_III {
     public String reverseWords(String s) {
         char[] cArr = s.toCharArray();
 
-        int left=0;
-        for (int right=0; right<cArr.length; right++) {
+        int left = 0;
+        for (int right = 0; right < cArr.length; right++) {
             if (cArr[right] == ' ') {
-                reverse(cArr, left, right-1);
-                left = right+1;
+                reverse(cArr, left, right - 1);
+                left = right + 1;
             }
         }
-        reverse(cArr, left, cArr.length-1);
+        reverse(cArr, left, cArr.length - 1);
         return new String(cArr);
     }
 

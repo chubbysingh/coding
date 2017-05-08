@@ -17,7 +17,7 @@ public class Graph {
 
         adj[V] = new LinkedList<Integer>();
 
-        for (int i=0 ; i < V ; i++) {
+        for (int i = 0; i < V; i++) {
             adj[i] = new LinkedList<Integer>();
         }
     }
@@ -32,7 +32,7 @@ public class Graph {
 
     private void validateVertex(int u) {
         if (u < 0 || u > V)
-            throw new IndexOutOfBoundsException("Vertex : " + u + " should be between 0 and " + (V-1));
+            throw new IndexOutOfBoundsException("Vertex : " + u + " should be between 0 and " + (V - 1));
     }
 
     public void addEdge(int u, int w) {

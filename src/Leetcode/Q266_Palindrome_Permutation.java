@@ -28,7 +28,7 @@ public class Q266_Palindrome_Permutation {
                 set.remove(c);
         }
 
-        return s.length()%2 == 0 ? (set.size() == 0) : (set.size() == 1);
+        return s.length() % 2 == 0 ? (set.size() == 0) : (set.size() == 1);
     }
 
     public boolean canPermutePalindrome(String s) {

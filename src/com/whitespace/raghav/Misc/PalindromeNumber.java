@@ -11,7 +11,7 @@ public class PalindromeNumber {
         }
 
         int div = 1;
-        while (num/div > 10) {
+        while (num / div > 10) {
             div *= 10;
         }
 

@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class Q437_Path_Sum_III {
     public int pathSum(TreeNode root, int sum) {
         HashMap<Integer, Integer> preSum = new HashMap();
-        preSum.put(0,1);
+        preSum.put(0, 1);
         return helper(root, 0, sum, preSum);
     }
 

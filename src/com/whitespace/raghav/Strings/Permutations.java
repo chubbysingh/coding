@@ -22,12 +22,11 @@ public class Permutations {
             Set<String> permSet = generatePerm(input);
 
             for (String x : permSet) {
-                for (int i=0; i<= x.length() ; i++) {
-                    set.add(x.substring(0,i) + a + x.substring(i));
+                for (int i = 0; i <= x.length(); i++) {
+                    set.add(x.substring(0, i) + a + x.substring(i));
                 }
             }
-        }
-        else {
+        } else {
             set.add(a + "");
         }
         return set;

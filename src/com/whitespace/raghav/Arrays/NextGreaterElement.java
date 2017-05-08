@@ -20,7 +20,7 @@ public class NextGreaterElement {
             if (!stack.isEmpty()) {
                 int element = stack.pop();
 
-                while(element < next) {
+                while (element < next) {
                     System.out.println(element + "--->" + next);
                     if (stack.isEmpty()) {
                         break;
@@ -36,7 +36,7 @@ public class NextGreaterElement {
             stack.push(next);
         }
 
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             int element = stack.pop();
             System.out.println(element + "---> -1");
         }

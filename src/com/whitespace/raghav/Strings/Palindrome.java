@@ -8,6 +8,7 @@ public class Palindrome {
 
     /**
      * Check if characters of a given string can be rearranged to form a palindrome
+     *
      * @param str
      * @return
      */

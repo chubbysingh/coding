@@ -21,11 +21,11 @@ public class ArrayRange {
         List<Pair> output = new ArrayList<Pair>();
         output.add(input[0]);
 
-        for (int i = 0 ; i < input.length; i++) {
+        for (int i = 0; i < input.length; i++) {
 
-            if (!input[i].isInside( output.get( output.size() - 1) )) {
-                if (output.get( output.size() - 1).isInside(input[i])) {
-                    output.remove( output.size() - 1);
+            if (!input[i].isInside(output.get(output.size() - 1))) {
+                if (output.get(output.size() - 1).isInside(input[i])) {
+                    output.remove(output.size() - 1);
                 }
 
                 output.add(input[i]);
@@ -46,7 +46,7 @@ public class ArrayRange {
     }
 }
 
-class Pair implements Comparable<Pair>{
+class Pair implements Comparable<Pair> {
     Integer low, high;
 
     Pair(int low, int high) {

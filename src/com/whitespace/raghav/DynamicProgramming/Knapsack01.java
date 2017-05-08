@@ -10,24 +10,24 @@ public class Knapsack01 {
 
         int[][] table = new int[rows][cols];
 
-        for (int i=0; i< rows; i++) {
-            for (int j=0; j < cols; j++) {
-                if (i==0 || j==0) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || j == 0) {
                     table[i][j] = 0;
                     continue;
                 }
 
-                if (j - wt[i-1] > 0) {
-                    int x = table[i-1][j - wt[i-1]] + value[i-1];
-                    int y = table[i-1][j];
+                if (j - wt[i - 1] > 0) {
+                    int x = table[i - 1][j - wt[i - 1]] + value[i - 1];
+                    int y = table[i - 1][j];
                     table[i][j] = max(x, y);
                 } else {
-                    table[i][j] = table[i-1][j];
+                    table[i][j] = table[i - 1][j];
                 }
             }
         }
 
-        return table[rows-1][cols-1];
+        return table[rows - 1][cols - 1];
     }
 
     private static int max(int x, int y) {

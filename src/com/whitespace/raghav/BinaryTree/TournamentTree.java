@@ -5,12 +5,12 @@ package com.whitespace.raghav.BinaryTree;
  */
 public class TournamentTree {
     public static int secondMin(BTN root) {
-        if(root.left == null && root.right == null) {
+        if (root.left == null && root.right == null) {
             return Integer.MAX_VALUE;
         }
         BTN node;
         int min;
-        if(root.left.val == root.val) {
+        if (root.left.val == root.val) {
             node = root.left;
             min = root.right.val;
         } else {
@@ -63,10 +63,11 @@ public class TournamentTree {
     }
 }
 
-class BTN{
+class BTN {
     int val;
     BTN left;
     BTN right;
+
     public BTN(int val, BTN left, BTN right) {
         super();
         this.val = val;

@@ -13,8 +13,8 @@ public class PatternMatching {
         }
 
         int sourceLength = sourceStr.length(),
-            patternLength = patternString.length();
-        return isMatch(sourceStr, patternString, sourceLength-1, patternLength-1);
+                patternLength = patternString.length();
+        return isMatch(sourceStr, patternString, sourceLength - 1, patternLength - 1);
     }
 
     private static boolean isMatch
@@ -26,7 +26,7 @@ public class PatternMatching {
             return false;
 
         else if (sourceIndex < 0) {
-            while (patternIndex >=0) {
+            while (patternIndex >= 0) {
                 if (patternString.charAt(patternIndex) == '*') {
                     patternIndex -= 2;
                 } else {
@@ -36,17 +36,17 @@ public class PatternMatching {
             return true;
         } else {
             if (sourceStr.charAt(sourceIndex) == patternString.charAt(patternIndex)) {
-                return isMatch(sourceStr, patternString, --sourceIndex, --patternIndex );
+                return isMatch(sourceStr, patternString, --sourceIndex, --patternIndex);
             } else if (patternString.charAt(patternIndex) == '*') {
-                if (patternIndex > 0 && sourceStr.charAt(sourceIndex) == patternString.charAt(patternIndex-1))
-                    return isMatch(sourceStr, patternString, sourceIndex-1, patternIndex);
+                if (patternIndex > 0 && sourceStr.charAt(sourceIndex) == patternString.charAt(patternIndex - 1))
+                    return isMatch(sourceStr, patternString, sourceIndex - 1, patternIndex);
                 else
-                    return isMatch(sourceStr, patternString, sourceIndex, patternIndex-2);
+                    return isMatch(sourceStr, patternString, sourceIndex, patternIndex - 2);
             } else {
                 if (patternIndex < patternString.length() - 1
-                        && sourceStr.charAt(sourceIndex) == patternString.charAt(patternIndex+2)
-                        && patternString.charAt(patternIndex+1) == '*')
-                    return isMatch(sourceStr, patternString, sourceIndex-1, patternIndex);
+                        && sourceStr.charAt(sourceIndex) == patternString.charAt(patternIndex + 2)
+                        && patternString.charAt(patternIndex + 1) == '*')
+                    return isMatch(sourceStr, patternString, sourceIndex - 1, patternIndex);
             }
         }
 

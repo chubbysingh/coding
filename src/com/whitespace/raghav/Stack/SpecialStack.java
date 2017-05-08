@@ -7,7 +7,7 @@ import java.util.Stack;
  * all the stack operations like push(), pop(), isEmpty(), isFull()
  * and an additional operation getMin() which should return minimum element from the SpecialStack.
  * All these operations of SpecialStack must be O(1).
- *
+ * <p>
  * Created by rbhatnagar2 on 9/20/15.
  */
 public class SpecialStack extends MyStackFromArray {
@@ -29,7 +29,7 @@ public class SpecialStack extends MyStackFromArray {
     }
 
     @Override
-    public int pop() throws Exception{
+    public int pop() throws Exception {
         minStack.pop();
         return super.pop();
     }

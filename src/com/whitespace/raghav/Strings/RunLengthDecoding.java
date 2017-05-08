@@ -10,14 +10,12 @@ public class RunLengthDecoding {
 
         StringBuilder sb = new StringBuilder();
         Character pre = null;
-        for (int i=0; i< input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {
 
-            if (i==0) {
+            if (i == 0) {
                 sb.append(input.charAt(i));
                 pre = input.charAt(i);
-            }
-
-            else if (Character.isDigit(input.charAt(i))){
+            } else if (Character.isDigit(input.charAt(i))) {
                 int occurrence = 0;
                 StringBuilder curr = new StringBuilder();
                 while (i < input.length() && Character.isDigit(input.charAt(i))) {

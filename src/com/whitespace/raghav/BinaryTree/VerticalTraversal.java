@@ -24,8 +24,8 @@ public class VerticalTraversal {
             map.put(distance, data);
         }
 
-        buildMap(root.left, map, distance-1);
-        buildMap(root.right, map, distance+1);
+        buildMap(root.left, map, distance - 1);
+        buildMap(root.right, map, distance + 1);
     }
 
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class VerticalTraversal {
 
         buildMap(root, map, 0);
 
-        for(Map.Entry<Integer, LinkedList<String>> entry : map.entrySet()) {
+        for (Map.Entry<Integer, LinkedList<String>> entry : map.entrySet()) {
             LinkedList<String> data = entry.getValue();
             for (String s : data) {
                 System.out.print(s);

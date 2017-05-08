@@ -31,13 +31,13 @@ public class MultiplyNumbersAsStrings {
         int carry = 0;
         int multiply = 1;
         for (int i = 0; i < arr2.length; i++) {
-            for (int j = 0 ; j < arr1.length; j++) {
+            for (int j = 0; j < arr1.length; j++) {
                 if (i > 0) {
-                    multiply = 10*i;
+                    multiply = 10 * i;
                 }
                 int product = multiply * (arr1[j] * arr2[i]) + carry;
-                result.add(product%10);
-                carry = product/10;
+                result.add(product % 10);
+                carry = product / 10;
             }
         }
 
@@ -46,7 +46,7 @@ public class MultiplyNumbersAsStrings {
 
     private static String toString(List<Integer> result) {
         StringBuilder sb = new StringBuilder(result.size());
-        for (int i = result.size()-1; i >= 0 ; i--) {
+        for (int i = result.size() - 1; i >= 0; i--) {
             sb.append(result.get(i));
         }
         return sb.toString();
@@ -56,8 +56,8 @@ public class MultiplyNumbersAsStrings {
     // e.g. ("1234", 4, 6) ----> {4, 3, 2, 1, 0, 0}
     private static int[] toIntArray(String str, int length1, int size) {
         int[] arr = new int[size];
-        int counter = str.length()-1;
-        for (int i=0; i < size; i++) {
+        int counter = str.length() - 1;
+        for (int i = 0; i < size; i++) {
             if (i < length1) {
                 arr[i] = Integer.parseInt(String.valueOf(str.charAt(counter)));
                 counter--;
@@ -70,14 +70,14 @@ public class MultiplyNumbersAsStrings {
 
     //Validates if input is correct
     private static void validate(String s1) {
-        for (int i = 0 ; i < s1.length(); i++) {
+        for (int i = 0; i < s1.length(); i++) {
             if (!Character.isDigit(s1.charAt(i)))
                 throw new IllegalArgumentException("Input is invalid");
         }
     }
 
     public static void main(String[] args) {
-        String s1 =  "123";
+        String s1 = "123";
         String s2 = "2";
         System.out.println("Multiplication ---> " + multiply(s1, s2));
     }

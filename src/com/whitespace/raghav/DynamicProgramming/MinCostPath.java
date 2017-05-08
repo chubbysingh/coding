@@ -13,7 +13,7 @@ public class MinCostPath {
         int n = path[0].length;
         int[][] cost = new int[m][n];
 
-        for (int i = 0 ; i < m ; i++) {
+        for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (i == 0 && j == 0) {
                     cost[i][j] = path[i][j];
@@ -22,13 +22,13 @@ public class MinCostPath {
                 } else if (j == 0) {
                     cost[i][j] = path[i][j] + cost[i - 1][j];
                 } else {
-                    cost[i][j] = path[i][j] +  min(cost[i-1][j-1], min(cost[i - 1][j], cost[i][j - 1]))  ;
+                    cost[i][j] = path[i][j] + min(cost[i - 1][j - 1], min(cost[i - 1][j], cost[i][j - 1]));
                 }
 
 
             }
         }
-        return cost[m-1][n-1];
+        return cost[m - 1][n - 1];
     }
 
     private static int min(int x, int y) {

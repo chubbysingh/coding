@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * Given a string consisting of opening and closing parenthesis,
  * find length of the longest valid parenthesis substring.
- *
+ * <p>
  * Created by rbhatnagar2 on 10/16/15.
  */
 public class LongestValidSubstring {

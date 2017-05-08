@@ -3,24 +3,23 @@ package com.whitespace.raghav.BinaryTree;
 /**
  * Created by rbhatnagar2 on 10/12/15.
  * Find all possible interpretations of an array of digits
- *
+ * <p>
  * Consider a coding system for alphabets to integers
  * where ‘a’ is represented as 1, ‘b’ as 2, .. ‘z’ as 26.
  * Given an array of digits (1 to 9) as input,
  * write a function that prints all valid interpretations of input array.
- *
  */
 public class ArrayToAlphabets {
-    private static final char alphabets[]  =
+    private static final char alphabets[] =
             {'A', 'B', 'C',
-            'D', 'E', 'F',
-            'G', 'H', 'I',
-            'J', 'K', 'L',
-            'M', 'N', 'O',
-            'P', 'Q', 'R',
-            'S', 'T', 'U',
-            'V', 'W', 'X',
-            'Y', 'Z' };
+                    'D', 'E', 'F',
+                    'G', 'H', 'I',
+                    'J', 'K', 'L',
+                    'M', 'N', 'O',
+                    'P', 'Q', 'R',
+                    'S', 'T', 'U',
+                    'V', 'W', 'X',
+                    'Y', 'Z'};
 
     private static void printLeafNodes(Node root) {
         if (root == null)
@@ -42,15 +41,15 @@ public class ArrayToAlphabets {
         int data = arr[index];
         String newString = null;
         if (data > 0) {
-            newString = s + alphabets[data-1];
-            root.left = createTree(newString, arr, index+1);
+            newString = s + alphabets[data - 1];
+            root.left = createTree(newString, arr, index + 1);
         }
 
-        if (index+1 < arr.length) {
-            data = arr[index]*10 + arr[index+1];
+        if (index + 1 < arr.length) {
+            data = arr[index] * 10 + arr[index + 1];
             if (data > 0 && data <= 26) {
-                newString = s + alphabets[data-1];
-                root.right = createTree(newString, arr, index+2);
+                newString = s + alphabets[data - 1];
+                root.right = createTree(newString, arr, index + 2);
             }
         }
         return root;

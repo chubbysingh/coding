@@ -16,10 +16,10 @@ public class LongestSubstring {
         int start = 0, end = 0, maxCount = 0;
         Map<Character, Integer> map = new HashMap<Character, Integer>();
 
-        for (int i=0 ; i< input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {
             Character c = input.charAt(i);
 
-            if (!map.containsKey(c) || (map.containsKey(c) && start > map.get(c)) ) {
+            if (!map.containsKey(c) || (map.containsKey(c) && start > map.get(c))) {
                 end++;
                 map.put(c, i);
             } else {
@@ -33,7 +33,7 @@ public class LongestSubstring {
 
         }
 
-        maxCount = end - start > maxCount ? end-start : maxCount;
+        maxCount = end - start > maxCount ? end - start : maxCount;
         return maxCount;
     }
 

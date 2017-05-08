@@ -11,8 +11,8 @@ public class IdenticalTrees {
         if (nodeA == null || nodeB == null)
             return false;
         return (nodeA.data == nodeB.data
-            && isIdenticalRecursive(nodeA.left, nodeB.left)
-            && isIdenticalRecursive(nodeA.right, nodeB.right));
+                && isIdenticalRecursive(nodeA.left, nodeB.left)
+                && isIdenticalRecursive(nodeA.right, nodeB.right));
     }
 
     public static void main(String[] args) {

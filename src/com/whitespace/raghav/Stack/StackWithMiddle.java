@@ -7,7 +7,7 @@ package com.whitespace.raghav.Stack;
  * 3) findMiddle() which will return middle element of the stack.
  * 4) deleteMiddle() which will delete the middle element.
  * Push and pop are standard stack operations.
- *
+ * <p>
  * Created by rbhatnagar2 on 10/16/15.
  */
 public class StackWithMiddle {
@@ -25,7 +25,7 @@ public class StackWithMiddle {
             node.right = head;
             head.left = node;
             head = node;
-            if (size %2 == 0) {
+            if (size % 2 == 0) {
                 mid = mid.right;
             }
         }
@@ -39,7 +39,7 @@ public class StackWithMiddle {
         int data = head.data;
         head = head.right;
         head.left = null;
-        if (size %2 == 0) {
+        if (size % 2 == 0) {
             mid = mid.left;
         }
         return data;

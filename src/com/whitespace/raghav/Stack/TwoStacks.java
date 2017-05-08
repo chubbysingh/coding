@@ -18,7 +18,7 @@ public class TwoStacks {
     }
 
     public boolean isFull() {
-        return top1 == top2-1;
+        return top1 == top2 - 1;
     }
 
     public boolean isStack1Empty() {

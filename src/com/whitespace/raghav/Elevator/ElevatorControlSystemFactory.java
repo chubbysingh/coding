@@ -5,6 +5,8 @@ package com.whitespace.raghav.Elevator;
  */
 public interface ElevatorControlSystemFactory {
     public void pickup(int floor);
+
     public void destination(int eId, int floor);
+
     public void step();
 }
