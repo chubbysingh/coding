@@ -6,19 +6,21 @@ import Leetcode.Util.TreeNode;
  * Created by rbhatnagar2 on 5/6/17.
  */
 public class Q563_Binary_Tree_Tilt {
+    int result = 0;
+
     public int findTilt(TreeNode root) {
-        int[] ret = new int[1];
-        helper(root, ret);
-        return ret[0];
+        postOrder(root);
+        return result;
     }
 
-    private int helper(TreeNode node, int[] ret) {
-        if (node == null) {
-            return 0;
-        }
-        int l_sum = helper(node.left, ret);
-        int r_sum = helper(node.right, ret);
-        ret[0] += Math.abs(l_sum - r_sum);
-        return l_sum + r_sum + node.val;
+    private int postOrder(TreeNode root) {
+        if (root == null) return 0;
+
+        int left = postOrder(root.left);
+        int right = postOrder(root.right);
+
+        result += Math.abs(left - right);
+
+        return left + right + root.val;
     }
 }
