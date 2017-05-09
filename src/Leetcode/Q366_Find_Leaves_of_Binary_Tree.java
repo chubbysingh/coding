@@ -7,6 +7,9 @@ import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
+ * <p>
+ * Given a binary tree, collect a tree's nodes as if you were doing this:
+ * Collect and remove all leaves, repeat until the tree is empty.
  */
 public class Q366_Find_Leaves_of_Binary_Tree {
     public List<List<Integer>> findLeaves(TreeNode root) {
