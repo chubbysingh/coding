@@ -15,24 +15,45 @@ package Leetcode;
  */
 
 public class Q370_Range_Addition {
+    /*
+    The idea is to utilize the fact that the array initializes with zero.
+    The hint suggests us that we only needs to modify the first and last element of the range.
+    In fact, we need to increment the first element in the range
+    and decreases the last element + 1 (if it's within the length) by inc.
+    Then we sum up all previous results.
+    Why does this work? When we sum up the array,
+    the increment is passed along to the subsequent elements
+    until the last element.
+    When we decrement the end + 1 index, we offset the increment
+    so no increment is passed along to the next element.
+     */
     public int[] getModifiedArray(int length, int[][] updates) {
         int[] result = new int[length];
-        if (updates == null || updates.length == 0)
-            return result;
-
         for (int i = 0; i < updates.length; i++) {
-            result[updates[i][0]] += updates[i][2];
-            if (updates[i][1] < length - 1) {
-                result[updates[i][1] + 1] -= updates[i][2];
+            int start = updates[i][0], end = updates[i][1];
+            int inc = updates[i][2];
+            result[start] += inc;
+            if (end < length - 1) {
+                result[end + 1] -= inc;
             }
         }
 
-        int v = 0;
+        int sum = 0;
         for (int i = 0; i < length; i++) {
-            v += result[i];
-            result[i] = v;
+            sum += result[i];
+            result[i] = sum;
         }
-
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[][] updates = new int[][]{
+                {1, 3, 2},
+                {2, 4, 3},
+                {0, 2, -2}
+        };
+        Q370_Range_Addition sol = new Q370_Range_Addition();
+        int[] res = sol.getModifiedArray(5, updates);
+        System.out.println(res);
     }
 }

@@ -69,4 +69,10 @@ public class Q439_Ternary_Expression_Parser {
 
         return String.valueOf(stack.peek());
     }
+
+    public static void main(String[] args) {
+        Q439_Ternary_Expression_Parser sol = new Q439_Ternary_Expression_Parser();
+        String res = sol.parseTernary("T?T?F:5:3");
+        System.out.println(res);
+    }
 }

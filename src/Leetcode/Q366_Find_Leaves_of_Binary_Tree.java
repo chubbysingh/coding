@@ -1,6 +1,7 @@
 package Leetcode;
 
 import Leetcode.Util.TreeNode;
+import com.whitespace.raghav.BinaryTree.Tree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,5 +37,37 @@ public class Q366_Find_Leaves_of_Binary_Tree {
         list.get(curr).add(root.val);
 
         return curr;
+    }
+
+    public static void main(String[] args) {
+        TreeNode a = new TreeNode(1);
+        TreeNode b = new TreeNode(2);
+        TreeNode c = new TreeNode(3);
+        TreeNode d = new TreeNode(4);
+        TreeNode e = new TreeNode(5);
+        TreeNode f = new TreeNode(6);
+        TreeNode g = new TreeNode(7);
+        TreeNode h = new TreeNode(8);
+        TreeNode i = new TreeNode(9);
+        TreeNode j = new TreeNode(10);
+
+        a.left = b;
+        a.right = c;
+
+        b.left = d;
+        b.right = e;
+
+        d.left = f;
+        e.left = g;
+
+        c.left = i;
+        c.right = h;
+
+        h.left = j;
+
+        Q366_Find_Leaves_of_Binary_Tree sol = new Q366_Find_Leaves_of_Binary_Tree();
+        List<List<Integer>> res = sol.findLeaves(a);
+        System.out.println(res);
+
     }
 }
