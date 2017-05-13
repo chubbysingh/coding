@@ -19,42 +19,23 @@ public class Q298_Binary_Tree_Longest_Consecutive_Sequence {
     int max = 0;
 
     public int longestConsecutive(TreeNode root) {
-        helper(root);
-        return max;
+        return helper(root, null, 0);
     }
 
-    public int helper(TreeNode root) {
-        if (root == null)
+    private int helper(TreeNode root, TreeNode parent, int lengthWithoutRoot) {
+        if (root == null) {
             return 0;
-
-        int l = helper(root.left);
-        int r = helper(root.right);
-
-        int fromLeft = 0;
-        int fromRight = 0;
-
-        if (root.left == null) {
-            fromLeft = 1;
-        } else if (root.left.val - 1 == root.val) {
-            fromLeft = l + 1;
-        } else {
-            fromLeft = 1;
         }
 
-        if (root.right == null) {
-            fromRight = 1;
-        } else if (root.right.val - 1 == root.val) {
-            fromRight = r + 1;
-        } else {
-            fromRight = 1;
-        }
-
-        max = Math.max(max, fromLeft);
-        max = Math.max(max, fromRight);
-
-        return Math.max(fromLeft, fromRight);
+        int length = (parent != null && parent.val + 1 == root.val)
+                ? lengthWithoutRoot + 1
+                : 1;
+        int left = helper(root.left, root, length);
+        int right = helper(root.right, root, length);
+        return Math.max(length, Math.max(left, right));
     }
 
+    // Iterative
     public int longestConsecutiveIterative(TreeNode root) {
         if (root == null)
             return 0;
