@@ -1,5 +1,6 @@
 package Leetcode;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -60,5 +61,12 @@ public class Q127_Word_Ladder {
         }
 
         return 0;
+    }
+
+    public static void main(String[] args) {
+        List<String> list = Arrays.asList(new String[] {"hot","dot","dog","lot","log","cog"});
+        Q127_Word_Ladder sol = new Q127_Word_Ladder();
+        int ans = sol.ladderLength("hit", "cog", list);
+        System.out.println(ans);
     }
 }
