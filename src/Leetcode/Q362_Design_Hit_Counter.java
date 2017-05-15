@@ -1,6 +1,7 @@
 package Leetcode;
 
-import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
@@ -37,13 +38,12 @@ import java.util.ArrayDeque;
  * counter.getHits(301);
  */
 public class Q362_Design_Hit_Counter {
-    private ArrayDeque<Integer> memory;
+    private Queue<Integer> queue = new LinkedList<Integer>();
 
     /**
      * Initialize your data structure here.
      */
     public Q362_Design_Hit_Counter() {
-        memory = new ArrayDeque<>();
     }
 
     /**
@@ -52,12 +52,7 @@ public class Q362_Design_Hit_Counter {
      * @param timestamp - The current timestamp (in seconds granularity).
      */
     public void hit(int timestamp) {
-        memory.add(timestamp);
-        // int top = memory.poll();
-        // while (timestamp - top >= 300) {
-        //     top = memory.poll();
-        // }
-        // memory.addFirst(top);
+        queue.add(timestamp);
     }
 
     /**
@@ -66,11 +61,11 @@ public class Q362_Design_Hit_Counter {
      * @param timestamp - The current timestamp (in seconds granularity).
      */
     public int getHits(int timestamp) {
-        if (!memory.isEmpty()) {
-            while (!memory.isEmpty() && (timestamp - memory.peek()) >= 300) {
-                memory.poll();
+        if (!queue.isEmpty()) {
+            while (!queue.isEmpty() && (timestamp - queue.peek()) >= 300) {
+                queue.poll();
             }
         }
-        return memory.size();
+        return queue.size();
     }
 }

@@ -51,13 +51,11 @@ public class Q364_Nested_List_Weight_Sum_II {
             maxLayer = Math.max(maxLayer, topLayer);
 
             if (top.isInteger()) {
-                if (map.containsKey(topLayer)) {
-                    map.get(topLayer).add(top.getInteger());
-                } else {
+                if (!map.containsKey(topLayer)) {
                     ArrayList<Integer> list = new ArrayList<Integer>();
-                    list.add(top.getInteger());
                     map.put(topLayer, list);
                 }
+                map.get(topLayer).add(top.getInteger());
             } else {
                 for (NestedInteger ni : top.getList()) {
                     stack.push(ni);
@@ -66,7 +64,7 @@ public class Q364_Nested_List_Weight_Sum_II {
             }
         }
 
-        // calcualte sum
+        // calculate sum
         int result = 0;
         for (int i = maxLayer; i >= 1; i--) {
             if (map.get(i) != null) {
