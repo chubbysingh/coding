@@ -1,8 +1,7 @@
 package Leetcode;
 
 import Leetcode.Util.TreeNode;
-
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,15 +9,17 @@ import java.util.List;
  */
 public class Q257_Binary_Tree_Paths {
     public List<String> binaryTreePaths(TreeNode root) {
-        List<String> result = new ArrayList<String>();
-        if (root != null)
-            searchBT(root, "", result);
+        List<String> result = new LinkedList<String>();
+        if (root == null)
+            return result;
+        searchBT(root, "", result);
         return result;
     }
-
     private void searchBT(TreeNode root, String path, List<String> result) {
-        if (root.left == null && root.right == null)
+        if (root.left == null && root.right == null) {
             result.add(path + root.val);
+            return;
+        }
 
         if (root.left != null)
             searchBT(root.left, path + root.val + "->", result);

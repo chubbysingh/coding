@@ -9,30 +9,39 @@ package Leetcode;
  */
 public class Q276_Paint_Fence {
 
-    /*
-    The key to solve this problem is finding this relation.
-
-    f(n) = (k-1)(f(n-1)+f(n-2))
-
-    Assuming there are 3 posts, if the first one and the second one has the same color,
-    then the third one has k-1 options. The first and second together has k options.
-    If the first and the second do not have same color,
-    the total is k * (k-1), then the third one has k options.
-    Therefore, f(3) = (k-1)*k + k*(k-1)*k = (k-1)(k+k*k)
-     */
-
+    // DP
     public int numWays(int n, int k) {
-        int dp[] = {0, k, k * k, 0};
-
-        if (n <= 2)
-            return dp[n];
-
-        for (int i = 2; i < n; i++) {
-            dp[3] = (k - 1) * (dp[1] + dp[2]);
-            dp[1] = dp[2];
-            dp[2] = dp[3];
+        if (n == 0 || k == 0) return 0;
+        if (n == 1) return k;
+        // same[i] means the ith post has the same color with the (i-1)th post.
+        int[] same = new int[n];
+        // diff[i] means the ith post has a different color with the (i-1)th post.
+        int[] diff = new int[n];
+        same[0] = same[1] = k;
+        diff[0] = k;
+        diff[1] = k * (k - 1);
+        for (int i = 2; i < n; ++i) {
+            // the i-th in same should be equal the previous one in diff since only two consectutive
+            // same are allowed
+            same[i] = diff[i - 1];
+            // the i-th in diff should be either different from its previous one or from the one
+            // before the previous one
+            diff[i] = (k - 1) * (same[i - 1] + diff[i - 1]);
         }
+        return same[n - 1] + diff[n - 1];
+    }
 
-        return dp[3];
+    // Constant Space Solution
+    public int numWaysConstant(int n, int k) {
+        if (n == 0) return 0;
+        else if (n == 1) return k;
+        int diffColorCounts = k * (k - 1);
+        int sameColorCounts = k;
+        for (int i = 2; i < n; i++) {
+            int temp = diffColorCounts;
+            diffColorCounts = (diffColorCounts + sameColorCounts) * (k - 1);
+            sameColorCounts = temp;
+        }
+        return diffColorCounts + sameColorCounts;
     }
 }

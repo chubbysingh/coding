@@ -9,16 +9,32 @@ import java.util.List;
  * <p>
  * A sequence of words forms a valid word square
  * if the kth row and column read the exact same string, where 0 ≤ k < max(numRows, numColumns).
+ *
+ * e.g. following is a valid word square
+ * [a b c d e f]
+ * [b g h i j k]
+ * [c h l m n o]
+ * [d i m p q r]
+ * [e j n q s t]
+ * [f k o r t u]
  */
 public class Q422_Valid_Word_Square {
     public boolean validWordSquare(List<String> words) {
         if (words == null || words.size() == 0) {
             return true;
         }
-        int n = words.size();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < words.get(i).length(); j++) {
-                if (j >= n || words.get(j).length() <= i || words.get(j).charAt(i) != words.get(i).charAt(j))
+        // pre-compute the length. If length isnt equal return false
+        int length = words.get(0).length();
+        for (int i=1; i < words.size(); i++) {
+            if (words.get(i).length() != length)
+                return false;
+        }
+
+        // Now its a square matrix
+        for (int i = 0; i < words.size(); i++) {
+            String str = words.get(i);
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(j) != words.get(j).charAt(i))
                     return false;
             }
         }
