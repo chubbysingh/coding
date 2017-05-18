@@ -6,30 +6,23 @@ import Leetcode.Util.TreeNode;
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q124_Binary_Tree_Maximum_Path_Sum {
-    private int maxSum = Integer.MIN_VALUE;
+    int max = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        maxPathSumHelper(root);
-        return maxSum;
+        helper(root);
+        return max;
     }
 
-    private int maxPathSumHelper(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
+    // helper returns the max branch
+    // plus current node's value
+    int helper(TreeNode root) {
+        if (root == null) return 0;
 
-        int left = maxPathSumHelper(root.left);
-        int right = maxPathSumHelper(root.right);
+        int left = Math.max(helper(root.left), 0);
+        int right = Math.max(helper(root.right), 0);
 
-        int arch = left + right + root.val;
+        max = Math.max(max, root.val + left + right);
 
-        int pathSum = Math.max(root.val, Math.max(left, right) + root.val);
-
-        maxSum = Math.max(maxSum, Math.max(arch, pathSum));
-
-        return pathSum;
+        return root.val + Math.max(left, right);
     }
 }

@@ -25,22 +25,12 @@ public class Q295_Find_Median_from_Data_Stream {
     We also need to keep the two heaps balanced in size.
     */
     public void addNum(int num) {
-        if (maxPq.isEmpty() || num <= maxPq.peek()) {
-            maxPq.offer(num);
-        } else {
-            minPq.offer(num);
-        }
-
-        // Rebalance the pqs
-        if (maxPq.size() - minPq.size() > 1) {
-            minPq.offer(maxPq.poll());
-        } else if (minPq.size() - maxPq.size() > 1) {
+        maxPq.offer(num);
+        minPq.offer(maxPq.poll());
+        if (maxPq.size() < minPq.size()){
             maxPq.offer(minPq.poll());
         }
-
-
     }
-
     /*
     For the method findMedian(), we need to check if the two heaps have the same size.
     If yes, there must be even number of elements so far,
@@ -49,16 +39,7 @@ public class Q295_Find_Median_from_Data_Stream {
     the median is the top of the heap which one more element.
     */
     public double findMedian() {
-        if (maxPq.isEmpty()) {
-            return (double) minPq.peek();
-        } else if (minPq.isEmpty()) {
-            return (double) maxPq.peek();
-        } else if (maxPq.size() > minPq.size()) {
-            return (double) maxPq.peek();
-        } else if (minPq.size() > maxPq.size()) {
-            return (double) minPq.peek();
-        } else {
-            return (double) (maxPq.peek() + minPq.peek()) / 2;
-        }
+        if (maxPq.size() == minPq.size()) return (maxPq.peek() + minPq.peek()) /  2.0;
+        else return maxPq.peek();
     }
 }
