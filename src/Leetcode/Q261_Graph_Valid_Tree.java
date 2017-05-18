@@ -3,6 +3,8 @@ package Leetcode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
@@ -19,7 +21,7 @@ public class Q261_Graph_Valid_Tree {
 
     // DFS
     public boolean validTreeDFS(int n, int[][] edges) {
-        HashMap<Integer, ArrayList<Integer>> map = new HashMap<Integer, ArrayList<Integer>>();
+        Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
         for (int i = 0; i < n; i++) {
             ArrayList<Integer> list = new ArrayList<Integer>();
             map.put(i, list);
@@ -43,7 +45,7 @@ public class Q261_Graph_Valid_Tree {
         return true;
     }
 
-    public boolean helper(int curr, int parent, HashMap<Integer, ArrayList<Integer>> map, boolean[] visited) {
+    public boolean helper(int curr, int parent, Map<Integer, List<Integer>> map, boolean[] visited) {
         if (visited[curr])
             return false;
 

@@ -41,4 +41,12 @@ public class Q320_Generalized_Abbreviation {
             }
         }
     }
+
+    public static void main(String[] args) {
+        Q320_Generalized_Abbreviation sol = new Q320_Generalized_Abbreviation();
+        String word = "word";
+        List<String> res = sol.generateAbbreviations(word);
+        System.out.println(res);
+
+    }
 }

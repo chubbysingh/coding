@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
@@ -25,10 +26,10 @@ public class Q314_Binary_Tree_Vertical_Order_Traversal {
             return result;
 
         // level and list
-        HashMap<Integer, ArrayList<Integer>> map = new HashMap<Integer, ArrayList<Integer>>();
+        HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
 
-        LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
-        LinkedList<Integer> level = new LinkedList<Integer>();
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<Integer> level = new LinkedList<Integer>();
 
         queue.offer(root);
         level.offer(0);
@@ -44,13 +45,11 @@ public class Q314_Binary_Tree_Vertical_Order_Traversal {
             minLevel = Math.min(minLevel, l);
             maxLevel = Math.max(maxLevel, l);
 
-            if (map.containsKey(l)) {
-                map.get(l).add(p.val);
-            } else {
-                ArrayList<Integer> list = new ArrayList<Integer>();
-                list.add(p.val);
+            if (!map.containsKey(l)) {
+                List<Integer> list = new ArrayList<Integer>();
                 map.put(l, list);
             }
+            map.get(l).add(p.val);
 
             if (p.left != null) {
                 queue.offer(p.left);

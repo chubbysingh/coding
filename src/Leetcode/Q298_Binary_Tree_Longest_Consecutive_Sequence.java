@@ -3,6 +3,7 @@ package Leetcode;
 import Leetcode.Util.TreeNode;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
@@ -40,8 +41,8 @@ public class Q298_Binary_Tree_Longest_Consecutive_Sequence {
         if (root == null)
             return 0;
 
-        LinkedList<TreeNode> nodeQueue = new LinkedList<TreeNode>();
-        LinkedList<Integer> sizeQueue = new LinkedList<Integer>();
+        Queue<TreeNode> nodeQueue = new LinkedList<TreeNode>();
+        Queue<Integer> sizeQueue = new LinkedList<Integer>();
 
         nodeQueue.offer(root);
         sizeQueue.offer(1);

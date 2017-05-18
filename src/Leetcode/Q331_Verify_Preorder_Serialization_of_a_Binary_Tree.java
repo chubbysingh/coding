@@ -31,4 +31,10 @@ public class Q331_Verify_Preorder_Serialization_of_a_Binary_Tree {
 
         return stack.size() == 1 && stack.peek().equals("#");
     }
+
+    public static void main(String[] args) {
+        Q331_Verify_Preorder_Serialization_of_a_Binary_Tree sol = new Q331_Verify_Preorder_Serialization_of_a_Binary_Tree();
+        String preorder = "9,3,4,#,#,1,#,#,2,#,6,#,#";
+        System.out.println(sol.isValidSerialization(preorder));
+    }
 }
