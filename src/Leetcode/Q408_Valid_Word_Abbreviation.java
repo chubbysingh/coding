@@ -27,18 +27,25 @@ public class Q408_Valid_Word_Abbreviation {
             if (word.charAt(i) == abbr.charAt(j)) {
                 i++;
                 j++;
-                continue;
             }
-            if (!Character.isDigit(abbr.charAt(j)))
+            else if (!Character.isDigit(abbr.charAt(j)))
                 return false;
 
-            int start = j;
-            while (j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
-                j++;
+            else {
+                int num = 0;
+                while (Character.isDigit(abbr.charAt(j))) {
+                    num = num*10 + Character.getNumericValue(abbr.charAt(j));
+                    j++;
+                }
+                i += num;
             }
-            int num = Integer.valueOf(abbr.substring(start, j));
-            i += num;
+
         }
         return i == word.length() && j == abbr.length();
+    }
+
+    public static void main(String[] args) {
+        Q408_Valid_Word_Abbreviation sol = new Q408_Valid_Word_Abbreviation();
+        System.out.println(sol.validWordAbbreviation("internationalization", "i12iz4n"));
     }
 }
