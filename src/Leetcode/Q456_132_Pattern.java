@@ -18,7 +18,8 @@ public class Q456_132_Pattern {
     public boolean find132pattern(int[] nums) {
         Stack<Pair> stack = new Stack();
         for (int n : nums) {
-            if (stack.isEmpty() || n < stack.peek().min) stack.push(new Pair(n, n));
+            if (stack.isEmpty() || n < stack.peek().min)
+                stack.push(new Pair(n, n));
             else if (n > stack.peek().min) {
                 Pair last = stack.pop();
                 if (n < last.max) return true;

@@ -22,13 +22,11 @@ public class Q332_Reconstruct_Itinerary {
             String from = ticket[0];
             String to = ticket[1];
 
-            if (adjList.containsKey(from)) {
-                adjList.get(from).add(to);
-            } else {
+            if (!adjList.containsKey(from)) {
                 List<String> neighbors = new ArrayList<>();
-                neighbors.add(to);
                 adjList.put(from, neighbors);
             }
+            adjList.get(from).add(to);
         }
 
         // step 2: sort the adjlist according to lex order

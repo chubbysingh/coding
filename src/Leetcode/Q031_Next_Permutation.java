@@ -46,4 +46,13 @@ public class Q031_Next_Permutation {
             end--;
         }
     }
+
+    public static void main(String[] args) {
+        Q031_Next_Permutation sol = new Q031_Next_Permutation();
+        int[] num = new int[] {1, 2, 3};
+        sol.nextPermutation(num);
+
+        for (int n: num)
+            System.out.print(n + " ");
+    }
 }
