@@ -20,37 +20,29 @@ public class Q018_4Sum {
 
         Arrays.sort(nums);
 
-        for (int i = 0; i < nums.length - 3; i++) {
+        for (int i=0; i<nums.length-3; i++) {
 
-            for (int j = i + 1; j < nums.length - 2; j++) {
+            for (int j=i+1; j<nums.length-2; j++) {
 
-                int k = j + 1;
-                int l = nums.length - 1;
+                int k = j+1;
+                int l = nums.length-1;
 
                 while (k < l) {
                     int sum = nums[i] + nums[j] + nums[k] + nums[l];
-                    if (sum < target)
-                        k++;
-                    else if (sum > target)
-                        l--;
-                    else {
-                        List<Integer> t = new LinkedList<Integer>();
-                        t.add(nums[i]);
-                        t.add(nums[j]);
-                        t.add(nums[k]);
-                        t.add(nums[l]);
-                        set.add(t);
-
+                    if (sum == target) {
+                        set.add(Arrays.asList(nums[i], nums[j], nums[k], nums[l]));
                         k++;
                         l--;
                     }
+                    else if (sum < target)
+                        k++;
+                    else
+                        l--;
                 }
 
             }
         }
-        for (List<Integer> l : set) {
-            result.add(l);
-        }
+        result.addAll(set);
         return result;
     }
 }

@@ -13,7 +13,7 @@ public class Q131_Palindrome_Partitioning {
         return list;
     }
 
-    public void backtrack(List<List<String>> list, List<String> tempList, String s, int start) {
+    private void backtrack(List<List<String>> list, List<String> tempList, String s, int start) {
         if (start == s.length())
             list.add(new ArrayList<>(tempList));
         else {
@@ -27,9 +27,16 @@ public class Q131_Palindrome_Partitioning {
         }
     }
 
-    public boolean isPalindrome(String s, int low, int high) {
+    private boolean isPalindrome(String s, int low, int high) {
         while (low < high)
             if (s.charAt(low++) != s.charAt(high--)) return false;
         return true;
+    }
+
+    public static void main(String[] args) {
+        Q131_Palindrome_Partitioning sol = new Q131_Palindrome_Partitioning();
+        String str = "aab";
+        List<List<String>> res = sol.partition(str);
+        System.out.println(res);
     }
 }

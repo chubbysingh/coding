@@ -31,15 +31,11 @@ public class Q210_Course_Schedule_II {
         // Convert the edge list to adj. list
         Map<Integer, List<Integer>> adjList = new HashMap<>();
         for (int[] edge : prerequisites) {
-            if (adjList.containsKey(edge[1])) {
-                List<Integer> neighbors = adjList.get(edge[1]);
-                neighbors.add(edge[0]);
-                adjList.put(edge[1], neighbors);
-            } else {
+            if (!adjList.containsKey(edge[1])) {
                 List<Integer> neighbors = new ArrayList<Integer>();
-                neighbors.add(edge[0]);
                 adjList.put(edge[1], neighbors);
             }
+            adjList.get(edge[1]).add(edge[0]);
         }
 
         int[] visited = new int[numCourses];
