@@ -5,19 +5,42 @@ package Leetcode;
  */
 public class Q097_Interleaving_String {
     public static boolean isInterleave(String s1, String s2, String s3) {
-        int length1 = s1.length(), length2 = s2.length(), length3 = s3.length();
-        if (length3 != length1 + length2)
+        return isInterleaveChr(s1.toCharArray(), s2.toCharArray(), s3.toCharArray());
+    }
+
+    private static boolean isInterleaveChr(char str1[], char str2[], char str3[]){
+        boolean T[][] = new boolean[str1.length +1][str2.length +1];
+
+        if(str1.length + str2.length != str3.length){
             return false;
-        boolean[][] dp = new boolean[length1 + 1][length2 + 1];
-        for (int i = 0; i <= length1; i++)
-            dp[i][0] = s1.substring(0, i).equals(s3.substring(0, i)) ? true : false;
-        for (int i = 1; i <= length2; i++)
-            dp[0][i] = s2.substring(0, i).equals(s3.substring(0, i)) ? true : false;
-        for (int i = 1; i <= length1; i++) {
-            for (int j = 1; j <= length2; j++) {
-                dp[i][j] = (dp[i - 1][j] && s1.charAt(i - 1) == s3.charAt(i + j - 1)) || (dp[i][j - 1] && s2.charAt(j - 1) == s3.charAt(i + j - 1));
+        }
+
+        for(int i=0; i < T.length; i++){
+            for(int j=0; j < T[i].length; j++){
+                int l = i + j -1;
+                if(i == 0 && j == 0){
+                    T[i][j] = true;
+                }
+                else if(i == 0){
+                    if(str2[j-1] == str3[j-1] ){
+                        T[i][j] = T[i][j-1];
+                    }
+                }
+                else if(j == 0){
+                    if(str1[i-1] == str3[i-1]){
+                        T[i][j] = T[i-1][j];
+                    }
+                }
+                else{
+                    if (str1[i-1] == str3[i+j-1] ) {
+                        T[i][j] = T[i-1][j] ;
+                    }
+                    if (str2[j-1] == str3[i+j-1]) {
+                        T[i][j] = T[i][j] || T[i][j-1];
+                    }
+                }
             }
         }
-        return dp[s1.length()][s2.length()];
+        return T[str1.length][str2.length];
     }
 }

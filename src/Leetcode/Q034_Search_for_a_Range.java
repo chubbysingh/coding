@@ -21,26 +21,29 @@ public class Q034_Search_for_a_Range {
     }
 
     private int binarySearchFirst(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
-        while (low < high) {
-            int mid = low + (high - low) / 2;
+        int low=0, high = nums.length-1;
+        while (low <= high) {
+            if (nums[low] == target)
+                return low;
+
+            int mid = low + (high-low)/2;
             if (nums[mid] == target)
                 high = mid;
             else if (nums[mid] > target)
-                high = mid - 1;
+                high = mid-1;
             else
-                low = mid + 1;
+                low = mid+1;
         }
-        if (nums[low] == target)
-            return low;
+
         return -1;
     }
 
     private int binarySearchLast(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
-        while (low < high) {
-            //for finding the right index, making id more towards right
-            // so that it does not stuck at infinite loop
+        int low=0, high=nums.length-1;
+        while (low <= high) {
+            if (nums[high] == target)
+                return high;
+
             int mid = 1 + low + (high - low) / 2;
             if (nums[mid] == target) {
                 low = mid;
@@ -50,9 +53,16 @@ public class Q034_Search_for_a_Range {
                 low = mid + 1;
             }
         }
-        if (nums[high] == target)
-            return high;
 
         return -1;
+    }
+
+    public static void main(String[] args) {
+        Q034_Search_for_a_Range sol = new Q034_Search_for_a_Range();
+        int[] num = {1};
+        int target = 1;
+        int[] res = sol.searchRange(num, target);
+        System.out.println("[ "+res[0] + ", " + res[1] + " ]");
+
     }
 }

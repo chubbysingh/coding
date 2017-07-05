@@ -17,15 +17,18 @@ public class Q031_Next_Permutation {
         }
 
         // for the case where the num[] is in descending order
-        if (i >= 0) {
-            for (j = i + 1; j < num.length; j++) {
-                if (num[j] <= num[i]) {
-                    break;
-                }
-            }
-            j = j - 1;
-            swap(num, i, j);
+        if(i == -1) {
+            reverse(num, 0);
+            return;
         }
+
+        for (j = i + 1; j < num.length; j++) {
+            if (num[j] <= num[i]) {
+                break;
+            }
+        }
+        j = j - 1;
+        swap(num, i, j);
         reverse(num, i + 1);
     }
 
@@ -45,14 +48,5 @@ public class Q031_Next_Permutation {
             start++;
             end--;
         }
-    }
-
-    public static void main(String[] args) {
-        Q031_Next_Permutation sol = new Q031_Next_Permutation();
-        int[] num = new int[] {1, 2, 3};
-        sol.nextPermutation(num);
-
-        for (int n: num)
-            System.out.print(n + " ");
     }
 }
