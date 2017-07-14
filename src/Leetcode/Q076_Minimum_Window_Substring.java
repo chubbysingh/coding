@@ -12,49 +12,59 @@ public class Q076_Minimum_Window_Substring {
             return "";
         }
 
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
-        Map<Character, Integer> dict = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 
         for (int i = 0; i < T.length(); i++) {
-            map.put(T.charAt(i), 0);
+            char c = T.charAt(i);
 
-            if (dict.containsKey(T.charAt(i))) {
-                dict.put(T.charAt(i), dict.get(T.charAt(i)) + 1);
+            if (map.containsKey(c)) {
+                map.put(c, map.get(c) + 1);
             } else {
-                dict.put(T.charAt(i), 1);
+                map.put(c, 1);
             }
         }
 
-        int start = 0;
-        int count = 0;
-        int minLen = S.length() + 1;
-        String result = "";
-
-        for (int end = 0; end < S.length(); end++) {
-            if (map.containsKey(S.charAt(end))) {
-                map.put(S.charAt(end), map.get(S.charAt(end)) + 1);
-
-                if (map.get(S.charAt(end)) <= dict.get(S.charAt(end))) {
-                    count++;
-                }
+        int start = 0, end=0, minStart=0,minLen = Integer.MAX_VALUE, counter = T.length();
+        while(end < S.length())
+        {
+            char c1 = S.charAt(end);
+            if(map.containsKey(c1) ) {
+                if (map.get(c1) > 0)
+                    counter--;
+                map.put(c1,map.get(c1)-1);
             }
 
-            if (count == T.length()) {
-                while (!dict.containsKey(S.charAt(start)) ||
-                        map.get(S.charAt(start)) > dict.get(S.charAt(start))) {
-                    if (map.containsKey(S.charAt(start))) {
-                        map.put(S.charAt(start), map.get(S.charAt(start)) - 1);
-                    }
-                    start++;
+
+            end++;
+
+            while(counter == 0)
+            {
+                if(minLen > end-start)
+                {
+                    minLen = end-start;
+                    minStart = start;
                 }
 
-                if (end - start + 1 < minLen) {
-                    minLen = end - start + 1;
-                    result = S.substring(start, end + 1);
+                char c2 = S.charAt(start);
+                if (map.containsKey(c2)) {
+                    map.put(c2, map.get(c2)+1);
+
+                    if(map.get(c2) > 0)
+                        counter++;
                 }
+
+
+                start++;
             }
         }
+        return minLen == Integer.MAX_VALUE ? "" : S.substring(minStart,minStart+minLen);
+    }
 
-        return result;
+    public static void main(String[] args) {
+        Q076_Minimum_Window_Substring sol = new Q076_Minimum_Window_Substring();
+        String S = "ADOBECODEBANC";
+        String T = "ABC";
+        String res = sol.minWindow(S, T);
+        System.out.println(res);
     }
 }

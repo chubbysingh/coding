@@ -79,4 +79,12 @@ public class Q068_Text_Justification {
 
         return result;
     }
+
+    public static void main(String[] args) {
+        Q068_Text_Justification sol = new Q068_Text_Justification();
+        String[] words = {"Tushar", "Roy", "likes", "to", "code"};
+        List<String> res = sol.fullJustify(words, 10);
+        for (String str : res)
+            System.out.println(str);
+    }
 }

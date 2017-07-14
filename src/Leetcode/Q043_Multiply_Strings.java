@@ -43,4 +43,12 @@ public class Q043_Multiply_Strings {
 
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        Q043_Multiply_Strings sol = new Q043_Multiply_Strings();
+        String a = "42";
+        String b = "32";
+        String res = sol.multiply(a,b);
+        System.out.println(res);
+    }
 }
