@@ -5,24 +5,43 @@ package Leetcode;
  */
 public class Q188_Best_Time_to_Buy_and_Sell_Stock_IV {
     public int maxProfit(int k, int[] prices) {
-        if (prices.length < 2 || k <= 0)
+        if (k == 0 || prices.length == 0) {
             return 0;
+        }
+        int T[][] = new int[k+1][prices.length];
 
-        //pass leetcode online judge (can be ignored)
-        if (k == 1000000000)
-            return 1648961;
-
-        int[] local = new int[k + 1];
-        int[] global = new int[k + 1];
-
-        for (int i = 0; i < prices.length - 1; i++) {
-            int diff = prices[i + 1] - prices[i];
-            for (int j = k; j >= 1; j--) {
-                local[j] = Math.max(global[j - 1] + Math.max(diff, 0), local[j] + diff);
-                global[j] = Math.max(local[j], global[j]);
+        for (int i = 1; i < T.length; i++) {
+            int maxDiff = -prices[0];
+            for (int j = 1; j < T[0].length; j++) {
+                T[i][j] = Math.max(T[i][j-1], prices[j] + maxDiff);
+                maxDiff = Math.max(maxDiff, T[i-1][j] - prices[j]);
             }
         }
+        return T[k][prices.length-1];
+    }
 
-        return global[k];
+    public int maxProfitSlowSolution(int prices[], int K) {
+        if (K == 0 || prices.length == 0) {
+            return 0;
+        }
+        int T[][] = new int[K+1][prices.length];
+
+        for (int i = 1; i < T.length; i++) {
+            for (int j = 1; j < T[0].length; j++) {
+                int maxVal = 0;
+                for (int m = 0; m < j; m++) {
+                    maxVal = Math.max(maxVal, prices[j] - prices[m] + T[i-1][m]);
+                }
+                T[i][j] = Math.max(T[i][j-1], maxVal);
+            }
+        }
+        return T[K][prices.length - 1];
+    }
+
+    public static void main(String[] args) {
+        Q188_Best_Time_to_Buy_and_Sell_Stock_IV sol = new Q188_Best_Time_to_Buy_and_Sell_Stock_IV();
+        int[] prices = {2, 5, 7, 1, 4, 3, 1, 3};
+        int res = sol.maxProfit(2, prices);
+        System.out.println(res);
     }
 }
