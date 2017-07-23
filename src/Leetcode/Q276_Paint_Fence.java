@@ -9,6 +9,34 @@ package Leetcode;
  */
 public class Q276_Paint_Fence {
 
+    // Constant Space Solution
+    public int numWaysConstantSpace(int n, int k) {
+        if (n <= 0 || k <= 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return k;
+        }
+        // Case 1: First 2 posts have same color.
+        int sameCase = k;
+        // Case 2: First 2 posts have different colors.
+        int diffCase = k * (k - 1);
+        for (int i = 3; i <= n; i++) {
+            int temp = diffCase;
+            /**
+             * To every sameCase and diffCase we can add a new post with different color as the last one. We have k-1 color
+             * options for the last one.
+             */
+            diffCase = (sameCase + diffCase) * (k - 1);
+            /**
+             * To every diffCase we can add a new post with the same color as the last one to not generate violation - no
+             * more than 2 adjacent fence posts have the same color.
+             */
+            sameCase = temp;
+        }
+        return sameCase + diffCase;
+    }
+
     // DP
     public int numWays(int n, int k) {
         if (n == 0 || k == 0) return 0;
@@ -31,17 +59,5 @@ public class Q276_Paint_Fence {
         return same[n - 1] + diff[n - 1];
     }
 
-    // Constant Space Solution
-    public int numWaysConstant(int n, int k) {
-        if (n == 0) return 0;
-        else if (n == 1) return k;
-        int diffColorCounts = k * (k - 1);
-        int sameColorCounts = k;
-        for (int i = 2; i < n; i++) {
-            int temp = diffColorCounts;
-            diffColorCounts = (diffColorCounts + sameColorCounts) * (k - 1);
-            sameColorCounts = temp;
-        }
-        return diffColorCounts + sameColorCounts;
-    }
+
 }

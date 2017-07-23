@@ -7,28 +7,18 @@ import Leetcode.Util.TreeNode;
  */
 public class Q543_Diameter_of_Binary_Tree {
     public int diameterOfBinaryTree(TreeNode root) {
-        int[] max = DFS(root);
-        return max[1];
+        return DFS(root)[0];
     }
 
-    // Return Height and Diameter together
-    private int[] DFS(TreeNode node) {
-        if (node == null)
-            return new int[]{0, 0};
+    // int[2] = [dia, height]
+    private int[] DFS(TreeNode node)
+    {
+        if (node == null) return new int[] { 0, 0 };
+        int[] left = DFS(node.left);
+        int[] right = DFS(node.right);
 
-        int[] leftResult = DFS(node.left);
-        int[] rightResult = DFS(node.right);
-
-        int maxHeight = Math.max(leftResult[0], rightResult[0]) + 1;
-        int leftDiameter = leftResult[1];
-        int rightDiameter = rightResult[1];
-
-        int rootDiameter = leftResult[0] + rightResult[0];
-
-        int maxDiameter = Math.max(rootDiameter, Math.max(leftDiameter, rightDiameter));
-
-        return new int[]{maxHeight, maxDiameter};
-
-
+        int dia = Math.max(left[1] + right[1], Math.max(left[0], right[0]));
+        int height = 1 + Math.max(left[1], right[1]);
+        return new int[] { dia, height };
     }
 }
