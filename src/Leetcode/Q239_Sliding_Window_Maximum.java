@@ -38,7 +38,7 @@ public class Q239_Sliding_Window_Maximum {
 
     public static void main(String[] args) {
         Q239_Sliding_Window_Maximum sol = new Q239_Sliding_Window_Maximum();
-        int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
+        int[] nums = {5, 1, -1, 3, 7, 2};
         int k=3;
 
         int[] res = sol.maxSlidingWindow(nums, k);

@@ -28,9 +28,11 @@ public class Q298_Binary_Tree_Longest_Consecutive_Sequence {
             return 0;
         }
 
-        int length = (parent != null && parent.val + 1 == root.val)
-                ? curLen + 1
-                : 1;
+        int length = 1;
+        if (parent != null && parent.val + 1 == root.val) {
+            length = curLen+1;
+        }
+
         int left = helper(root.left, root, length);
         int right = helper(root.right, root, length);
 
