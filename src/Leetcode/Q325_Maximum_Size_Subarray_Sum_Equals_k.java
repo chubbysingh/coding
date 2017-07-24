@@ -17,15 +17,26 @@ import java.util.Map;
  */
 
 public class Q325_Maximum_Size_Subarray_Sum_Equals_k {
+    /*
+     * We can first calculate the prefix sum of each number,
+     * so sum(i, j) = sum(j) - sum(i - 1) = k.
+     * Therefore, for each sum(j), we only need to check if there was a sum(i - 1)
+     * which equals to sum(j) - k.
+     * We can use a hash map to store the previous calculated sum.
+     */
+
     public int maxSubArrayLen(int[] nums, int k) {
         if(nums == null || nums.length == 0) {
             return 0;
         }
 
-        int maxLen = 0;
         Map<Integer, Integer> map = new HashMap<>();
-        map.put(0, -1); // IMPOARTANT
+        int maxLen = 0;
         int sum = 0;
+        //We need to put this entry into the map before, because
+        // if the maximal range starts from 0, we need to calculate sum(j) - sum(i - 1).
+        map.put(0, -1); // IMPORTANT
+
 
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];

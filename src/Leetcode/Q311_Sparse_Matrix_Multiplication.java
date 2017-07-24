@@ -8,23 +8,6 @@ package Leetcode;
  * You may assume that A's column number is equal to B's row number.
  */
 public class Q311_Sparse_Matrix_Multiplication {
-    // Naive
-    public int[][] multiplyNaive(int[][] A, int[][] B) {
-        //validity check
-
-        int[][] C = new int[A.length][B[0].length];
-        for (int i = 0; i < C.length; i++) {
-            for (int j = 0; j < C[0].length; j++) {
-                int sum = 0;
-                for (int k = 0; k < A[0].length; k++) {
-                    sum += A[i][k] * B[k][j];
-                }
-                C[i][j] = sum;
-            }
-        }
-
-        return C;
-    }
 
     // Optimized
     public int[][] multiply(int[][] A, int[][] B) {
@@ -43,4 +26,24 @@ public class Q311_Sparse_Matrix_Multiplication {
 
         return C;
     }
+
+    // Naive
+    public int[][] multiplyNaive(int[][] A, int[][] B) {
+        //validity check
+
+        int[][] C = new int[A.length][B[0].length];
+        for (int i = 0; i < C.length; i++) {
+            for (int j = 0; j < C[0].length; j++) {
+                int sum = 0;
+                for (int k = 0; k < A[0].length; k++) {
+                    sum += A[i][k] * B[k][j];
+                }
+                C[i][j] = sum;
+            }
+        }
+
+        return C;
+    }
+
+
 }

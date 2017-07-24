@@ -34,9 +34,8 @@ public class Q251_Flatten_2D_Vector {
 
         if (colId < vec2d.get(rowId).size()) {
             ans = vec2d.get(rowId).get(colId);
+            colId++;
         }
-
-        colId++;
 
         if (colId == vec2d.get(rowId).size()) {
             colId = 0;

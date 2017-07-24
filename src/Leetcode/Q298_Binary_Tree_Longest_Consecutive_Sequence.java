@@ -23,16 +23,17 @@ public class Q298_Binary_Tree_Longest_Consecutive_Sequence {
         return helper(root, null, 0);
     }
 
-    private int helper(TreeNode root, TreeNode parent, int lengthWithoutRoot) {
+    private int helper(TreeNode root, TreeNode parent, int curLen) {
         if (root == null) {
             return 0;
         }
 
         int length = (parent != null && parent.val + 1 == root.val)
-                ? lengthWithoutRoot + 1
+                ? curLen + 1
                 : 1;
         int left = helper(root.left, root, length);
         int right = helper(root.right, root, length);
+
         return Math.max(length, Math.max(left, right));
     }
 
