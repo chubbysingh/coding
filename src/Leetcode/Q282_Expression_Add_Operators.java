@@ -8,29 +8,48 @@ import java.util.List;
  */
 public class Q282_Expression_Add_Operators {
     public List<String> addOperators(String num, int target) {
-        List<String> rst = new ArrayList<String>();
-        if (num == null || num.length() == 0) return rst;
-        helper(rst, "", num, target, 0, 0, 0);
-        return rst;
+        List<String> result = new ArrayList<>();
+
+        if (num == null || num.length() == 0) {
+            return result;
+        }
+
+        addOperatorHelper(num, 0, target, 0, 0, "", result);
+
+        return result;
     }
 
-    public void helper(List<String> rst, String path, String num, int target, int pos, long eval, long multed) {
-        if (pos == num.length()) {
-            if (target == eval)
-                rst.add(path);
-            return;
+    private void addOperatorHelper(String num, int start, int target, long curSum,
+                                   long preNum, String curResult, List<String> result) {
+        if (start == num.length() ) {
+            if (curSum == target) {
+                result.add(curResult);
+                return;
+            }
         }
-        for (int i = pos; i < num.length(); i++) {
-            if (i != pos && num.charAt(pos) == '0') break;
-            long cur = Long.parseLong(num.substring(pos, i + 1));
-            if (pos == 0) {
-                helper(rst, path + cur, num, target, i + 1, cur, cur);
+
+        for (int i = start; i < num.length(); i++) {
+            String curStr = num.substring(start, i + 1);
+            if (curStr.length() > 1 && curStr.charAt(0) == '0') {
+                break;
+            }
+
+            long curNum = Long.parseLong(curStr);
+
+            if (curResult.isEmpty()) {
+                addOperatorHelper(num, i + 1, target, curNum, curNum, curStr, result);
             } else {
-                helper(rst, path + "+" + cur, num, target, i + 1, eval + cur, cur);
+                // Add
+                addOperatorHelper(num, i + 1, target, curSum + curNum, curNum,
+                        curResult + "+" + curNum, result);
 
-                helper(rst, path + "-" + cur, num, target, i + 1, eval - cur, -cur);
+                // Subtract
+                addOperatorHelper(num, i + 1, target, curSum - curNum, -curNum,
+                        curResult + "-" + curNum, result);
 
-                helper(rst, path + "*" + cur, num, target, i + 1, eval - multed + multed * cur, multed * cur);
+                // Multiply
+                addOperatorHelper(num, i + 1, target, curSum - preNum + preNum * curNum,
+                        preNum * curNum, curResult + "*" + curNum, result);
             }
         }
     }

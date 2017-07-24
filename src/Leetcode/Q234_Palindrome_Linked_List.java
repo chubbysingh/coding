@@ -7,26 +7,29 @@ import Leetcode.Util.ListNode;
  */
 public class Q234_Palindrome_Linked_List {
     public boolean isPalindrome(ListNode head) {
-        ListNode fast = head,
-                slow = head;
+        if (head == null)
+            return true;
+        ListNode first = head;
+        ListNode second = getMid(head);
+        second = reverse(second);
 
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
-        }
-
-        slow = reverse(slow);
-        fast = head;
-
-        while (slow != null && fast != null) {
-            if (fast.data != slow.data)
+        while(first != null && second != null) {
+            if (first.data != second.data)
                 return false;
-            else {
-                slow = slow.next;
-                fast = fast.next;
-            }
+            first = first.next;
+            second = second.next;
         }
         return true;
+    }
+
+    private ListNode getMid(ListNode head) {
+        ListNode walker = head;
+        ListNode runner = head;
+        while (runner != null && runner.next != null) {
+            walker = walker.next;
+            runner = runner.next.next;
+        }
+        return walker;
     }
 
     private ListNode reverse(ListNode head) {
