@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Q054_Spiral_Matrix {
     public List<Integer> spiralOrder(int[][] matrix) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<Integer>();
 
         if (matrix == null || matrix.length == 0) return result;
 

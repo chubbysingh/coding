@@ -9,18 +9,18 @@ public class RunLengthEncoding {
         if (input == null || input == "")
             return "";
 
-        String encodedString = "";
+        StringBuilder res = new StringBuilder();
         int count = 1;
 
         for (int i = 0; i < input.length(); i++) {
             if (i == 0) {
-                encodedString = input.charAt(0) + "";
+                res.append(input.charAt(i));
             } else {
                 if (input.charAt(i) == input.charAt(i - 1)) {
                     count++;
                 } else {
-                    encodedString += count + "";
-                    encodedString += input.charAt(i);
+                    res.append(count);
+                    res.append(input.charAt(i));
                     count = 1;
                 }
 
@@ -28,7 +28,7 @@ public class RunLengthEncoding {
 
 
         }
-        return encodedString + count;
+        return res.append(count).toString();
     }
 
     public static void main(String[] args) {

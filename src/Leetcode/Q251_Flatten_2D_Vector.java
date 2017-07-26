@@ -30,11 +30,21 @@ public class Q251_Flatten_2D_Vector {
     }
 
     public int next() {
-        int ans = 0;
+        if (!hasNext())
+            return -1;
 
-        if (colId < vec2d.get(rowId).size()) {
-            ans = vec2d.get(rowId).get(colId);
-            colId++;
+        int ans = vec2d.get(rowId).get(colId);
+        colId++;
+        return ans;
+    }
+
+    public boolean hasNext() {
+        if (vec2d == null || vec2d.isEmpty())
+            return false;
+
+        while (rowId < numRows
+                && (vec2d.get(rowId) == null || vec2d.get(rowId).isEmpty())) {
+            rowId++;
         }
 
         if (colId == vec2d.get(rowId).size()) {
@@ -42,17 +52,6 @@ public class Q251_Flatten_2D_Vector {
             rowId++;
         }
 
-        return ans;
-    }
-
-    public boolean hasNext() {
-        while (rowId < numRows
-                && (vec2d.get(rowId) == null || vec2d.get(rowId).isEmpty())) {
-            rowId++;
-        }
-
-        return vec2d != null &&
-                !vec2d.isEmpty() &&
-                rowId < numRows;
+        return rowId < numRows && colId < vec2d.get(rowId).size();
     }
 }

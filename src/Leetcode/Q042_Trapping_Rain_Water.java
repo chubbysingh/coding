@@ -45,4 +45,11 @@ public class Q042_Trapping_Rain_Water {
         }
         return sum;
     }
+
+    public static void main(String[] args) {
+        Q042_Trapping_Rain_Water sol = new Q042_Trapping_Rain_Water();
+        int[] A = new int[] {0,1,0,2,1,0,1,3,2,1,2,1};
+        int sum = sol.trap(A);
+        System.out.println(sum);
+    }
 }

@@ -8,7 +8,7 @@ package Leetcode;
  * 0 - A gate.
  * INF - Infinity means an empty room.
  * We use the value 231 - 1 = 2147483647 to represent INF
- * as you may assume that the distance to a gate is less than2147483647.
+ * as you may assume that the distance to a gate is less than 2147483647.
  * <p>
  * Fill each empty room with the distance to its nearest gate.
  * If it is impossible to reach a gate, it should be filled with INF.
@@ -51,9 +51,12 @@ public class Q286_Walls_and_Gates {
         int m = rooms.length;
         int n = rooms[0].length;
 
-        if (i < 0 || i >= m || j < 0 || j >= n || rooms[i][j] < distance) {
+        if (i < 0 || i >= m || j < 0 || j >= n) {
             return;
         }
+
+        if (rooms[i][j] == -1 || rooms[i][j] < distance)
+            return;
 
         rooms[i][j] = distance;
 
