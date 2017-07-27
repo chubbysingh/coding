@@ -11,7 +11,8 @@ package com.whitespace.raghav.BinaryTree;
  */
 public class ArrayToAlphabets {
     private static final char alphabets[] =
-            {'A', 'B', 'C',
+            {
+                    'A', 'B', 'C',
                     'D', 'E', 'F',
                     'G', 'H', 'I',
                     'J', 'K', 'L',
@@ -19,7 +20,8 @@ public class ArrayToAlphabets {
                     'P', 'Q', 'R',
                     'S', 'T', 'U',
                     'V', 'W', 'X',
-                    'Y', 'Z'};
+                    'Y', 'Z'
+            };
 
     private static void printLeafNodes(Node root) {
         if (root == null)
@@ -63,25 +65,25 @@ public class ArrayToAlphabets {
 
     public static void main(String[] args) {
         int[] arr1 = {1, 1, 3, 4};
-        printArrayToAlphabet(arr1);
+        //printArrayToAlphabet(arr1);
 
         int[] arr2 = {1, 1, 1};
         printArrayToAlphabet(arr2);
 
         int[] arr3 = {2, 6};
-        printArrayToAlphabet(arr3);
+        //printArrayToAlphabet(arr3);
 
         int[] arr4 = {1, 2};
-        printArrayToAlphabet(arr4);
+        //printArrayToAlphabet(arr4);
 
         int[] arr5 = {1, 0};
-        printArrayToAlphabet(arr5);
+        //printArrayToAlphabet(arr5);
 
         int[] arr6 = {};
-        printArrayToAlphabet(arr6);
+        //printArrayToAlphabet(arr6);
 
         int[] arr7 = {1, 2, 2, 1};
-        printArrayToAlphabet(arr7);
+        //printArrayToAlphabet(arr7);
 
     }
 

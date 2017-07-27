@@ -11,22 +11,15 @@ public class RunLengthEncoding {
 
         StringBuilder res = new StringBuilder();
         int count = 1;
-
-        for (int i = 0; i < input.length(); i++) {
-            if (i == 0) {
-                res.append(input.charAt(i));
+        res.append(input.charAt(0));
+        for (int i = 1; i < input.length(); i++) {
+            if (input.charAt(i) == input.charAt(i - 1)) {
+                count++;
             } else {
-                if (input.charAt(i) == input.charAt(i - 1)) {
-                    count++;
-                } else {
-                    res.append(count);
-                    res.append(input.charAt(i));
-                    count = 1;
-                }
-
+                res.append(count);
+                res.append(input.charAt(i));
+                count = 1;
             }
-
-
         }
         return res.append(count).toString();
     }

@@ -4,51 +4,37 @@ package Leetcode;
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q329_Longest_Increasing_Path_in_a_Matrix {
-    private int[] dx = new int[]{0, 0, -1, 1};
-    private int[] dy = new int[]{1, -1, 0, 0};
-
     public int longestIncreasingPath(int[][] matrix) {
-        if (matrix == null || matrix.length == 0) {
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return 0;
         }
-
-        int m = matrix.length;
-        int n = matrix[0].length;
-
+        int[][] cache = new int[matrix.length][matrix[0].length];
         int max = 0;
-        int[][] dp = new int[m][n];
-
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                max = Math.max(max, helper(i, j, matrix, dp));
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                int length = findSmallAround(i, j, matrix, cache, Integer.MAX_VALUE);
+                max = Math.max(length, max);
             }
         }
-
         return max;
     }
-
-    private int helper(int row, int col, int[][] matrix, int[][] dp) {
-
-        if (dp[row][col] > 0) {
-            return dp[row][col];
+    private int findSmallAround(int i, int j, int[][] matrix, int[][] cache, int pre) {
+        // if out of bond OR current cell value larger than previous cell value.
+        if (i < 0 || i >= matrix.length || j < 0 || j >= matrix[0].length || matrix[i][j] >= pre) {
+            return 0;
         }
-
-        int m = matrix.length;
-        int n = matrix[0].length;
-
-        int curMax = 0;
-
-        for (int i = 0; i < 4; i++) {
-            int x = dx[i] + row;
-            int y = dy[i] + col;
-
-            if (x >= 0 && x < m && y >= 0 && y < n && matrix[x][y] > matrix[row][col]) {
-                curMax = Math.max(curMax, helper(x, y, matrix, dp));
-            }
+        // if calculated before, no need to do it again
+        if (cache[i][j] > 0) {
+            return cache[i][j];
+        } else {
+            int cur = matrix[i][j];
+            int tempMax = 0;
+            tempMax = Math.max(findSmallAround(i - 1, j, matrix, cache, cur), tempMax);
+            tempMax = Math.max(findSmallAround(i + 1, j, matrix, cache, cur), tempMax);
+            tempMax = Math.max(findSmallAround(i, j - 1, matrix, cache, cur), tempMax);
+            tempMax = Math.max(findSmallAround(i, j + 1, matrix, cache, cur), tempMax);
+            cache[i][j] = ++tempMax;
+            return tempMax;
         }
-
-        dp[row][col] = curMax + 1;
-
-        return curMax + 1;
     }
 }
