@@ -12,7 +12,7 @@ import Leetcode.Util.ListNode;
 public class Q002_Add_Two_Numbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(-1);
-        ListNode head = result.next;
+        ListNode head = result;
 
         int carry = 0;
 
@@ -20,19 +20,23 @@ public class Q002_Add_Two_Numbers {
             int sum = carry;
             if (l1 != null) {
                 sum += l1.data;
+                l1 = l1.next;
             }
             if (l2 != null) {
                 sum += l2.data;
+                l2 = l2.next;
             }
 
             carry = sum / 10;
             sum = sum % 10;
             result.next = new ListNode(sum);
+            result = result.next;
         }
         if (carry != 0) {
             result.next = new ListNode(carry);
         }
-        return head;
+        return head.next;
+
     }
 
     // Recursive
@@ -53,8 +57,8 @@ public class Q002_Add_Two_Numbers {
         result += l1 == null ? 0 : l1.data;
         result += l2 == null ? 0 : l2.data;
 
-        carry = result % 10;
-        result = result / 10;
+        carry = result / 10;
+        result = result % 10;
 
         ListNode node = new ListNode(result);
 
