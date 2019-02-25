@@ -53,14 +53,14 @@ public class Q002_Add_Two_Numbers {
             }
         }
 
-        int result = carry;
-        result += l1 == null ? 0 : l1.data;
-        result += l2 == null ? 0 : l2.data;
+        int sum = carry;
+        sum += l1 == null ? 0 : l1.data;
+        sum += l2 == null ? 0 : l2.data;
 
-        carry = result / 10;
-        result = result % 10;
+        carry = sum / 10;
+        sum = sum % 10;
 
-        ListNode node = new ListNode(result);
+        ListNode node = new ListNode(sum);
 
         if (l1 == null) {
             node.next = addTwoNumbersRecursive(l1, l2.next, carry);
@@ -70,5 +70,29 @@ public class Q002_Add_Two_Numbers {
             node.next = addTwoNumbersRecursive(l1.next, l2.next, carry);
         }
         return node;
+    }
+
+    public static void main(String[] args) {
+        Q002_Add_Two_Numbers sol = new Q002_Add_Two_Numbers();
+
+        // 9-->4-->3-->null
+        ListNode l1 = new ListNode(9);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(3);
+
+        // 5-->6-->8-->null
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(8);
+
+        ListNode result = sol.addTwoNumbers(l1, l2);
+
+        // Result: 4-->1-->2-->1-->null
+        System.out.println("Result: ");
+        while (result != null) {
+            System.out.print(result.data + "-->");
+            result = result.next;
+        }
+        System.out.print("null");
     }
 }

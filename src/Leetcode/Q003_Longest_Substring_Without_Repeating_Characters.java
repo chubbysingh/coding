@@ -13,7 +13,7 @@ public class Q003_Longest_Substring_Without_Repeating_Characters {
         if (str.length() == 0) {
             return 0;
         }
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+        Map<Character, Integer> map = new HashMap<>();
         int leftPointer = 0,
                 result = 0;
 
@@ -28,5 +28,12 @@ public class Q003_Longest_Substring_Without_Repeating_Characters {
             result = Math.max(result, currLength);
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        Q003_Longest_Substring_Without_Repeating_Characters sol = new Q003_Longest_Substring_Without_Repeating_Characters();
+        String str = "abcdeafghijk";
+        int length = sol.lengthOfLongestSubstring(str);
+        System.out.println("Length: " + length);
     }
 }

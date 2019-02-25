@@ -49,4 +49,16 @@ public class Q001_Two_Sum {
         }
         return null;
     }
+
+    public static void main(String[] args) {
+        Q001_Two_Sum sol = new Q001_Two_Sum();
+
+        int[] arr = {1, 2, 3, 4, 5};
+        int target = 7;
+
+        int[] result = sol.twoSum(arr, target);
+        System.out.println("Indices "+ result[0] + " and " + result[1] +
+                " with values " + arr[result[0]] + " and " + arr[result[1]] + " add upto " +
+                target);
+    }
 }
