@@ -44,15 +44,11 @@ public class Q100_Same_Tree {
 
         while (!q1.isEmpty() && !q2.isEmpty()) {
             // Get front nodes and compare them
-            TreeNode n1 = q1.peek();
-            TreeNode n2 = q2.peek();
+            TreeNode n1 = q1.poll();
+            TreeNode n2 = q2.poll();
 
             if (n1.val != n2.val)
                 return false;
-
-            // Remove front nodes from queues
-            q1.remove();
-            q2.remove();
 
             /* Enqueue left children of both nodes */
             if (n1.left != null && n2.left != null) {
