@@ -28,6 +28,7 @@ public class Q246_Strobogrammatic_Number {
             end = num.length() - 1;
 
         while (start <= end) {
+            //if start and end digits are not in map, return false
             if (!map.containsKey(num.charAt(start))
                 || map.containsKey(num.charAt(end)))
                 return false;

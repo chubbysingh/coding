@@ -4,8 +4,17 @@ import Leetcode.Util.ListNode;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
+ *
+ * Reverse a singly linked list.
+ *
+ * Example:
+ *
+ * Input: 1->2->3->4->5->NULL
+ * Output: 5->4->3->2->1->NULL
  */
 public class Q206_Reverse_Linked_List {
+
+    // Iterative
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null)
             return head;
@@ -34,6 +43,7 @@ public class Q206_Reverse_Linked_List {
         }
     }
 
+    // Recursive
     public ListNode reverseListIterative(ListNode head) {
         ListNode prev = null;
         while (head != null) {
