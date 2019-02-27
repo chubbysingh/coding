@@ -23,6 +23,7 @@ public class Q293_Flip_Game {
             return result;
 
         char[] arr = s.toCharArray();
+        // loop till second last element to avoid IndexOutOfBoundException
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] == arr[i + 1] && arr[i] == '+') {
                 // flip two consecutive "++" into "--"
@@ -36,5 +37,19 @@ public class Q293_Flip_Game {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        Q293_Flip_Game sol = new Q293_Flip_Game();
+
+        String s = "++++";
+        List<String> result = sol.generatePossibleNextMoves(s);
+
+        //   --++
+        //   +--+
+        //   ++--
+        for (String p : result) {
+            System.out.println(p);
+        }
     }
 }
