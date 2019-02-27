@@ -15,21 +15,21 @@ package Leetcode;
 
 public class Q243_Shortest_Word_Distance {
     public int shortestDistance(String[] words, String word1, String word2) {
-        int m = -1;
-        int n = -1;
+        int word1Index = -1;
+        int word2Index = -1;
 
         int min = Integer.MAX_VALUE;
 
         for (int i = 0; i < words.length; i++) {
-            String s = words[i];
-            if (word1.equals(s)) {
-                m = i;
-                if (n != -1)
-                    min = Math.min(min, m - n);
-            } else if (word2.equals(s)) {
-                n = i;
-                if (m != -1)
-                    min = Math.min(min, n - m);
+            String currentWord = words[i];
+            if (word1.equals(currentWord)) {
+                word1Index = i;
+                if (word2Index != -1)
+                    min = Math.min(min, word1Index - word2Index);
+            } else if (word2.equals(currentWord)) {
+                word2Index = i;
+                if (word1Index != -1)
+                    min = Math.min(min, word2Index - word1Index);
             }
         }
 

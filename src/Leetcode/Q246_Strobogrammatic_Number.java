@@ -18,20 +18,25 @@ import java.util.Map;
 public class Q246_Strobogrammatic_Number {
     public boolean isStrobogrammatic(String num) {
         Map<Character, Character> map = new HashMap<Character, Character>();
-        map.put('1', '1');
         map.put('0', '0');
+        map.put('1', '1');
         map.put('6', '9');
-        map.put('9', '6');
         map.put('8', '8');
+        map.put('9', '6');
 
-        int left = 0, right = num.length() - 1;
-        while (left <= right) {
-            if (!map.containsKey(num.charAt(right))
-                    || num.charAt(left) != map.get(num.charAt(right))) {
+        int start = 0,
+            end = num.length() - 1;
+
+        while (start <= end) {
+            if (!map.containsKey(num.charAt(start))
+                || map.containsKey(num.charAt(end)))
                 return false;
-            }
-            left++;
-            right--;
+
+            if (num.charAt(start) != map.get(num.charAt(end)))
+                return false;
+
+            start++;
+            end--;
         }
         return true;
     }

@@ -15,8 +15,6 @@ import Leetcode.Util.TreeNode;
  *
  */
 public class Q270_Closest_Binary_Search_Tree_Value {
-    int goal;
-    double min = Double.MAX_VALUE;
 
     public int closestValue(TreeNode root, double target) {
         if (root == null)
