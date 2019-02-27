@@ -9,45 +9,42 @@ package Leetcode;
  */
 public class Q276_Paint_Fence {
 
-    // Constant Space Solution
     public int numWaysConstantSpace(int n, int k) {
         if (n <= 0 || k <= 0) {
             return 0;
         }
-        if (n == 1) {
-            return k;
+
+        // 0 ways to paint the 1st fence with same color (since there is no previous color)
+        // k ways to paint the 1st fence with diff color
+        int same = 0,
+            diff = k,
+            result = same + diff;
+
+        for ( int i = 2 ; i <= n; ++ i) {
+            same = diff; // same color as previous fence
+            diff = result * (k - 1 ); //different color
+            result = same + diff;
         }
-        // Case 1: First 2 posts have same color.
-        int sameCase = k;
-        // Case 2: First 2 posts have different colors.
-        int diffCase = k * (k - 1);
-        for (int i = 3; i <= n; i++) {
-            int temp = diffCase;
-            /**
-             * To every sameCase and diffCase we can add a new post with different color as the last one. We have k-1 color
-             * options for the last one.
-             */
-            diffCase = (sameCase + diffCase) * (k - 1);
-            /**
-             * To every diffCase we can add a new post with the same color as the last one to not generate violation - no
-             * more than 2 adjacent fence posts have the same color.
-             */
-            sameCase = temp;
-        }
-        return sameCase + diffCase;
+        return result;
     }
 
     // DP
     public int numWays(int n, int k) {
-        if (n == 0 || k == 0) return 0;
-        if (n == 1) return k;
+        if (n <= 0 || k <= 0)
+            return 0;
+
+        if (n == 1)
+            return k;
+
         // same[i] means the ith post has the same color with the (i-1)th post.
         int[] same = new int[n];
         // diff[i] means the ith post has a different color with the (i-1)th post.
         int[] diff = new int[n];
+
         same[0] = same[1] = k;
         diff[0] = k;
         diff[1] = k * (k - 1);
+
         for (int i = 2; i < n; ++i) {
             // the i-th in same should be equal the previous one in diff since only two consectutive
             // same are allowed
