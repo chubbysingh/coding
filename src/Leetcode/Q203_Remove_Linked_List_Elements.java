@@ -18,6 +18,7 @@ public class Q203_Remove_Linked_List_Elements {
         if (head == null)
             return null;
 
+        //remove elements from beginning if equal to val
         while (head != null && head.data == val) {
             head = head.next;
         }
