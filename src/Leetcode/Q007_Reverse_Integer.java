@@ -20,7 +20,8 @@ package Leetcode;
  *
  */
 public class Q007_Reverse_Integer {
-    public int reverse(int num) {
+    public int reverse(int x) {
+        long num = (long) x;
         boolean isNegative = false;
 
         if (num < 0) {
@@ -28,16 +29,24 @@ public class Q007_Reverse_Integer {
             num = 0 - num;
         }
 
-        int reverse = 0;
+        long reverse = 0;
 
         while (num != 0) {
-            if (reverse < Integer.MAX_VALUE / 10) {
-                reverse = reverse * 10 + num % 10;
-                num /= 10;
-            } else {
-                return 0;
-            }
+            reverse = reverse * 10 + num % 10;
+            num /= 10;
         }
-        return isNegative ? 0 - reverse : reverse;
+        if (isNegative)
+            reverse = -1 * reverse;
+
+        if (reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE)
+            return 0;
+        else
+            return (int) reverse;
+    }
+
+    public static void main(String[] args) {
+        Q007_Reverse_Integer sol = new Q007_Reverse_Integer();
+        int result = sol.reverse(123);
+        System.out.println("Result: "  + result);
     }
 }
