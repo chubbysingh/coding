@@ -1,7 +1,6 @@
 package Leetcode;
 
 /**
- * Created by rbhatnagar2 on 1/13/17.
  *
  * Given two binary strings, return their sum (also a binary string).
  *
@@ -10,6 +9,11 @@ package Leetcode;
  * Example 1:
  * Input: a = "1010", b = "1011"
  * Output: "10101"
+ *
+ * Time Complexity: O(max(N1, N2))
+ *  *      where N1 and N2 are length of num1 and num2
+ *  * Space Complexity: O(max(N1, N2)),
+ *  *      because the length of the new string is at most max(N1, N2) + 1
  *
  */
 public class Q067_Add_Binary {
@@ -23,6 +27,7 @@ public class Q067_Add_Binary {
 
         while (lengthA >= 0 || lengthB >= 0) {
             int sum = carry;
+            carry = 0;
 
             if (lengthA >= 0) {
                 sum += a.charAt(lengthA) - '0';
@@ -35,8 +40,6 @@ public class Q067_Add_Binary {
             if (sum > 1) {
                 carry = 1;
                 sum = sum % 2;
-            } else {
-                carry = 0;
             }
             sb.append(sum);
 
@@ -45,7 +48,6 @@ public class Q067_Add_Binary {
             sb.append("1");
         }
         return sb.reverse().toString();
-
     }
 
     public static void main(String[] args) {

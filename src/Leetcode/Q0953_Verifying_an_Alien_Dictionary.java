@@ -11,24 +11,27 @@ import java.util.Map;
  *
  * Given a sequence of words written in the alien language,
  * and the order of the alphabet,
- * return true if and only if the given words are sorted lexicographicaly
+ * return true if and only if the given words are sorted lexicographically
  * in this alien language.
+ *
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(n)
  *
  */
 public class Q0953_Verifying_an_Alien_Dictionary {
-    Map<Character, Integer> orderMap;
+    private Map<Character, Integer> orderMap;
     public boolean isAlienSorted(String[] words, String order) {
         orderMap = computeMap(order);
 
         for (int i=0; i < words.length - 1; i++) {
-            if (isLatterWordLexicographicallySmaller(words[i], words[i+1])) {
+            if (isFirstWordLargerThanSecond(words[i], words[i+1])) {
                 return false;
             }
         }
         return true;
     }
 
-    private boolean isLatterWordLexicographicallySmaller(String word1, String word2) {
+    private boolean isFirstWordLargerThanSecond(String word1, String word2) {
         int idx1 = 0, idx2 = 0;
 
         while (idx1 < word1.length() && idx2 < word2.length()) {
@@ -40,7 +43,10 @@ public class Q0953_Verifying_an_Alien_Dictionary {
             idx1++;
             idx2++;
         }
-        return word2.length() < word1.length();
+        // First word will be larger than second if
+        // first word is bigger in length than second
+        // e.g. facebook > face
+        return word1.length() > word2.length() ;
     }
 
     private Map<Character, Integer> computeMap(String order) {

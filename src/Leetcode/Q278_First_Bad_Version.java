@@ -26,6 +26,9 @@ package Leetcode;
  *
  * Then 4 is the first bad version.
  *
+ * Time Complexity: O(log(n))
+ * Space Complexity: O(1)
+ *
  */
 public class Q278_First_Bad_Version {
     public int firstBadVersion(int n) {

@@ -1,7 +1,11 @@
 package Leetcode;
 
 /**
- * Created by rbhatnagar2 on 1/15/17.
+ * Given a string s, determine if it is a palindrome,
+ * considering only alphanumeric characters and ignoring cases.
+ *
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  */
 public class Q125_Valid_Palindrome {
     public boolean isPalindrome(String s) {
@@ -27,5 +31,13 @@ public class Q125_Valid_Palindrome {
 
     private boolean isNotLetter(Character c) {
         return !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'));
+    }
+
+    public static void main(String[] args) {
+        Q125_Valid_Palindrome sol = new Q125_Valid_Palindrome();
+        boolean result = sol.isPalindrome("A man. a plan, a canal: Panama");
+
+        System.out.println(result);
+
     }
 }
