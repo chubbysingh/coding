@@ -26,9 +26,10 @@ public class Q0938_Range_Sum_of_BST {
 
     private void dfs(TreeNode node, int L, int R) {
         if (node != null) {
-            if (node.val >= L && node.val <= R)
-                ans += node.val;
-            if (node.val > L)
+            // L <= node.val <= R
+            if (L <= node.val && node.val <= R)
+            ans += node.val;
+            if (L < node.val)
                 dfs(node.left, L, R);
             if (node.val < R)
                 dfs(node.right, L, R);

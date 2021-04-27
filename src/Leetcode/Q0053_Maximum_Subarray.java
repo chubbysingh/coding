@@ -12,6 +12,9 @@ package Leetcode;
  * Output: 6
  * Explanation: [4,-1,2,1] has the largest sum = 6.
  *
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ *
  */
 public class Q0053_Maximum_Subarray {
     public int maxSubArray(int[] nums) {
@@ -22,5 +25,14 @@ public class Q0053_Maximum_Subarray {
             max = Math.max(max, maxHere);
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        Q0053_Maximum_Subarray sol = new Q0053_Maximum_Subarray();
+
+        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+
+        int result = sol.maxSubArray(nums);
+        System.out.println(result);
     }
 }

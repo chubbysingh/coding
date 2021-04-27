@@ -47,4 +47,13 @@ public class Q0026_Remove_Duplicates_from_Sorted_Array {
                 nums[i++] = n;
         return i;
     }
+
+    public static void main(String[] args) {
+        Q0026_Remove_Duplicates_from_Sorted_Array sol = new Q0026_Remove_Duplicates_from_Sorted_Array();
+
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+
+        int result = sol.removeDuplicates(nums);
+        System.out.println(result);
+    }
 }

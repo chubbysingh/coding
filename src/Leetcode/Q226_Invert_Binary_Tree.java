@@ -6,9 +6,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Created by rbhatnagar2 on 1/15/17.
+ * Given the root of a binary tree, invert the tree, and return its root.
  *
- * Invert a binary tree.
  *
  * Example:
  *

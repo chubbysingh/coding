@@ -22,20 +22,20 @@ public class Q0009_Palindrome_Number {
         if (x < 0)
             return false;
 
-        int digit = 1;
-        while (x / digit >= 10) {
-            digit = digit * 10;
+        int magnitude = 1;
+        while (x / magnitude >= 10) {
+            magnitude = magnitude * 10;
         }
 
         while (x > 0) {
-            int left = x / digit;
+            int left = x / magnitude;
             int right = x % 10;
 
             if (left != right)
                 return false;
             else {
-                x = (x % digit) / 10;
-                digit = digit / 100;
+                x = (x % magnitude) / 10;
+                magnitude = magnitude / 100;
             }
         }
         return true;

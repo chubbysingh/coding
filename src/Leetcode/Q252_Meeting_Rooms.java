@@ -1,7 +1,6 @@
 package Leetcode;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * Created by rbhatnagar2 on 3/15/17.
@@ -15,12 +14,12 @@ import java.util.Comparator;
 
 public class Q252_Meeting_Rooms {
     public boolean canAttendMeetings(Interval[] intervals) {
-        Arrays.sort(intervals, Comparator.comparingInt(a -> a.start));
+        Arrays.sort(intervals, (a, b) -> a.start - b.start);
+
 
         /*
         Other ways:
-
-        Arrays.sort(intervals, (a, b) -> a.start - b.start);
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a.start));
 
         Arrays.sort(intervals, new Comparator<Interval>() {
             public int compare(Interval a, Interval b) {

@@ -37,16 +37,16 @@ import java.util.Stack;
  */
 public class Q0020_Valid_Parentheses {
     public boolean isValid(String s) {
-        Stack<Character> bracket = new Stack<Character>();
+        Stack<Character> stack = new Stack<Character>();
 
         for (Character c : s.toCharArray()) {
             if (c == '(' || c == '{' || c == '[') {
-                bracket.push(getInverted(c));
-            } else if (bracket.isEmpty() || bracket.pop() != c) {
+                stack.push(getInverted(c));
+            } else if (stack.isEmpty() || stack.pop() != c) {
                 return false;
             }
         }
-        return bracket.isEmpty();
+        return stack.isEmpty();
     }
 
     private Character getInverted(Character c) {

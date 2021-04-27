@@ -1,7 +1,12 @@
 package Leetcode;
 
 /**
- * Created by rbhatnagar2 on 1/15/17.
+ * Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+ *
+ * Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?
+ *
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  */
 public class Q136_Single_Number {
     public int singleNumber(int[] nums) {
