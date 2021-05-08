@@ -11,6 +11,13 @@ import Leetcode.Util.TreeNode;
  * <p>
  * A subtree of s is a tree consists of a node in s and all of this node's descendants.
  * The tree s could also be considered as a subtree of itself.
+ *
+ * Time complexity : O(m * n).
+ * In worst case(skewed tree) traverse function takes O(m*n) time.
+ *
+ * Space complexity : O(n).
+ * The depth of the recursion tree can go upto n.
+ * n refers to the number of nodes in s.
  */
 public class Q0572_Subtree_of_Another_Tree {
     public boolean isSubtree(TreeNode s, TreeNode t) {

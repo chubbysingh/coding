@@ -26,6 +26,7 @@ public class Q111_Minimum_Depth_of_Binary_Tree {
 
         int min = 0;
         while (!queue.isEmpty()) {
+            //sizeofQueue is the # of elements at every level
             int sizeOfQueue = queue.size();
             min++;
 

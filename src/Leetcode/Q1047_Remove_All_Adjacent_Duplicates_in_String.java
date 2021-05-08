@@ -1,5 +1,7 @@
 package Leetcode;
 
+import java.util.Stack;
+
 /**
  * Given a string S of lowercase letters,
  * a duplicate removal consists of choosing two adjacent and equal letters, and removing them.
@@ -15,14 +17,30 @@ package Leetcode;
 public class Q1047_Remove_All_Adjacent_Duplicates_in_String {
 
     public String removeDuplicates(String S) {
+        StringBuffer result = new StringBuffer();
+        Stack<Character> stack = new Stack<>();
+
+        for (Character c : S.toCharArray()) {
+            if (!stack.isEmpty() && stack.peek() == c) {
+                stack.pop();
+            } else {
+                stack.push(c);
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            result.append(stack.pop());
+        }
+        return result.reverse().toString();
+    }
+
+    public String removeDuplicatesAlternate(String S) {
         StringBuilder sb = new StringBuilder();
-        int sbLength = 0;
-        for(char character : S.toCharArray()) {
-            if (sbLength != 0 && character == sb.charAt(sbLength - 1))
-                sb.deleteCharAt(sbLength-- - 1);
-            else {
-                sb.append(character);
-                sbLength++;
+        for (char ch: S.toCharArray()) {
+            if ( sb.length() != 0 && sb.charAt(sb.length() - 1) == ch ) {
+                sb.deleteCharAt(sb.length() - 1);
+            } else {
+                sb.append(ch);
             }
         }
         return sb.toString();
