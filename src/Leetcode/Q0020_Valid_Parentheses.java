@@ -37,26 +37,35 @@ import java.util.Stack;
  */
 public class Q0020_Valid_Parentheses {
     public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
 
         for (Character c : s.toCharArray()) {
             if (c == '(' || c == '{' || c == '[') {
-                stack.push(getInverted(c));
-            } else if (stack.isEmpty() || stack.pop() != c) {
-                return false;
+                stack.push(c);
+            } else {
+                if ( stack.isEmpty() || !isMatch(stack.pop(), c)) {
+                    return false;
+                }
             }
         }
         return stack.isEmpty();
     }
 
-    private Character getInverted(Character c) {
-        if (c == '(')
-            return ')';
-        else if (c == '{')
-            return '}';
-        else if (c == '[')
-            return ']';
-        else
-            return null;
+    private boolean isMatch(Character open, Character close) {
+        if (open == '(') {
+            return close == ')';
+        } else if (open == '{') {
+            return close == '}';
+        } if (open == '[') {
+            return close == ']';
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        Q0020_Valid_Parentheses sol = new Q0020_Valid_Parentheses();
+
+        boolean result = sol.isValid("()");
+        System.out.println(result);
     }
 }

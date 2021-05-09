@@ -10,8 +10,8 @@ public class Q108_Convert_Sorted_Array_to_Binary_Search_Tree {
         if (nums.length == 0)
             return null;
 
-        TreeNode t = helper(nums, 0, nums.length - 1);
-        return t;
+        TreeNode result = helper(nums, 0, nums.length - 1);
+        return result;
     }
 
     private TreeNode helper(int[] nums, int low, int high) {
@@ -20,9 +20,9 @@ public class Q108_Convert_Sorted_Array_to_Binary_Search_Tree {
         }
 
         int mid = low + (high - low) / 2;
-        TreeNode tmp = new TreeNode(nums[mid]);
-        tmp.left = helper(nums, low, mid - 1);
-        tmp.right = helper(nums, mid + 1, high);
-        return tmp;
+        TreeNode curr = new TreeNode(nums[mid]);
+        curr.left = helper(nums, low, mid - 1);
+        curr.right = helper(nums, mid + 1, high);
+        return curr;
     }
 }

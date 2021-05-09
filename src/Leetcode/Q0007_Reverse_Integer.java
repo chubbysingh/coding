@@ -21,32 +21,28 @@ package Leetcode;
  */
 public class Q0007_Reverse_Integer {
     public int reverse(int x) {
-        long num = (long) x;
-        boolean isNegative = false;
-
-        if (num < 0) {
-            isNegative = true;
-            num = 0 - num;
-        }
-
-        long reverse = 0;
-
-        while (num != 0) {
-            reverse = reverse * 10 + num % 10;
-            num /= 10;
-        }
-        if (isNegative)
-            reverse = -1 * reverse;
-
-        if (reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE)
+        //Corner case since Int range is from -2147483647 to 2147483646:
+        if (Integer.MIN_VALUE == x)
             return 0;
-        else
-            return (int) reverse;
+
+        boolean isNegative = x < 0;
+        x = Math.abs(x);
+
+        int reverse = 0;
+
+        while (x != 0) {
+            if (reverse > Integer.MAX_VALUE/10) {
+                return 0;
+            }
+            reverse = reverse * 10 + x%10;
+            x = x/10;
+        }
+        return isNegative ? -1 * reverse : reverse;
     }
 
     public static void main(String[] args) {
         Q0007_Reverse_Integer sol = new Q0007_Reverse_Integer();
-        int result = sol.reverse(123);
+        int result = sol.reverse(-2147483648);
         System.out.println("Result: "  + result);
     }
 }

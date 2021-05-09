@@ -21,10 +21,8 @@ import java.util.Arrays;
  *
  */
 public class Q0014_Longest_Common_Prefix {
-
-
     /**
-     * Horizontal Scan
+     * Horizontal Scan. Preferred.
      */
     public String longestCommonPrefixHorizontalScan(String[] strs) {
         if (strs.length == 0) return "";
@@ -73,7 +71,7 @@ public class Q0014_Longest_Common_Prefix {
         }
     }
 
-    String commonPrefix(String left, String right) {
+    private String commonPrefix(String left, String right) {
         int min = Math.min(left.length(), right.length());
         for (int i = 0; i < min; i++) {
             if (left.charAt(i) != right.charAt(i))
@@ -104,5 +102,13 @@ public class Q0014_Longest_Common_Prefix {
             i++;
         }
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        Q0014_Longest_Common_Prefix sol = new Q0014_Longest_Common_Prefix();
+        String[] strs = {"flower","flow","flight"};
+
+        String result = sol.longestCommonPrefixHorizontalScan(strs);
+        System.out.println(result);
     }
 }

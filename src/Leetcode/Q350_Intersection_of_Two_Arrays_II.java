@@ -12,11 +12,10 @@ public class Q350_Intersection_of_Two_Arrays_II {
     public int[] intersect(int[] nums1, int[] nums2) {
 
         // buildMap
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        map = buildMap(nums2);
+        Map<Integer, Integer> map = buildMap(nums2);
 
         // buildList
-        List<Integer> res = new LinkedList<Integer>();
+        List<Integer> res = new LinkedList<>();
         for (int n : nums1) {
             if (map.containsKey(n) && map.get(n) != 0) {
                 res.add(n);
