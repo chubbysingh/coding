@@ -15,7 +15,6 @@ public class Q238_Product_of_Array_Except_Self {
             left[i] = left[i - 1] * nums[i - 1];
         }
 
-
         //right product
         right[nums.length - 1] = 1;
         for (int i = nums.length - 2; i >= 0; i--) {

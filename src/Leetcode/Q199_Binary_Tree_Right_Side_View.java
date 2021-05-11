@@ -11,11 +11,11 @@ import java.util.Queue;
  */
 public class Q199_Binary_Tree_Right_Side_View {
     public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
+        List<Integer> result = new LinkedList<>();
         if (root == null)
             return result;
 
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {

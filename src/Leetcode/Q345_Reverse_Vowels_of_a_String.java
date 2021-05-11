@@ -8,37 +8,42 @@ import java.util.Set;
  */
 public class Q345_Reverse_Vowels_of_a_String {
     public String reverseVowels(String s) {
-        Set<Character> vowels = new HashSet<Character>();
-        vowels.add('a');
-        vowels.add('e');
-        vowels.add('i');
-        vowels.add('o');
-        vowels.add('u');
-        vowels.add('A');
-        vowels.add('E');
-        vowels.add('I');
-        vowels.add('O');
-        vowels.add('U');
+        if (s == null || s.length() == 0) {
+            return s;
+        }
 
-        int start = 0, end = s.length() - 1;
-        char[] cArr = s.toCharArray();
+        char[] chArray = s.toCharArray();
+        int start = 0,
+                end = chArray.length - 1;
 
         while (start < end) {
-            if (!vowels.contains(cArr[start])) {
+            if (!isVowel(chArray[start])) {
                 start++;
             }
-            if (!vowels.contains(cArr[end])) {
+
+            else if (!isVowel(chArray[end])) {
                 end--;
             }
-            if (vowels.contains(cArr[start]) && vowels.contains(cArr[end])) {
-                Character tmp = cArr[start];
-                cArr[start] = cArr[end];
-                cArr[end] = tmp;
+
+            else {
+                Character tmp = chArray[start];
+                chArray[start] = chArray[end];
+                chArray[end] = tmp;
+
                 start++;
                 end--;
             }
         }
-        return new String(cArr);
+        return new String(chArray);
+    }
 
+    private boolean isVowel(Character c) {
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+    }
+
+    public static void main(String[] args) {
+        Q345_Reverse_Vowels_of_a_String sol = new Q345_Reverse_Vowels_of_a_String();
+        String result = sol.reverseVowels("hello");
+        System.out.println(result);
     }
 }
