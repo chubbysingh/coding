@@ -9,13 +9,12 @@ public class Q0050_Pow {
     public double myPow(double x, int n) {
         // Not required. Only for leetcode crappy edge case
         if (n == Integer.MIN_VALUE) {
-            if (x < 0) {
-                x = -x;
-            }
-            n++;
+            x = x*x;
+            n = n/2;
+            return myPow(x, n);
         }
         if (n < 0)
-            return 1 / myPow(x, -n);
+            return myPow(1/x, -n);
 
         else if (n == 0)
             return 1;
@@ -24,11 +23,9 @@ public class Q0050_Pow {
             return x;
 
         else if (n % 2 == 0) {
-            double part = myPow(x, n / 2);
-            return part * part;
+            return myPow(x * x, n / 2);
         } else {
-            double part = myPow(x, n / 2);
-            return x * part * part;
+            return x * myPow(x * x, n / 2);
         }
     }
 }

@@ -15,7 +15,7 @@ public class Q235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree {
             return null;
 
         // Identify smaller and larger values first
-        int smaller = Integer.MIN_VALUE, larger = Integer.MIN_VALUE;
+        int smaller, larger;
         if (p.val < q.val) {
             smaller = p.val;
             larger = q.val;

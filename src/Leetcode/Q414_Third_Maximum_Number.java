@@ -23,15 +23,13 @@ public class Q414_Third_Maximum_Number {
                 min = mid;
                 mid = max;
                 max = num;
-                count++;
             } else if (mid == null || num > mid) {
                 min = mid;
                 mid = num;
-                count++;
             } else if (min == null || num > min) {
                 min = num;
-                count++;
             }
+            count++;
         }
         if (count >= 3)
             return min;
