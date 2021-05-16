@@ -4,22 +4,35 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by rbhatnagar2 on 3/5/17.
+ * Given an integer array nums and an integer k,
+ * return true if nums has a continuous subarray of size at least two
+ * whose elements sum up to a multiple of k, or false otherwise.
  */
 public class Q523_Continuous_Subarray_Sum {
     public boolean checkSubarraySum(int[] nums, int k) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> map = new HashMap<>();
         map.put(0, -1);
-        int runningSum = 0;
+        int sum = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            runningSum += nums[i];
-            if (k != 0) runningSum %= k;
-            Integer prev = map.get(runningSum);
-            if (prev != null) {
-                if (i - prev > 1) return true;
-            } else map.put(runningSum, i);
+            sum += nums[i];
+            sum = k != 0 ? sum % k : sum;
+            if (map.containsKey(sum)
+                    && i - map.get(sum) > 1) {
+                return true;
+            }
+            map.put (sum, map.getOrDefault (sum, i));
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        Q523_Continuous_Subarray_Sum sol = new Q523_Continuous_Subarray_Sum();
+
+        int[] nums = {23,2,4,6,7};
+        int k = 6;
+
+        boolean result = sol.checkSubarraySum(nums, k);
+        System.out.println(result);
     }
 }

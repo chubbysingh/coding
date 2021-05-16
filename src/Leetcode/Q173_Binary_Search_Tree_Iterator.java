@@ -8,36 +8,29 @@ import java.util.Stack;
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q173_Binary_Search_Tree_Iterator {
-    private Stack<TreeNode> stack;
-
-    // constructor
+    Stack<TreeNode> stack;
     public Q173_Binary_Search_Tree_Iterator(TreeNode root) {
-        stack = new Stack<TreeNode>();
-        while (root != null) {
-            stack.push(root);
-            root = root.left;
-        }
+        stack = new Stack<>(); // initialize the stack
+        add(root); //add the current node and all its left child to the stack
     }
 
-    /**
-     * @return whether we have a next smallest number
-     */
+    /** @return whether we have a next smallest number */
     public boolean hasNext() {
         return !stack.isEmpty();
     }
 
-    /**
-     * @return the next smallest number
-     */
+    /** @return the next smallest number */
     public int next() {
-        TreeNode res = stack.pop();
-        if (res.right != null) {
-            TreeNode curr = res.right;
-            while (curr != null) {
-                stack.push(curr);
-                curr = curr.left;
-            }
+        TreeNode node = stack.pop();
+        add(node.right);
+        return node.val;
+    }
+
+    /** @add the current node and all its left child to the stack*/
+    private void add(TreeNode node) {
+        while (node != null) {
+            stack.push(node);
+            node = node.left;
         }
-        return res.val;
     }
 }

@@ -1,28 +1,37 @@
 package Leetcode;
 
+import java.util.Arrays;
+
 /**
- * Created by rbhatnagar2 on 7/26/17.
+ * Return the least number of units of times that
+ * the CPU will take to finish all the given tasks.
  */
 public class Q0621_Task_Scheduler {
     public int leastInterval(char[] tasks, int n) {
-        int[] storage = new int[26];
-        for (char c : tasks) {
-            storage[(c - 'A')]++;
+        int[] slots = new int[26];
+
+        for (int i=0; i < tasks.length; i++) {
+            slots[tasks[i] - 'A']++;
         }
-        int max = 0;
-        int count = 1;
-        for (int num : storage) {
-            if (num == 0) {
-                continue;
-            }
-            if (max < num) {
-                max = num;
-                count = 1;
-            } else if (max == num) {
-                count++;
-            }
+
+        Arrays.sort(slots);
+
+        int groups = slots[25] - 1,
+                idleSlots = groups * n;
+
+        for (int i = 24; i >= 0 ; i--) {
+            idleSlots -= Math.min(slots[i], groups);
         }
-        int space = (n + 1) * (max - 1) + count;
-        return Math.max(tasks.length, space);
+
+        return idleSlots > 0 ? tasks.length + idleSlots : tasks.length;
+    }
+
+    public static void main(String[] args) {
+        Q0621_Task_Scheduler sol = new Q0621_Task_Scheduler();
+
+        char[] tasks = { 'A','A','A','B','B','B' };
+        int result = sol.leastInterval(tasks, 2);
+
+        System.out.println(result);
     }
 }
