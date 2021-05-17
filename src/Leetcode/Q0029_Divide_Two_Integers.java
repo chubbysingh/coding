@@ -18,6 +18,8 @@ public class Q0029_Divide_Two_Integers {
 
         //Take care the edge cases.
         if (divisor == 0) return Integer.MAX_VALUE;
+
+        //Not needed. Code can handle these two conditions.
         if (divisor == 1) return sign*dividend;
         if ((dividend == 0) || (dividend < divisor)) return 0;
 

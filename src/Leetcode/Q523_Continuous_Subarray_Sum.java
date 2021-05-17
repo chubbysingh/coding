@@ -17,11 +17,24 @@ public class Q523_Continuous_Subarray_Sum {
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
             sum = k != 0 ? sum % k : sum;
+
+            if (map.containsKey(sum)) {
+                if (i - map.get(sum) > 1) {
+                    return true;
+                }
+            } else {
+                map.put(sum, i);
+            }
+
+            /*
+            // Can be done like below as well
             if (map.containsKey(sum)
                     && i - map.get(sum) > 1) {
                 return true;
             }
+            // Do not override existing value in map.
             map.put (sum, map.getOrDefault (sum, i));
+            */
         }
         return false;
     }
