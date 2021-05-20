@@ -16,41 +16,44 @@ public class Q0023_Merge_k_Sorted_Lists {
         if (lists.length == 1)
             return lists[0];
 
-        int numLists = lists.length;
+        int low = 0,
+            high = lists.length - 1;
 
-        return merge(lists, 0, numLists - 1);
+        return merge(lists, low, high);
     }
 
-    ListNode merge(ListNode[] lists, int lo, int hi) {
-        if (lo == hi)
-            return lists[lo];
+    ListNode merge(ListNode[] lists, int low, int high) {
+        if (low == high)
+            return lists[low];
 
-        int mid = (lo + hi) / 2;
+        int mid = low + (high - low)/2;
 
-        ListNode l1 = merge(lists, lo, mid);
-        ListNode l2 = merge(lists, mid + 1, hi);
+        ListNode l1 = merge(lists, low, mid);
+        ListNode l2 = merge(lists, mid + 1, high);
 
         return mergeTwoLists(l1, l2);
     }
 
+    // 21. https://leetcode.com/problems/merge-two-sorted-lists/
     ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
-        ListNode head = new ListNode(0);
-        ListNode p = head;
+        ListNode res = new ListNode(0);
+        ListNode resHead = res;
 
         while (l1 != null && l2 != null) {
             if (l1.data <= l2.data) {
-                p.next = l1;
+                resHead.next = l1;
                 l1 = l1.next;
             } else {
-                p.next = l2;
+                resHead.next = l2;
                 l2 = l2.next;
             }
-            p = p.next;
+            resHead = resHead.next;
         }
-        if (l1 != null) p.next = l1;
-        else if (l2 != null) p.next = l2;
+        if (l1 != null) resHead.next = l1;
 
-        return head.next;
+        if (l2 != null) resHead.next = l2;
+
+        return res.next;
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q301_Remove_Invalid_Parentheses {
-    List<String> result = new ArrayList<String>();
+    List<String> result = new ArrayList<>();
     int max = 0;
 
     public List<String> removeInvalidParentheses(String s) {

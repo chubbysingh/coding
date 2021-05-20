@@ -4,6 +4,12 @@ import java.util.Stack;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
+ *
+ * Complexity:
+ * push: O(n)
+ * pop: O(1)
+ * peek: O(1)
+ * isEmpty: O(1)
  */
 public class Q232_Implement_Queue_using_Stacks_Expensive_Push {
     Stack<Integer> s1 = new Stack<Integer>();

@@ -73,7 +73,7 @@ public class Q211_Add_and_Search_Word_Data_structure_design {
 
         public TrieNode() {
             this.isLeaf = false;
-            this.children = new HashMap<Character, TrieNode>();
+            this.children = new HashMap<>();
         }
     }
 }

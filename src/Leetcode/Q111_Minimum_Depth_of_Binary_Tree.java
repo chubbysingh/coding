@@ -11,11 +11,20 @@ import java.util.Queue;
 public class Q111_Minimum_Depth_of_Binary_Tree {
     public int minDepthRecursive(TreeNode root) {
         if (root == null) return 0;
-        else if (root.left == null) return minDepthRecursive(root.right) + 1;
-        else if (root.right == null) return minDepthRecursive(root.left) + 1;
-        else {
-            return Math.min(minDepthRecursive(root.left), minDepthRecursive(root.right)) + 1;
+        if (root.left == null) return minDepthRecursive(root.right) + 1;
+        if (root.right == null) return minDepthRecursive(root.left) + 1;
+        return Math.min(minDepthRecursive(root.left), minDepthRecursive(root.right)) + 1;
+    }
+
+    public int minDepthRecursiveTwo(TreeNode root) {
+        if (root == null) return 0;
+        int left = minDepthRecursiveTwo(root.right) + 1;
+        int right = minDepthRecursiveTwo(root.left) + 1;
+
+        if (left == 0 || right == 0) {
+            return 1 + right + left;
         }
+        return Math.min(minDepthRecursiveTwo(root.left), minDepthRecursiveTwo(root.right)) + 1;
     }
 
     public int minDepthIterative(TreeNode root) {
