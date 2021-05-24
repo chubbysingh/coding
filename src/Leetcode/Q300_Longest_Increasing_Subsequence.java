@@ -1,5 +1,7 @@
 package Leetcode;
 
+import java.util.Arrays;
+
 /**
  * Created by rbhatnagar2 on 1/15/17.
  */
@@ -9,9 +11,7 @@ public class Q300_Longest_Increasing_Subsequence {
             return 0;
 
         int[] dp = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            dp[i] = 1;
-        }
+        Arrays.fill(dp, 1);
 
         for (int i = 1; i < nums.length; i++) {
             for (int j = 0; j < i; j++) {

@@ -35,15 +35,15 @@ public class Q094_Binary_Tree_Inorder_Traversal {
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
 
-        TreeNode p = root;
-        while (!stack.empty() || p != null) {
-            if (p != null) {
-                stack.push(p);
-                p = p.left;
+        TreeNode curr = root;
+        while (!stack.empty() || curr != null) {
+            if (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
             } else {
                 TreeNode temp = stack.pop();
                 result.add(temp.val);
-                p = temp.right;
+                curr = temp.right;
             }
         }
         return result;

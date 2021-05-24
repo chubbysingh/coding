@@ -1,24 +1,31 @@
 package Leetcode;
 
 /**
- * Created by rbhatnagar2 on 1/13/17.
- * <p>
+ * Each element in the array represents your maximum jump length at that position.
+ * Determine if you are able to reach the last index.
+ *
  * https://leetcode.com/problems/jump-game/
  */
+
+// https://www.youtube.com/watch?v=Zb4eRjuPHbM
 public class Q055_Jump_Game {
     public boolean canJump(int[] nums) {
-        if (nums.length <= 1)
-            return true;
+        int lastGoodIndexPosition = nums.length - 1;
 
-        int max = nums[0];
-        for (int i = 0; i < nums.length; i++) {
-            if (max < i)
-                return false;
-            max = Math.max(max, i + nums[i]);
-
-            if (max >= nums.length - 1)
-                return true;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (i + nums[i] >= lastGoodIndexPosition) {
+                lastGoodIndexPosition = i;
+            }
         }
-        return false;
+        return lastGoodIndexPosition == 0;
+    }
+
+    public static void main(String[] args) {
+        Q055_Jump_Game sol = new Q055_Jump_Game();
+
+        int[] nums = {2,3,1,1,4};
+        boolean result = sol.canJump(nums);
+
+        System.out.println(result);
     }
 }

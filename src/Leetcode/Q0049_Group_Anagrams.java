@@ -1,9 +1,10 @@
 package Leetcode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
@@ -12,23 +13,34 @@ import java.util.List;
  */
 public class Q0049_Group_Anagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> result = new LinkedList<>();
 
-        if (strs == null || strs.length == 0) {
-            return new ArrayList<List<String>>();
+        Map<String, List<String>> map = new HashMap<>();
+
+        for (String str : strs) {
+            char[] chArr = str.toCharArray();
+            Arrays.sort(chArr);
+
+            String sortedString = new String(chArr);
+
+            if (!map.containsKey(sortedString)) {
+                map.put(sortedString, new LinkedList<String>());
+            }
+
+            map.get(sortedString).add(str);
         }
-        HashMap<String, List<String>> map = new HashMap<String, List<String>>();
 
-        for (String s : strs) {
-            char[] ca = s.toCharArray();
-            Arrays.sort(ca);
-            String keyStr = String.valueOf(ca);
-
-            if (!map.containsKey(keyStr))
-                map.put(keyStr, new ArrayList<String>());
-
-            map.get(keyStr).add(s);
+        for (List<String> groupedStrings : map.values()) {
+            result.add(groupedStrings);
         }
+        return result;
+    }
 
-        return new ArrayList<List<String>>(map.values());
+    public static void main(String[] args) {
+        Q0049_Group_Anagrams sol = new Q0049_Group_Anagrams();
+        String[] strs = {"eat","tea","tan","ate","nat","bat"};
+
+        List<List<String>> result = sol.groupAnagrams(strs);
+        System.out.println(result);
     }
 }

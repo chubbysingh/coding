@@ -16,8 +16,8 @@ public class Q0036_Valid_Sudoku {
 
     private boolean validateRowAndCols(char[][] board) {
         for (int i = 0; i < 9; i++) {
-            Set<Character> rowSet = new HashSet<Character>();
-            Set<Character> colSet = new HashSet<Character>();
+            Set<Character> rowSet = new HashSet<>();
+            Set<Character> colSet = new HashSet<>();
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] != '.') {
                     if (rowSet.contains(board[i][j]))
