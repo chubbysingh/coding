@@ -1,6 +1,7 @@
 package Leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,8 +33,7 @@ public class Q210_Course_Schedule_II {
         Map<Integer, List<Integer>> adjList = new HashMap<>();
         for (int[] edge : prerequisites) {
             if (!adjList.containsKey(edge[1])) {
-                List<Integer> neighbors = new ArrayList<Integer>();
-                adjList.put(edge[1], neighbors);
+                adjList.put(edge[1], new ArrayList<>());
             }
             adjList.get(edge[1]).add(edge[0]);
         }
@@ -77,6 +77,15 @@ public class Q210_Course_Schedule_II {
         visited[vertexId] = 1;
 
         return true;
+    }
 
+    public static void main(String[] args) {
+        Q210_Course_Schedule_II sol = new Q210_Course_Schedule_II();
+
+        int numCourses = 4;
+        int[][] prerequisites = {{1, 0}, {2, 0}, {3, 1}, {3, 2}};
+
+        int[] result = sol.findOrder(numCourses, prerequisites);
+        System.out.println(Arrays.toString(result));
     }
 }

@@ -39,7 +39,7 @@ public class Q0036_Valid_Sudoku {
     private boolean validateCube(char[][] board) {
 
         for (int bucket = 0; bucket < 9; bucket++) {
-            Set<Character> set = new HashSet<Character>();
+            Set<Character> set = new HashSet<>();
             for (int i = bucket / 3 * 3; i < bucket / 3 * 3 + 3; i++) {
                 for (int j = bucket % 3 * 3; j < bucket % 3 * 3 + 3; j++) {
                     if (board[i][j] != '.') {

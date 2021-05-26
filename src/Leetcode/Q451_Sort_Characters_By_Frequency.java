@@ -55,4 +55,13 @@ public class Q451_Sort_Characters_By_Frequency {
         }
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        Q451_Sort_Characters_By_Frequency sol = new Q451_Sort_Characters_By_Frequency();
+
+        String s = "tree";
+
+        String result = sol.frequencySort(s);
+        System.out.println(result);
+    }
 }
