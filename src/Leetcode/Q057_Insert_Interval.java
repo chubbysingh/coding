@@ -1,14 +1,16 @@
 package Leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by rbhatnagar2 on 1/13/17.
  */
 public class Q057_Insert_Interval {
-    public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
+    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
 
-        ArrayList<Interval> result = new ArrayList<>();
+        List<Interval> result = new ArrayList<>();
 
         for (Interval interval : intervals) {
             if (interval.end < newInterval.start) {
@@ -29,7 +31,7 @@ public class Q057_Insert_Interval {
         return result;
     }
 
-    public class Interval {
+    public static class Interval {
         int start;
         int end;
 
@@ -37,5 +39,25 @@ public class Q057_Insert_Interval {
             start = s;
             end = e;
         }
+
+        @Override
+        public String toString() {
+            return "{" + start + "," + end + '}';
+        }
+    }
+
+    public static void main(String[] args) {
+        Q057_Insert_Interval sol = new Q057_Insert_Interval();
+
+        List<Interval> intervals = Arrays.asList(
+                new Interval(1, 3),
+                new Interval(6, 9)
+        );
+
+        Interval newInternal = new Interval(2, 5);
+
+        List<Interval> result = sol.insert(intervals, newInternal);
+
+        System.out.println(result);
     }
 }

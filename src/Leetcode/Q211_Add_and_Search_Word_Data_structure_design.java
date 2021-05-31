@@ -9,60 +9,47 @@ import java.util.Map;
 public class Q211_Add_and_Search_Word_Data_structure_design {
     private TrieNode root = new TrieNode();
 
-    /**
-     * Adds a word into the data structure.
-     */
+    /** Adds a word into the data structure. */
     public void addWord(String word) {
         TrieNode curr = root;
         for (char c : word.toCharArray()) {
-            TrieNode node = curr.children.get(c);
-            if (node == null) {
-                node = new TrieNode();
-                curr.children.put(c, node);
+
+            if (!curr.children.containsKey(c)) {
+                curr.children.put(c, new TrieNode());
             }
-            curr = node;
+
+            curr = curr.children.get(c);
         }
         curr.isLeaf = true;
     }
 
-    /**
-     * Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter.
-     */
+    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     public boolean search(String word) {
-        return dfsSearch(root.children, word, 0);
+        return dfsSearch(root, word, 0);
     }
 
-    public boolean dfsSearch(Map<Character, TrieNode> children, String word, int start) {
-        if (start == word.length()) {
-            if (children.size() == 0)
-                return true;
-            else
-                return false;
+    private boolean dfsSearch(TrieNode root, String word, int start) {
+        if(start == word.length()) {
+            return root.isLeaf;
         }
 
         char c = word.charAt(start);
 
-        if (children.containsKey(c)) {
-            if (start == word.length() - 1 && children.get(c).isLeaf) {
-                return true;
-            }
-
-            return dfsSearch(children.get(c).children, word, start + 1);
-        } else if (c == '.') {
+        if(root.children.containsKey(c)) {
+            return dfsSearch(root.children.get(c), word, start+1);
+        }
+        else if(c == '.') {
             boolean result = false;
-            for (Map.Entry<Character, TrieNode> child : children.entrySet()) {
-                if (start == word.length() - 1 && child.getValue().isLeaf) {
-                    return true;
-                }
+            for(Character ch: root.children.keySet()) {
 
                 //if any path is true, set result to be true;
-                if (dfsSearch(child.getValue().children, word, start + 1)) {
+                if(dfsSearch(root.children.get(ch), word, start+1)) {
                     result = true;
                 }
             }
-
             return result;
-        } else {
+        }
+        else {
             return false;
         }
     }
@@ -75,5 +62,21 @@ public class Q211_Add_and_Search_Word_Data_structure_design {
             this.isLeaf = false;
             this.children = new HashMap<>();
         }
+    }
+
+    public static void main(String[] args) {
+        Q211_Add_and_Search_Word_Data_structure_design sol = new Q211_Add_and_Search_Word_Data_structure_design();
+        sol.addWord("bad");
+        sol.addWord("dad");
+        sol.addWord("mad");
+        boolean result1 = sol.search("pad");
+        boolean result2 = sol.search("bad");
+        boolean result3 = sol.search(".ad");
+        boolean result4 = sol.search("b..");
+
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
+        System.out.println(result4);
     }
 }
