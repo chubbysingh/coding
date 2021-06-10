@@ -16,11 +16,11 @@ public class Q0621_Task_Scheduler {
 
         Arrays.sort(slots);
 
-        int groups = slots[25] - 1,
-                idleSlots = groups * n;
+        int buckets = slots[25] - 1,
+                idleSlots = buckets * n;
 
         for (int i = 24; i >= 0 ; i--) {
-            idleSlots -= Math.min(slots[i], groups);
+            idleSlots -= Math.min(slots[i], buckets);
         }
 
         return idleSlots > 0 ? tasks.length + idleSlots : tasks.length;

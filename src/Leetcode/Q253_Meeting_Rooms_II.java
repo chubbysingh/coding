@@ -17,13 +17,9 @@ public class Q253_Meeting_Rooms_II {
         if (intervals == null || intervals.length == 0)
             return 0;
 
-        Arrays.sort(intervals, new Comparator<Interval>() {
-            public int compare(Interval i1, Interval i2) {
-                return i1.start - i2.start;
-            }
-        });
+        Arrays.sort(intervals, (i1, i2) -> i1.start - i2.start);
 
-        PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
         int count = 1;
         queue.offer(intervals[0].end);
 

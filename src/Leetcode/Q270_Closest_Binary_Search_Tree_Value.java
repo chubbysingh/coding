@@ -42,24 +42,23 @@ public class Q270_Closest_Binary_Search_Tree_Value {
         int result = root.val;
 
         while (root != null) {
-            if (target > root.val) {
+            double diff = Math.abs(root.val - target);
 
-                double diff = Math.abs(root.val - target);
-                if (diff < min) {
-                    min = Math.min(min, diff);
-                    result = root.val;
-                }
-                root = root.right;
-            } else if (target < root.val) {
+            if (diff < min) {
+                min = diff;
+                result = root.val;
+            }
 
-                double diff = Math.abs(root.val - target);
-                if (diff < min) {
-                    min = Math.min(min, diff);
-                    result = root.val;
-                }
-                root = root.left;
-            } else {
+            if (target == root.val) {
                 return root.val;
+            }
+
+            else if (root.val < target) {
+                root = root.right;
+            }
+
+            else if (target < root.val) {
+                root = root.left;
             }
         }
 

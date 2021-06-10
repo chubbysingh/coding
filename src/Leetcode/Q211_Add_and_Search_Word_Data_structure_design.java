@@ -25,33 +25,33 @@ public class Q211_Add_and_Search_Word_Data_structure_design {
 
     /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     public boolean search(String word) {
-        return dfsSearch(root, word, 0);
+        return dfs(root, word, 0);
     }
 
-    private boolean dfsSearch(TrieNode root, String word, int start) {
-        if(start == word.length()) {
+    private boolean dfs(TrieNode root, String word, int index) {
+        if (index == word.length()) {
             return root.isLeaf;
         }
 
-        char c = word.charAt(start);
+        char c = word.charAt(index);
 
-        if(root.children.containsKey(c)) {
-            return dfsSearch(root.children.get(c), word, start+1);
+        if (c != '.') {
+            if (!root.children.containsKey(c)) {
+                return false;
+            }
+            return dfs(root.children.get(c), word, index+1);
         }
-        else if(c == '.') {
-            boolean result = false;
-            for(Character ch: root.children.keySet()) {
 
-                //if any path is true, set result to be true;
-                if(dfsSearch(root.children.get(ch), word, start+1)) {
-                    result = true;
+        else if (c == '.') {
+
+            for (char ch : root.children.keySet()) {
+                if  (dfs(root.children.get(ch), word, index+1)) {
+                    return true;
                 }
             }
-            return result;
         }
-        else {
-            return false;
-        }
+
+        return false;
     }
 
     class TrieNode {

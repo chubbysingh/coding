@@ -8,6 +8,27 @@ import java.util.PriorityQueue;
  */
 public class Q215_Kth_Largest_Element_in_an_Array {
 
+    /*
+     * Min heap
+     * Time: O(k)
+     * Space: O(k)
+     */
+    public int findKthLargestMinHeap(int[] nums, int k) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+        for (int num : nums) {
+            minHeap.offer(num);
+
+            if (minHeap.size() > k) {
+                minHeap.poll();
+            }
+        }
+        return minHeap.peek();
+    }
 
     /*
      * Using Max Heap
@@ -31,35 +52,5 @@ public class Q215_Kth_Largest_Element_in_an_Array {
         }
 
         return result;
-    }
-
-    /*
-     * Min heap
-     * Time: O(k)
-     * Space: O(k)
-     */
-    public int findKthLargestMinHeap(int[] nums, int k) {
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>(k);
-
-        for (int num : nums) {
-
-            // Put 1st k elements in the heap
-            if (minHeap.size() < k) {
-                minHeap.offer(num);
-            }
-            // if incoming number > min, add that number in the heap
-            else {
-                if (num > minHeap.peek()) {
-                    minHeap.poll();
-                    minHeap.offer(num);
-                }
-            }
-        }
-        // result will be k largest numbers with min as kth largest number
-        return minHeap.peek();
     }
 }
