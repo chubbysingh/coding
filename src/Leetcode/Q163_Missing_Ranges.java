@@ -1,7 +1,6 @@
 package Leetcode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,32 +11,34 @@ import java.util.List;
  */
 public class Q163_Missing_Ranges {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
-        List<String> list = new ArrayList<>();
+        List<String> result = new ArrayList<>();
 
-        if (nums == null || nums.length <= 0) {
-            list.add(rangeToString(lower, upper));
-            return list;
+        if (nums == null || nums.length == 0) {
+            result.add(formatString(lower, upper));
+            return result;
         }
 
-        Arrays.sort(nums);
-
-        int pre = lower - 1;
-        for (int n : nums) {
-            if (n - pre > 1)
-                list.add(rangeToString(pre + 1, n - 1));
-
-            pre = n;
+        if (lower < nums[0]) {
+            result.add(formatString(lower, nums[0] - 1));
         }
 
-        if (pre + 1 <= upper)
-            list.add(rangeToString(pre + 1, upper));
+        for (int i = 1; i < nums.length; i++) {
 
-        return list;
+            if (nums[i-1] + 1 != nums[i]) {
+                result.add(formatString(nums[i-1] + 1, nums[i] - 1));
+            }
+        }
+
+        if (upper > nums[nums.length - 1]) {
+            result.add(formatString(nums[nums.length - 1] + 1, upper));
+        }
+        return result;
+
     }
 
-    private String rangeToString(long l, long r) {
-        if (l == r) return "" + l;
-        else return l + "->" + r;
+    private String formatString(int lower, int upper) {
+        if (lower == upper) return lower + "";
+        return lower + "->" + upper;
     }
 
     public static void main(String[] args) {
