@@ -12,24 +12,24 @@ package Leetcode;
 public class Q157_Read_N_Characters_Given_Read4 {
     public int read(char[] buf, int n) {
         boolean eof = false;
-        int charsRead = 0;
-        char[] buf4 = new char[4];
+        int result = 0;
+        char[] tmp = new char[4];
 
-        while (!eof && charsRead < n) {
-            int size = read4(buf4);
-            if (size < 4) {
+        while (!eof && result < n) {
+            int count = read4(tmp);
+            if (count < 4) {
                 eof = true;
             }
 
-            if (charsRead + size > n) {
-                size = n - charsRead;
-            }
+            for (int i = 0; i < count; i++) {
+                buf[result] = tmp[i];
+                result++;
 
-            System.arraycopy(buf4, 0, buf, charsRead, size);
-            charsRead += size;
+                if (result >= n) break;
+            }
         }
 
-        return charsRead;
+        return result;
     }
 
     private int read4(char[] chArr) {

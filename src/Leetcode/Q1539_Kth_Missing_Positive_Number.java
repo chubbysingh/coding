@@ -43,6 +43,24 @@ public class Q1539_Kth_Missing_Positive_Number {
         return arr[index] - index - 1;
     }
 
+    public int findKthPositiveSimplified(int[] arr, int k) {
+        int lo = 0, hi = arr.length - 1;
+
+        while(lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+
+            if(arr[mid] -  mid - 1 < k) {
+                lo = mid + 1; // answer lies in left part
+            }
+            else {
+                hi = mid - 1; // answer lies in right part
+            }
+        }
+
+        //return arr[hi] + k - (arr[hi] - hi - 1);
+        return k + hi + 1;
+    }
+
     public int findKthPositiveAlternate(int[] A, int k) {
         int left = 0, right = A.length;
         int mid;
