@@ -12,6 +12,35 @@ package Leetcode;
  * and subtract by the height of the block itself.
  */
 public class Q0042_Trapping_Rain_Water {
+
+    //Space: O(1)
+    //Time: O(n)
+    public int trapAlternate(int[] height) {
+        int result = 0;
+
+        int maxLeft = 0,
+            maxRight = 0;
+
+        int start = 0,
+            end = height.length;
+
+        while (start < end) {
+            maxLeft = Math.max(maxLeft, height[start]);
+            maxRight = Math.max(maxRight, height[end]);
+
+            if (maxLeft < maxRight) {
+                result += maxLeft - height[start];
+                start++;
+            }
+            else {
+                result += maxRight - height[end];
+                end--;
+            }
+        }
+        return result;
+    }
+    //Space: O(n)
+    //Time: O(n)
     public int trap(int[] A) {
         if (A == null || A.length <= 2) {
             return 0;
