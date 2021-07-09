@@ -1,40 +1,50 @@
 package Leetcode;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
  * Created by rbhatnagar2 on 1/15/17.
  */
 public class Q140_Word_Break_II {
-    Map<String, LinkedList<String>> map = new HashMap<String, LinkedList<String>>();
 
     public List<String> wordBreak(String s, List<String> wordDict) {
-        Set<String> wordDictSet = new HashSet<String>(wordDict);
-        return wordBreak(s, wordDictSet);
+        List<String> result = new ArrayList<>();
+
+        Set<String> dict = new HashSet<>(wordDict);
+
+        dfs(s, dict, result, "");
+        return result;
     }
 
-    public List<String> wordBreak(String s, Set<String> wordDict) {
-        if (map.containsKey(s))
-            return map.get(s);
+    private void dfs(String s, Set<String> wordDict, List<String> result, String temp) {
 
-        LinkedList<String> res = new LinkedList<String>();
-        if (s.length() == 0) {
-            res.add("");
-            return res;
-        }
-        for (String word : wordDict) {
-            if (s.startsWith(word)) {
-                List<String> sublist = wordBreak(s.substring(word.length()), wordDict);
-                for (String sub : sublist)
-                    res.add(word + (sub.isEmpty() ? "" : " ") + sub);
+        for (int i = 1; i <= s.length(); i++) {
+            String left = s.substring(0, i);
+            String right = i == s.length() ? "" : s.substring(i);
+
+            if (wordDict.contains(left)) {
+                if (right.isEmpty()) {
+                    temp += " " + left;
+                    result.add(temp.trim());
+                    return;
+                }
+
+                dfs(right, wordDict, result, temp + " "+ left);
             }
         }
-        map.put(s, res);
-        return res;
+    }
+
+    public static void main(String[] args) {
+        Q140_Word_Break_II sol = new Q140_Word_Break_II();
+
+        List<String> wordDict = Arrays.asList(new String[]{"cat","cats","and","sand","dog"});
+        String s = "catsanddog";
+
+        List<String> result = sol.wordBreak(s, wordDict);
+        System.out.println(result);
     }
 }
