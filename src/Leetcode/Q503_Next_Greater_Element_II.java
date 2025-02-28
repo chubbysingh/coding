@@ -19,4 +19,13 @@ public class Q503_Next_Greater_Element_II {
         }
         return next;
     }
+
+    public static void main(String[] args) {
+        Q503_Next_Greater_Element_II sol = new Q503_Next_Greater_Element_II();
+        int[] result = sol.nextGreaterElements(new int[]{1, 2, 3, 4, 3});
+        for (int i : result) {
+            System.out.println(i);
+        }
+
+    }
 }
