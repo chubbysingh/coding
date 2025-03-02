@@ -24,7 +24,7 @@ public class Q509_Fibonacci_Number {
     public static void main(String[] args) {
         Q509_Fibonacci_Number sol = new Q509_Fibonacci_Number();
 
-        long result = sol.fib(12);
+        long result = sol.fib(5);
         System.out.println(result);
     }
 }

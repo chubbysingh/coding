@@ -8,7 +8,8 @@ import java.util.Stack;
  */
 public class Q503_Next_Greater_Element_II {
     public int[] nextGreaterElements(int[] nums) {
-        int n = nums.length, next[] = new int[n];
+        int n = nums.length;
+        int[] next = new int[n];
         Arrays.fill(next, -1);
         Stack<Integer> stack = new Stack<>(); // index stack
         for (int i = 0; i < n * 2; i++) {
@@ -22,7 +23,7 @@ public class Q503_Next_Greater_Element_II {
 
     public static void main(String[] args) {
         Q503_Next_Greater_Element_II sol = new Q503_Next_Greater_Element_II();
-        int[] result = sol.nextGreaterElements(new int[]{1, 2, 3, 4, 3});
+        int[] result = sol.nextGreaterElements(new int[]{1, 3, 2, 4});
         for (int i : result) {
             System.out.println(i);
         }
