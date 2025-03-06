@@ -16,9 +16,7 @@ public class Q378_Kth_Smallest_Element_in_a_Sorted_Matrix {
      * After k-1, the min in the minHeap would be kth smallest element
      */
     public int kthSmallest(int[][] matrix, int k) {
-        PriorityQueue<Tuple> pq = new PriorityQueue<Tuple>();
-
-        int n = matrix.length;
+        PriorityQueue<Tuple> pq = new PriorityQueue<>();
 
         for (int i = 0; i < matrix.length; i++) {
             pq.offer(new Tuple(0, i, matrix[0][i]));
@@ -26,9 +24,7 @@ public class Q378_Kth_Smallest_Element_in_a_Sorted_Matrix {
 
         for (int i = 0; i < k - 1; i++) {
             Tuple t = pq.poll();
-            if (t.x == matrix[0].length - 1)
-                continue;
-            else
+            if (t.x != matrix[0].length - 1)
                 pq.offer(new Tuple(t.x + 1, t.y, matrix[t.x + 1][t.y]));
         }
         return pq.poll().val;
